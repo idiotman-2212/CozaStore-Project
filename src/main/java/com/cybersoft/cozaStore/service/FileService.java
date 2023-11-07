@@ -14,6 +14,7 @@ public class FileService implements FileServiceImp {
 private FileRepository fileRepository;
     @Override
     public String uploadFile(MultipartFile file) throws IOException {
+
         String fileName = file.getOriginalFilename();
         String type = file.getContentType();
         byte[] data = file.getBytes();

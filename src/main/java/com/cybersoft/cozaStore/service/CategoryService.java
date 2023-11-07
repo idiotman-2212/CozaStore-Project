@@ -1,21 +1,17 @@
 package com.cybersoft.cozaStore.service;
 
 import com.cybersoft.cozaStore.entity.CategoryEntity;
-import com.cybersoft.cozaStore.entity.ColorEntity;
-import com.cybersoft.cozaStore.entity.ProductEntity;
-import com.cybersoft.cozaStore.entity.SizeEntity;
-import com.cybersoft.cozaStore.payload.request.SignUpRequest;
 import com.cybersoft.cozaStore.payload.response.CategoryResponse;
 import com.cybersoft.cozaStore.repository.CategoryRepository;
 import com.cybersoft.cozaStore.service.imp.CategoryServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
+@Service
 public class CategoryService implements CategoryServiceImp {
     @Autowired
     private CategoryRepository categoryRepository;

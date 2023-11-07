@@ -13,51 +13,53 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.filter.OncePerRequestFilter;
+import io.jsonwebtoken.ExpiredJwtException;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
-//Tạo filter để hứng token mỗi khi nguời dùng gọi request
+@Component
+//OncePerRequestFilter : Có request yêu cầu chứng thực thì chạy vào filter
 public class JwtFilter extends OncePerRequestFilter {
 
+//    Bước 1 : Lấy token
+//    Bước 2 : Giải mã token
+//    Bước 3 : Token hợp lệ tạo chứng thực cho Security
+
     @Autowired
-    private JwtHelper jwtHelper;
-
-    private Gson gson = new Gson();
-
+    JwtHelper jwtHelper;
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        //lấy token mà client truyền trên header (Authorization)
-        String headerValue =request.getHeader("Authorization");
-        if(headerValue != null && headerValue.startsWith("Bearer ")){
-            //cắt chữ Bearer để lấy token
-           String token = headerValue.substring(7);
-           String data = jwtHelper.parseToken(token);
-            System.out.printf("Kiem tra " + data);
-            if(data != null && data.isEmpty()){
-                Type listType = new TypeToken<ArrayList< SimpleGrantedAuthority>>(){}.getType();
-                List<SimpleGrantedAuthority> roles = gson.fromJson(data, listType);
+//        Lấy giá trị trên header
+        String header = request.getHeader("Authorization");
 
-//                List<GrantedAuthority> roles = new ArrayList<>();
-//                GrantedAuthority grantedAuthority = new SimpleGrantedAuthority("ROLE_ADMIN");
-//                roles.add( grantedAuthority);
-
-
-               // Chứng thực hợp lệ và tạo chứng thực cho security
-                UsernamePasswordAuthenticationToken user = new UsernamePasswordAuthenticationToken("", "", roles);
-                SecurityContext context = SecurityContextHolder .getContext();
-                context.setAuthentication(user);
+//      Kiểm tra token lấy được xem có thể do hệ thống sinh ra hay không
+        try{
+            //        Cắt chuỗi bỏ chữ Bearer để lấy đúng token
+            String token = header.substring(7);
+            String data = jwtHelper.validToken(token);
+//            Nếu token khác rỗng tức là hợp lệ thì tạo chứng thực
+            if(!data.isEmpty()){
+//          Tạo chứng thực cho Security
+                UsernamePasswordAuthenticationToken authenticationToken =
+                        new UsernamePasswordAuthenticationToken("","",new ArrayList<>());
+                SecurityContext securityContext = SecurityContextHolder.getContext();
+                securityContext.setAuthentication(authenticationToken);
+//
             }
-        }else{
-            //khong hop le
-            System.out.println("Noi dung khong hop le");
+            System.out.println("Kiem tra " + data);
+        }catch (Exception e){
+//            Token không hợp lệ
+            System.out.println("token không hợp lệ");
         }
 
-        filterChain.doFilter(request, response);
+//        Cho phép đi vào link người dùng muốn truy cập
+        filterChain.doFilter(request,response);
     }
+
 }

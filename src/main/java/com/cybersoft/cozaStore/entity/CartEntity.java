@@ -17,7 +17,7 @@ public class CartEntity {
     @Column(name = "quanity")
     private int quanity;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_user")
     private UserEntity user;
 

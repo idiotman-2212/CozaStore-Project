@@ -1,6 +1,6 @@
 package com.cybersoft.cozaStore.controller;
 
-import com.cybersoft.cozaStore.payload.response.Baseresponse;
+import com.cybersoft.cozaStore.payload.response.BaseResponse;
 import com.cybersoft.cozaStore.service.imp.FileServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -21,7 +21,7 @@ public class FileController {
     @PostMapping("")
     public ResponseEntity<?> uploadFile(@RequestParam MultipartFile file) throws IOException {
        String message = fileServiceImp.uploadFile(file);
-        Baseresponse baseresponse = new Baseresponse();
+        BaseResponse baseresponse = new BaseResponse();
         baseresponse.setStatusCode(200);
         baseresponse.setMessage("Thanh cong");
         baseresponse.setData(message);
@@ -33,7 +33,6 @@ public class FileController {
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.IMAGE_PNG);
-
 
         return new ResponseEntity<> (fileImage, headers, HttpStatus.OK);
     }

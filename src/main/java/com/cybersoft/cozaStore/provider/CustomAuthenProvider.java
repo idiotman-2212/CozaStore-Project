@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 @Component
-public class CustomAuthenProvider implements AuthenticationProvider {
+public class CustomAuthenProvider implements AuthenticationProvider{
     @Autowired
     private UserRepository userRepository;
 
@@ -28,29 +28,37 @@ public class CustomAuthenProvider implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        //logic xử lý đăng nhập
+        //Logic xử lí đăng nhập
         String username = authentication.getName();
         String password = authentication.getCredentials().toString();
 
         UserEntity user = userRepository.findByEmail(username);
-        if(user != null){
-            //user tn tại kiểm tra tiếp mật khẩu
-            if(passwordEncoder.matches(password, user.getPassword())){
+        if (username != null){
+            // User tồn tại kiểm tra tiếp mật khẩu
+            if (passwordEncoder.matches(password, user.getPassword())){
+                // Tạo chứng thực --- GrantedAuthority một class chứng thực của SS
                 List<GrantedAuthority> roles = new ArrayList<>();
                 GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(user.getRole().getName());
-                roles.add( grantedAuthority);
 
-              //Tạo chứng thực cho security
-              UsernamePasswordAuthenticationToken token =  new UsernamePasswordAuthenticationToken(username, user.getPassword(), roles);
+                roles.add(grantedAuthority);
+
+                // Tạo chứng thực cho security
+                UsernamePasswordAuthenticationToken token =
+                        new UsernamePasswordAuthenticationToken(username,user.getPassword(),roles);
+
+
+
                 SecurityContextHolder.getContext().setAuthentication(token);
+
+
                 return token;
-            }else{
+            }else {
                 return null;
             }
-
-        }else{
+        } else {
             return null;
         }
+
     }
 
     @Override

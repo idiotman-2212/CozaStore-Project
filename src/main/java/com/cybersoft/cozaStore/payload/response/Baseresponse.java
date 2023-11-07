@@ -1,9 +1,9 @@
 package com.cybersoft.cozaStore.payload.response;
 
-public class Baseresponse {
-    private int statusCode = 200;
-    private String message = "";
-    private Object data = "";
+public class BaseResponse {
+    private int statusCode;
+    private String message;
+    private Object data;
 
     public int getStatusCode() {
         return statusCode;

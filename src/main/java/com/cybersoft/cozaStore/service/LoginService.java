@@ -19,9 +19,12 @@ public class LoginService implements LoginServiceImp {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+
     @Override
     public boolean insertUser(SignUpRequest signUpRequest) {
+
         boolean isSuccess = false;
+
         UserEntity user = new UserEntity();
         user.setEmail(signUpRequest.getEmail());
         user.setPassword(passwordEncoder.encode(signUpRequest.getPassword()));
@@ -31,7 +34,8 @@ public class LoginService implements LoginServiceImp {
             userRepository.save(user);
             isSuccess = true;
         } catch (Exception e) {
-            System.out.printf("Them that bai " + e.getLocalizedMessage());
+            System.out.println("Them that bai " + e.getLocalizedMessage());
+
             isSuccess = false;
         }
 

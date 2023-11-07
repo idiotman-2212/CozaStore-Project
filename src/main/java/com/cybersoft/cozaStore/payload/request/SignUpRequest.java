@@ -6,19 +6,22 @@ import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Pattern;
 
 public class SignUpRequest {
+
     @NotNull
-    @NotBlank(message = "User Name khong duoc rong")
+    @NotBlank(message = "User name không được rỗng")
     private String userName;
-    @Pattern(regexp = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}")
+
     @NotNull
-    @NotBlank(message = "Password khong duoc rong")
+    @NotBlank(message = "Password không được rỗng")
+    @Pattern(regexp = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}")
     private String password;
 
-    @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$")
     @NotNull
-    @NotBlank(message = "Email khong duoc rong")
+    @NotBlank(message = "Email không được rỗng")
+    @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$")
     private String email;
 
+    private String role;
     public String getUserName() {
         return userName;
     }

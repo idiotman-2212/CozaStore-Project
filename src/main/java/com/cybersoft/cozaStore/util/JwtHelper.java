@@ -7,37 +7,33 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
-import java.util.Base64;
 import java.util.Date;
-
 @Component
 public class JwtHelper {
-    //@Value: giúp lấy thông tin cấu hình bên file application.properties
+    //@Value : Giúp lấy key khai báo bên file application.properties
     @Value("${custom.token.key}")
-    private  String secretKey;
-    private long expiredTime = 8 * 60 * 60 * 1000;
-    public String generateToken(String data){
-        // Lấy key đã lưu trữ và sử dụng để tạo ra token
-        SecretKey key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(secretKey));
-        // Sinh ra thời gian hết hạn mới
-        Date date = new Date();
-        long newDateMilis = date.getTime() + expiredTime;
-        Date newExpiredDate = new Date(newDateMilis);
+    String secrectKey;
+    /**
+     *
+     *  Bước 1 : Tạo Key
+     *  Bước 2 : Sử dụng key mới tạo để sinh ra token
+     *
+     */
 
-        String token = Jwts.builder() // #1
-                .setSubject(data)                    // #2
-                .signWith(key)
-                .setExpiration(newExpiredDate)
-                .compact();
+    public String generateToken(String data){
+//       Lấy secrect key đã tạo trước đó sử dụng
+        SecretKey key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(secrectKey));
+//        Dùng key để tạo ra token
+        String token = Jwts.builder().setSubject(data).signWith(key).compact();
         return token;
     }
-    /// Giai ma token
-    public String parseToken(String token){
-        SecretKey key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(secretKey));
-        String data =  Jwts.parserBuilder()
-                .setSigningKey(key).build()//truyền key cần giải mã token
-                .parseClaimsJws(token)//Truyền vô token cần giải mã
-                .getBody().getSubject();// lấy nội dung lưu trũ trong token
-        return data;
+
+    public String validToken(String token){
+        SecretKey key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(secrectKey));
+//        chuẩn bị chìa khóa để tiến hành giải mã
+        return Jwts.parserBuilder().setSigningKey(key).build()
+                .parseClaimsJws(token) //Truyền token cần giải mã
+                .getBody().getSubject();
     }
+
 }
