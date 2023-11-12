@@ -1,4 +1,4 @@
-package com.cybersoft.cozaStore.controller;
+package com.cybersoft.cozaStore.api;
 
 import com.cybersoft.cozaStore.payload.response.BaseResponse;
 import com.cybersoft.cozaStore.service.imp.FileServiceImp;
@@ -14,7 +14,7 @@ import java.io.IOException;
 
 @RestController
 @RequestMapping("/file")
-public class FileController {
+public class ApiFileController {
     @Autowired
     private FileServiceImp fileServiceImp;
 

@@ -1,7 +1,6 @@
-package com.cybersoft.cozaStore.controller;
+package com.cybersoft.cozaStore.api;
 
 import com.cybersoft.cozaStore.payload.response.BaseResponse;
-import com.cybersoft.cozaStore.repository.SizeRepository;
 import com.cybersoft.cozaStore.service.imp.SizeSeviceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/size")
-public class SizeController {
+public class ApiSizeController {
 
     @Autowired
     private SizeSeviceImp sizeSeviceImp;

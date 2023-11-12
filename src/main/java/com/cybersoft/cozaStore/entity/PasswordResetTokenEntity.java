@@ -21,6 +21,9 @@ public class PasswordResetTokenEntity {
     @JoinColumn(name = "id_user")
     private UserEntity user;
 
+    public PasswordResetTokenEntity(String token, UserEntity user) {
+    }
+
 
     public int getId() {
         return id;

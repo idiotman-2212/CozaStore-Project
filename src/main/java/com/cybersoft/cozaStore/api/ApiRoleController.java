@@ -1,7 +1,6 @@
-package com.cybersoft.cozaStore.controller;
+package com.cybersoft.cozaStore.api;
 
 import com.cybersoft.cozaStore.payload.response.BaseResponse;
-import com.cybersoft.cozaStore.payload.response.CartResponse;
 import com.cybersoft.cozaStore.payload.response.RoleResponse;
 import com.cybersoft.cozaStore.service.imp.RoleServiceIml;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/role")
-public class RoleController {
+public class ApiRoleController {
 
     @Autowired
     private RoleServiceIml roleServiceIml;

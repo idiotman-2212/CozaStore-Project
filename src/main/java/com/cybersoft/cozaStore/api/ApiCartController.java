@@ -1,9 +1,8 @@
-package com.cybersoft.cozaStore.controller;
+package com.cybersoft.cozaStore.api;
 
 import com.cybersoft.cozaStore.payload.request.CartRequest;
 import com.cybersoft.cozaStore.payload.response.BaseResponse;
 import com.cybersoft.cozaStore.payload.response.CartResponse;
-import com.cybersoft.cozaStore.service.CartService;
 import com.cybersoft.cozaStore.service.imp.CartServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/cart")
 @CrossOrigin
-public class CartController {
+public class ApiCartController {
     @Autowired
     private CartServiceImp cartServiceImp;
     //lấy thông tin cart theo idUser
@@ -55,4 +54,5 @@ public class CartController {
             return new ResponseEntity<>("Cart not found or unable to delete", HttpStatus.OK);
         }
     }
+
 }

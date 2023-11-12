@@ -4,5 +4,6 @@ import com.cybersoft.cozaStore.entity.UserEntity;
 
 public interface UserServiceImp {
     UserEntity findByEmail(String email);
-    void updatePassword(String password, Long userId);
+
+    //void createPasswordResetTokenForUser(UserEntity user, String token);
 }

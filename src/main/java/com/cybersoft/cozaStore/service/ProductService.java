@@ -3,6 +3,7 @@ package com.cybersoft.cozaStore.service;
 import com.cybersoft.cozaStore.entity.*;
 import com.cybersoft.cozaStore.payload.response.ProductResponse;
 import com.cybersoft.cozaStore.repository.CartRepository;
+import com.cybersoft.cozaStore.repository.CategoryRepository;
 import com.cybersoft.cozaStore.repository.ProductRepository;
 import com.cybersoft.cozaStore.service.imp.ProductServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,9 @@ public class ProductService implements ProductServiceImp {
 
     @Autowired
     private CartRepository cartRepository;
+
+    @Autowired
+    private CategoryRepository categoryRepository;
 
     @Value("${root.folder}")
     private String rootFolder;
@@ -60,7 +64,7 @@ public class ProductService implements ProductServiceImp {
         productEntity.setCategory(categoryEntity);
 
         productRepository.save(productEntity);
-        return false;
+        return true;
     }
 
     @Override
@@ -119,29 +123,28 @@ public class ProductService implements ProductServiceImp {
     }
 
     @Override
-    public boolean updateProductById(int idProduct, String name, MultipartFile file, String description, double price, int quantity, int idColor, int idSize, int idCategory) throws IOException {
-        Optional<ProductEntity> optionalProductEntity = productRepository.findById(idProduct);
+    public boolean updateProductById(int idProduct, String name, MultipartFile file, String description, double price, int quanity, int idColor, int idSize, int idCategory) throws IOException {
+        Optional<ProductEntity> productOptional = productRepository.findById(idProduct);
+        List<ProductResponse> responseList = new ArrayList<>();
 
-        if (optionalProductEntity.isPresent()) {
-            ProductEntity productEntity = optionalProductEntity.get();
+        if (productOptional.isPresent()) {
+            ProductEntity productEntity = productOptional.get();
 
             // Xoá ảnh cũ
             String oldImage = productEntity.getImage();
             if (oldImage != null) {
                 Files.deleteIfExists(Paths.get(rootFolder, oldImage));
             }
-
             // Lưu ảnh mới
             String newImage = file.getOriginalFilename();
             Path newPathImageCopy = Paths.get(rootFolder, newImage);
             Files.copy(file.getInputStream(), newPathImageCopy, StandardCopyOption.REPLACE_EXISTING);
 
-            // Cập nhật thông tin sản phẩm
             productEntity.setName(name);
-            productEntity.setImage(newImage);
-            productEntity.setDescription(description);
+            productEntity.setImage(file.getOriginalFilename());
             productEntity.setPrice(price);
-            productEntity.setQuanity(quantity);
+            productEntity.setQuanity(quanity);
+            productEntity.setDescription(description);
 
             ColorEntity colorEntity = new ColorEntity();
             colorEntity.setId(idColor);
@@ -156,11 +159,14 @@ public class ProductService implements ProductServiceImp {
             productEntity.setCategory(categoryEntity);
 
             productRepository.save(productEntity);
+
+
             return true;
         } else {
             return false;
         }
     }
+
 
     @Override
     public List<ProductResponse> getProductByName(String productName) {

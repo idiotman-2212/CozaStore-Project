@@ -19,7 +19,7 @@ public interface ProductServiceImp {
 
     boolean updateProductById(int idProduct, String name,
                               MultipartFile file, String description, double price,
-                              int quantity,int idColor, int idSize, int idCategory) throws IOException;
+                              int quanity,int idColor, int idSize, int idCategory) throws IOException;
 
     List<ProductResponse> getProductByName(String productName);
 

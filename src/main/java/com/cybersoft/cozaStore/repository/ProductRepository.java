@@ -10,4 +10,6 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<ProductEntity, Integer> {
 
     List<ProductEntity> findByNameContaining(String productName);
+
+    boolean existsByName(String name);
 }

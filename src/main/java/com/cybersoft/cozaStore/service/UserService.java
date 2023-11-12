@@ -1,6 +1,8 @@
 package com.cybersoft.cozaStore.service;
 
+import com.cybersoft.cozaStore.entity.PasswordResetTokenEntity;
 import com.cybersoft.cozaStore.entity.UserEntity;
+//import com.cybersoft.cozaStore.repository.PasswordResetTokenRepository;
 import com.cybersoft.cozaStore.repository.UserRepository;
 import com.cybersoft.cozaStore.service.imp.UserServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,13 +13,22 @@ public class UserService implements UserServiceImp {
 
     @Autowired
     private UserRepository userRepository;
+
+//    @Autowired
+//    private PasswordResetTokenRepository passwordTokenRepository;
     @Override
     public UserEntity findByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 
-    @Override
-    public void updatePassword(String password, Long userId) {
-        userRepository.updatePassword(password, userId);
-    }
+//    @Override
+//    public void createPasswordResetTokenForUser(UserEntity user, String token) {
+//        PasswordResetTokenEntity myToken = new PasswordResetTokenEntity(token, user);
+//        passwordTokenRepository.save(myToken);
+//    }
+
+//    @Override
+//    public void updatePassword(String password, Long userId) {
+//        userRepository.updatePassword(password, userId);
+//    }
 }

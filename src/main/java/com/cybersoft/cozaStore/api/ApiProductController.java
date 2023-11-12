@@ -1,7 +1,8 @@
-package com.cybersoft.cozaStore.controller;
+package com.cybersoft.cozaStore.api;
 
 import com.cybersoft.cozaStore.payload.response.BaseResponse;
 import com.cybersoft.cozaStore.payload.response.ProductResponse;
+import com.cybersoft.cozaStore.repository.ProductRepository;
 import com.cybersoft.cozaStore.service.imp.ProductServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,11 +15,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/product")
-public class ProductController {
+public class ApiProductController {
 
     @Autowired
     private ProductServiceImp productServiceImp;
 
+    @Autowired
+    private ProductRepository productRepository;
 
     @GetMapping("")
     public ResponseEntity<?> getAllProduct(){
@@ -62,12 +65,20 @@ public class ProductController {
                                            @RequestParam int quanity, @RequestParam int idColor,
                                            @RequestParam int idSize, @RequestParam int idCategory, @RequestParam String description) throws IOException {
 
-        boolean isSussecc = productServiceImp.insertProduct(name, file, price, quanity, idColor, idSize, idCategory,description);
+        if(productRepository.existsByName(name)){
+            BaseResponse errorResponse = new BaseResponse();
+            errorResponse.setStatusCode(400);
+            errorResponse.setMessage("Product with name '" + name+ " ' already exist");
+
+            return new ResponseEntity<>( errorResponse, HttpStatus.BAD_REQUEST);
+        }
+
+        boolean isSuccess = productServiceImp.insertProduct(name, file, price, quanity, idColor, idSize, idCategory,description);
 
         BaseResponse baseResponse = new BaseResponse();
         baseResponse.setMessage("Insert Product Successfully");
         baseResponse.setStatusCode(200);
-        baseResponse.setData("");
+        baseResponse.setData(isSuccess);
 
         return new ResponseEntity<>(baseResponse, HttpStatus.OK);
     }
@@ -87,28 +98,26 @@ public class ProductController {
     }
 
 
-    @PutMapping("/{id}")
-    public ResponseEntity<?> updateProductById(@PathVariable int id, @RequestParam String name,
+    @PutMapping("/{idProduct}")
+    public ResponseEntity<?> updateProductById(@PathVariable int idProduct, @RequestParam String name,
                                                @RequestParam MultipartFile file, @RequestParam String description, @RequestParam double price,
-                                               @RequestParam int quantity, @RequestParam int idColor, @RequestParam int idSize, @RequestParam int idCategory
+                                               @RequestParam int quanity, @RequestParam int idColor, @RequestParam int idSize, @RequestParam int idCategory
     ) throws IOException {
-        boolean isUpdated = productServiceImp.updateProductById(id, name, file, description, price, quantity,
+       boolean isUpdated = productServiceImp.updateProductById(idProduct, name, file, description, price, quanity,
                 idColor, idSize, idCategory);
 
         if (isUpdated) {
             BaseResponse baseResponse = new BaseResponse();
             baseResponse.setMessage("Product updated successfully");
             baseResponse.setStatusCode(200);
-
-            // Lấy thông tin sản phẩm sau cập nhật
-            List<ProductResponse> updateProductById = productServiceImp.getProductById(id);
-
-            // Đặt danh sách sản phẩm sau cập nhật vào trường data
-            baseResponse.setData(updateProductById);
+            baseResponse.setData(isUpdated);
 
             return new ResponseEntity<>(baseResponse, HttpStatus.OK);
         } else {
-            return new ResponseEntity<>("Product not found or unable to update", HttpStatus.NOT_FOUND);
+            BaseResponse errorResponse = new BaseResponse();
+            errorResponse.setMessage("Product with id '" + idProduct + " ' not found");
+            errorResponse.setStatusCode(404);
+            return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
         }
     }
 

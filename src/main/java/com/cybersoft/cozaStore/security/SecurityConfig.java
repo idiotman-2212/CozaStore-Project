@@ -66,6 +66,7 @@ public class SecurityConfig {
                 .requestMatchers("/role/**").permitAll()
                 .requestMatchers("/admin/**").permitAll()
                 .requestMatchers("/mail/**").permitAll()
+                .requestMatchers("/order/**").permitAll()
 
 
 

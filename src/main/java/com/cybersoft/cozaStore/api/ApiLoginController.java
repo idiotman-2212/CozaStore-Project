@@ -1,6 +1,5 @@
-package com.cybersoft.cozaStore.controller;
+package com.cybersoft.cozaStore.api;
 
-import ch.qos.logback.core.status.Status;
 import com.cybersoft.cozaStore.entity.RoleEntity;
 import com.cybersoft.cozaStore.entity.UserEntity;
 import com.cybersoft.cozaStore.payload.response.BaseResponse;
@@ -15,7 +14,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -27,13 +25,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
 import java.util.List;
 
 @CrossOrigin
 @RestController
 @RequestMapping("/login")
-public class LoginController {
+public class ApiLoginController {
 
     @Autowired
     private AuthenticationManager authenticationManager;

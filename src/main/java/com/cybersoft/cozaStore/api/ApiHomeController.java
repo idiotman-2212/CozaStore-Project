@@ -1,4 +1,4 @@
-package com.cybersoft.cozaStore.controller;
+package com.cybersoft.cozaStore.api;
 
 import com.cybersoft.cozaStore.payload.response.BaseResponse;
 import com.cybersoft.cozaStore.service.HomeService;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/home")
-public class HomeController {
+public class ApiHomeController {
 
     @Autowired
     private HomeService homeService;

@@ -36,17 +36,6 @@ public class UserEntity {
     @OneToMany(mappedBy = "user")
     private List<CartEntity> carts;
 
-    @OneToMany(mappedBy = "user")
-    private List<PasswordResetTokenEntity> resetPasswords;
-
-    public List<PasswordResetTokenEntity> getResetPasswords() {
-        return resetPasswords;
-    }
-
-    public void setResetPasswords(List<PasswordResetTokenEntity> resetPasswords) {
-        this.resetPasswords = resetPasswords;
-    }
-
     public List<BlogEntity> getBlogs() {
         return blogs;
     }
