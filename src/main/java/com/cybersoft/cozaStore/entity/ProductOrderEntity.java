@@ -1,20 +1,17 @@
 package com.cybersoft.cozaStore.entity;
 
+import com.cybersoft.cozaStore.entity.keys.ProductOrderKeys;
 import jakarta.persistence.*;
 
 import java.util.Date;
 
 @Entity(name = "product_order")
+
 public class ProductOrderEntity {
 
-    @ManyToOne
-    @JoinColumn(name = "id_product")
-    private ProductEntity product;
+    @EmbeddedId
+    private ProductOrderKeys keys; // đặt tên gì cũng dược không quan trọng
 
-    @Id
-    @ManyToOne
-    @JoinColumn(name = "id_order")
-    private OrderEntity order;
 
     @Column(name = "quanity")
     private int quanity;
@@ -25,21 +22,25 @@ public class ProductOrderEntity {
     @Column(name = "create_date")
     private Date createDate;
 
-
-    public ProductEntity getProduct() {
-        return product;
+    @PrePersist
+    protected void onCreate() {
+        createDate = new Date();
     }
 
-    public void setProduct(ProductEntity product) {
-        this.product = product;
+    @ManyToOne
+    @JoinColumn(name = "id_product", insertable = false, updatable = false)
+    private ProductEntity product;
+
+    @ManyToOne
+    @JoinColumn(name = "id_order", insertable = false, updatable = false) // thêm vào đê tránh đi vòng lặp vô tận
+    private OrderEntity order;
+
+    public ProductOrderKeys getKeys() {
+        return keys;
     }
 
-    public OrderEntity getOrder() {
-        return order;
-    }
-
-    public void setOrder(OrderEntity order) {
-        this.order = order;
+    public void setKeys(ProductOrderKeys keys) {
+        this.keys = keys;
     }
 
     public int getQuanity() {

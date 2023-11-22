@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Edit User</title>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="images/icons/favicon.png" rel="icon" type="image/png"/>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="fonts/iconic/css/material-design-iconic-font.min.css" rel="stylesheet" type="text/css">
+  <link href="fonts/linearicons-v1.0.0/icon-font.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/animate/animate.css" rel="stylesheet" type="text/css">
+  <link href="css/util.css" rel="stylesheet" type="text/css">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <style> body { overflow: auto; } </style>
+</head>
+<body class="animsition">
+<header class="header-v4">
+  <div class="container-menu-desktop">
+    <div class="wrap-menu-desktop how-shadow1">
+      <nav class="limiter-menu-desktop container">
+        <a class="logo" href="#">
+          <img alt="IMG-LOGO" src="images/icons/logo-01.png">
+        </a>
+        <div class="menu-desktop">
+          <ul class="main-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="manage-products.html">Manage Products</a></li>
+            <li><a href="manage-users.html">Manage Users</a></li>
+            <li><a href="manage-blogs.html">Manager Blogs</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="wrap-icon-header flex-w flex-r-m">
+          <a class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0" href="#">
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="bg0 m-t-23 p-b-140">
+  <div class="container">
+    <form id="edit-user-form">
+      <div class="form-group">
+        <label for="userName">Username</label>
+        <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter username">
+      </div>
+
+      <div class="form-group">
+        <label for="idRole">Role</label>
+        <select class="form-control" id="idRole" name="idRole">
+          <!-- Danh sách vai trò sẽ được cập nhật bằng JavaScript -->
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Update User</button>
+    </form>
+  </div>
+</div>
+
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="vendor/animsition/js/animsition.min.js"></script>
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var urlParams = new URLSearchParams(window.location.search);
+        var idUser = urlParams.get("idUser");
+
+        // Hàm để gửi yêu cầu API để lấy danh sách vai trò
+        function loadRoles() {
+            $.ajax({
+                url: "http://localhost:8080/role",
+                method: "GET",
+                dataType: "json",
+                success: function (data) {
+                    var selectBox = $("#idRole");
+                    selectBox.empty(); // Xóa tất cả các tùy chọn hiện tại
+
+                    // Lặp qua danh sách vai trò và thêm tùy chọn vào select box
+                    for (var i = 0; i < data.data.length; i++) {
+                        var role = data.data[i];
+                        selectBox.append("<option value='" + role.idRole + "'>" + role.nameRole + "</option>");
+                    }
+                },
+                error: function () {
+                    alert("Lỗi khi tải danh sách vai trò.");
+                }
+            });
+        }
+
+        // Gọi hàm để tải danh sách vai trò khi trang được tải
+        loadRoles();
+
+        // Gọi API để lấy thông tin người dùng dựa trên idUser
+        $.ajax({
+            url: "http://localhost:8080/user/" + idUser,
+            method: "GET",
+            dataType: "json",
+            success: function (data) {
+                $("#userName").val(data.data[0].userName);
+                $("#idRole").val(data.data[0].idRole);
+            },
+            error: function () {
+                alert("Lỗi khi tải thông tin người dùng.");
+            }
+        });
+
+        // Xử lý sự kiện submit form
+        $("#edit-user-form").submit(function (event) {
+            event.preventDefault();
+
+            var formData = new FormData();
+            formData.append("userName", $("#userName").val());
+            formData.append("idRole", $("#idRole").val());
+
+            // Gửi yêu cầu PUT để cập nhật người dùng
+            $.ajax({
+                url: "http://localhost:8080/user/" + idUser,
+                method: "PUT",
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function () {
+                    alert("Cập nhật người dùng thành công.");
+                    window.location.href = 'manage-users.html';
+                },
+                error: function () {
+                    alert("Lỗi khi cập nhật người dùng.");
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

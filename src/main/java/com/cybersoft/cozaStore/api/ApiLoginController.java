@@ -4,6 +4,7 @@ import com.cybersoft.cozaStore.entity.RoleEntity;
 import com.cybersoft.cozaStore.entity.UserEntity;
 import com.cybersoft.cozaStore.payload.response.BaseResponse;
 import com.cybersoft.cozaStore.payload.request.SignUpRequest;
+import com.cybersoft.cozaStore.payload.response.UserResponse;
 import com.cybersoft.cozaStore.repository.RoleRepository;
 import com.cybersoft.cozaStore.repository.UserRepository;
 import com.cybersoft.cozaStore.service.imp.LoginServiceImp;
@@ -90,6 +91,7 @@ public class ApiLoginController {
         userEntity.setUsername(signUpRequest.getUserName());
         userEntity.setEmail(signUpRequest.getEmail());
         userEntity.setPassword(passwordEncoder.encode(signUpRequest.getPassword()));
+        userEntity.setCreateDate(signUpRequest.getCreateDate());
 
         RoleEntity roleEntity = roleRepository.findByName("ROLE_ADMIN").orElse(null); // Sử dụng orElse để tránh null
         userEntity.setRole(roleEntity);
@@ -114,7 +116,29 @@ public class ApiLoginController {
         return "redirect:/login.html"; // Thay thế bằng URL của trang đăng nhập của bạn
     }
 
+    @GetMapping("")
+    public ResponseEntity<?> getAllUser(){
+        List<UserResponse> userResponses = loginServiceImp.getAllUser();
+        BaseResponse baseResponse = new BaseResponse();
+        baseResponse.setStatusCode(200);
+        baseResponse.setMessage("Get all user");
+        baseResponse.setData(userResponses);
 
+        return new ResponseEntity<>(baseResponse, HttpStatus.OK);
+    }
+
+    @GetMapping("/search")
+    public BaseResponse searchUsers(@RequestParam String query){
+        BaseResponse response = new BaseResponse();
+        List<UserResponse> userResponses = loginServiceImp.searchUsers(query);
+        if(userResponses.isEmpty()){
+            response.setMessage("No user found for the given query.");
+        }else{
+            response.setData(userResponses);
+            response.setMessage("User found successfully.");
+        }
+        return response;
+    }
 }
 
 

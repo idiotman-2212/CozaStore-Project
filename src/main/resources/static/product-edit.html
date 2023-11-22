@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Product</title>
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body class="animsition">
+<header class="header-v4">
+    <div class="container-menu-desktop">
+        <div class="wrap-menu-desktop how-shadow1">
+            <nav class="limiter-menu-desktop container">
+                <a href="#" class="logo">
+                    <img src="images/icons/logo-01.png" alt="IMG-LOGO">
+                </a>
+                <div class="menu-desktop">
+                    <ul class="main-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="manage-products.html">Manage Products</a></li>
+                        <li><a href="manage-users.html">Manage Users</a></li>
+                        <li><a href="manage-blogs.html">Manager Blogs</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Edit Product - ID: <span id="productId"></span></h1>
+    <form id="editProductForm" method="POST" action="">
+        <div class="form-group">
+            <label for="name">Product Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Product Description</label>
+            <textarea class="form-control" id="description" name="description" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" class="form-control" id="price" name="price" required>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" required>
+        </div>
+        <div class="form-group">
+            <label for="idColor">Color</label>
+            <select class="form-control" id="idColor" name="idColor" required>
+                <!-- Populate Color options from server data -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="idSize">Size</label>
+            <select class="form-control" id="idSize" name="idSize" required>
+                <!-- Populate Size options from server data -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="idCategory">Category</label>
+            <select class="form-control" id="idCategory" name="idCategory" required>
+                <!-- Populate Category options from server data -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="file">Product Image</label>
+            <input type="file" class="form-control-file" id="file" name="file">
+        </div>
+        <button type="submit" class="btn btn-primary">Update Product</button>
+        <button class="btn btn-primary" id="backToProduct" type="button">Back To Product</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="vendor/animsition/js/animsition.min.js"></script>
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    // Lấy idProduct từ URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const idProduct = urlParams.get("idProduct");
+
+    // Gán idProduct vào phần tử HTML
+    document.getElementById("productId").textContent = idProduct;
+
+    // Hàm để tải danh sách color
+    function loadColors() {
+        $.ajax({
+            url: "http://localhost:8080/color", // Endpoint để lấy danh sách colors
+            method: "GET",
+            success: function (data) {
+                var colorSelect = $("#idColor");
+                colorSelect.empty();
+                colorSelect.append($("<option value='' disabled>Select Color</option>"));
+                $.each(data.data, function (index, color) {
+                    colorSelect.append($("<option></option>").attr("value", color.idColor).text(color.nameColor));
+                });
+            }
+        });
+    }
+
+    // Hàm để tải danh sách sizes
+    function loadSizes() {
+        $.ajax({
+            url: "http://localhost:8080/size", // Endpoint để lấy danh sách sizes
+            method: "GET",
+            success: function (data) {
+                var sizeSelect = $("#idSize");
+                sizeSelect.empty();
+                sizeSelect.append($("<option value='' disabled>Select Size</option>"));
+                $.each(data.data, function (index, size) {
+                    sizeSelect.append($("<option></option>").attr("value", size.idSize).text(size.nameSize));
+                });
+            }
+        });
+    }
+
+    // Hàm để tải danh sách categories
+    function loadCategories() {
+        $.ajax({
+            url: "http://localhost:8080/category", // Endpoint để lấy danh sách categories
+            method: "GET",
+            success: function (data) {
+                var categorySelect = $("#idCategory");
+                categorySelect.empty();
+                categorySelect.append($("<option value='' disabled>Select Category</option>"));
+                $.each(data.data, function (index, category) {
+                    categorySelect.append($("<option></option>").attr("value", category.id).text(category.name));
+                });
+            }
+        });
+    }
+
+    // Gọi các hàm để tải danh sách color, size, và category
+    loadColors();
+    loadSizes();
+    loadCategories();
+
+    // Gọi một yêu cầu GET để lấy thông tin sản phẩm và điền vào form
+    $.ajax({
+        url: `http://localhost:8080/product/${idProduct}`,
+        method: "GET",
+    }).done(function (data) {
+        const product = data.data[0];
+        document.getElementById("name").value = product.nameProduct;
+        document.getElementById("description").value = product.description;
+        document.getElementById("price").value = product.price;
+        document.getElementById("quantity").value = product.quantity;
+
+        document.getElementById("idColor").value = product.idColor;
+        document.getElementById("idSize").value = product.idSize;
+        document.getElementById("idCategory").value = product.idCategory;
+    });
+
+    // Xử lý sự kiện submit của form để gửi yêu cầu cập nhật sản phẩm
+    document.getElementById("editProductForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Ngăn chặn form tự động submit
+
+        const name = document.getElementById("name").value;
+        const description = document.getElementById("description").value;
+        const price = parseFloat(document.getElementById("price").value);
+        const quantity = parseInt(document.getElementById("quantity").value);
+        const idColor = parseInt(document.getElementById("idColor").value);
+        const idSize = parseInt(document.getElementById("idSize").value);
+        const idCategory = parseInt(document.getElementById("idCategory").value);
+
+        const formData = new FormData(this);
+        formData.set("name", name);
+        formData.set("description", description);
+        formData.set("price", price);
+        formData.set("quantity", quantity);
+        formData.set("idColor", idColor);
+        formData.set("idSize", idSize);
+        formData.set("idCategory", idCategory);
+
+        // Gửi yêu cầu cập nhật sản phẩm bằng phương thức PUT
+        $.ajax({
+            url: `http://localhost:8080/product/${idProduct}`,
+            method: "PUT",
+            data: formData,
+            contentType: false,
+            processData: false,
+        }).done(function (data) {
+            // Xử lý sau khi cập nhật sản phẩm (ví dụ: cập nhật giao diện)
+            alert("Sản phẩm đã được cập nhật.");
+            window.location.href = 'manage-products.html';
+        });
+    });
+</script>
+
+<script>document.getElementById("backToProduct").addEventListener("click", function() {
+        window.location.href = 'manage-products.html';
+    });</script>
+</body>
+</html>

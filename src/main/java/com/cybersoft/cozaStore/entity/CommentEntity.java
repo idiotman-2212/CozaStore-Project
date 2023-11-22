@@ -23,6 +23,11 @@ public class CommentEntity {
     @Column(name = "create_date")
     private Date createDate;
 
+    @PrePersist
+    protected void onCreate() {
+        createDate = new Date();
+    }
+
     @ManyToOne
     @JoinColumn(name = "id_blog")
     private BlogEntity blog;

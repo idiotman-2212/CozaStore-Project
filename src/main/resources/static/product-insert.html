@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Product Insert</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="images/icons/favicon.png" rel="icon" type="image/png"/>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="fonts/iconic/css/material-design-iconic-font.min.css" rel="stylesheet" type="text/css">
+    <link href="fonts/linearicons-v1.0.0/icon-font.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/animate/animate.css" rel="stylesheet" type of="text/css">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/animsition/css/animsition.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/slick/slick.css" rel="stylesheet" type="text/css">
+    <link href="vendor/MagnificPopup/magnific-popup.css" rel="stylesheet" type="text/css">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css">
+    <link href="css/util.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body class="animsition">
+<header class="header-v4">
+    <div class="container-menu-desktop">
+        <div class="wrap-menu-desktop how-shadow1">
+            <nav class="limiter-menu-desktop container">
+                <a class="logo" href="#">
+                    <img alt="IMG-LOGO" src="images/icons/logo-01.png">
+                </a>
+                <div class="menu-desktop">
+                    <ul class="main-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="manage-products.html">Manage Products</a></li>
+                        <li><a href="manage-users.html">Manage Users</a></li>
+                        <li><a href="manage-blogs.html">Manager Blogs</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="wrap-icon-header flex-w flex-r-m">
+                    <a class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0"
+                       href="#">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <h1 style="text-align: center">Insert Product</h1>
+        <form enctype="multipart/form-data" id="insertProductForm">
+            <!-- Product Name -->
+            <div class="form-group">
+                <label for="name">Product Name</label>
+                <input class="form-control" id="name" name="name" required type="text">
+            </div>
+            <!-- Description -->
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" name="description" required rows="4"></textarea>
+            </div>
+            <!-- Price -->
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input class="form-control" id="price" name="price" required type="number">
+            </div>
+            <!-- Quantity -->
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input class="form-control" id="quantity" name="quantity" required type="number">
+            </div>
+            <!-- Color -->
+            <div class="form-group">
+                <label for="idColor">Color</label>
+                <select class="form-control" id="idColor" name="idColor" required>
+                    <option value="" disabled selected>Select Color</option>
+                    <!-- Populate Color options from server data -->
+                </select>
+            </div>
+            <!-- Size -->
+            <div class="form-group">
+                <label for="idSize">Size</label>
+                <select class="form-control" id="idSize" name="idSize" required>
+                    <option value="" disabled selected>Select Size</option>
+                    <!-- Populate Size options from server data -->
+                </select>
+            </div>
+            <!-- Category -->
+            <div class="form-group">
+                <label for="idCategory">Category</label>
+                <select class="form-control" id="idCategory" name="idCategory" required>
+                    <option value="" disabled selected>Select Category</option>
+                    <!-- Populate Category options from server data -->
+                </select>
+            </div>
+            <!-- Product Image -->
+            <div class="form-group">
+                <label for="image">Product Image</label>
+                <input accept=".jpg, .jpeg, .png" class="form-control-file" id="image" name="file" required type="file">
+            </div>
+            <button class="btn btn-primary" type="submit">Insert Product</button>
+            <button class="btn btn-primary" id="backToProduct" type="button">Back To Product</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <script src="vendor/slick/slick.min.js"></script>
+    <script src="js/slick-custom.js"></script>
+    <script src="vendor/parallax100/parallax100.js"></script>
+    <script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+    <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <script src="vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    $(document).ready(function () {
+        $("#insertProductForm").submit(function (event) {
+            event.preventDefault();
+            var form = $(this);
+            var formData = new FormData(form[0]);
+            $.ajax({
+                url: "http://localhost:8080/product",
+                method: "POST",
+                data: formData,
+                contentType: false,
+                processData: false
+            }).done(function (data) {
+                alert("Product inserted successfully!");
+                // Clear the form
+                form[0].reset();
+                window.location.href = 'manage-products.html';
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                alert("Failed to insert product. Error: " + errorThrown);
+            });
+        });
+    });
+    document.getElementById("backToProduct").addEventListener("click", function() {
+        window.location.href = 'manage-products.html';
+    });
+
+    // Load Color options
+    $.ajax({
+        url: "http://localhost:8080/color", // Endpoint to fetch colors
+        method: "GET",
+        success: function (data) {
+            var colorSelect = $("#idColor");
+            colorSelect.empty();
+            colorSelect.append($("<option disabled selected>").val("").text("Select Color"));
+            $.each(data.data, function (index, color) {
+                colorSelect.append($("<option>").val(color.idColor).text(color.nameColor));
+            });
+        }
+    });
+
+    // Load Size options
+    $.ajax({
+        url: "http://localhost:8080/size", // Endpoint to fetch sizes
+        method: "GET",
+        success: function (data) {
+            var sizeSelect = $("#idSize");
+            sizeSelect.empty();
+            sizeSelect.append($("<option disabled selected>").val("").text("Select Size"));
+            $.each(data.data, function (index, size) {
+                sizeSelect.append($("<option>").val(size.idSize).text(size.nameSize));
+            });
+        }
+    });
+
+    // Load Category options
+    $.ajax({
+        url: "http://localhost:8080/category", // Endpoint to fetch categories
+        method: "GET",
+        success: function (data) {
+            var categorySelect = $("#idCategory");
+            categorySelect.empty();
+            categorySelect.append($("<option disabled selected>").val("").text("Select Category"));
+            $.each(data.data, function (index, category) {
+                categorySelect.append($("<option>").val(category.id).text(category.name));
+            });
+        }
+    });
+    </script>
+</header>
+</body>
+</html>

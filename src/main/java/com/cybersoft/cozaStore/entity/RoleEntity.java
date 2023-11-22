@@ -17,6 +17,11 @@ public class RoleEntity {
     @Column(name="create_date")
     private Date createDate;
 
+    @PrePersist
+    protected void onCreate() {
+        createDate = new Date();
+    }
+
     @OneToMany(mappedBy = "role")
     private List<UserEntity> users;
 

@@ -28,6 +28,11 @@ public class CarouselEntity {
         @Column(name = "create_date")
         private Date createDate;
 
+    @PrePersist
+    protected void onCreate() {
+        createDate = new Date();
+    }
+
 
     public int getId() {
         return id;

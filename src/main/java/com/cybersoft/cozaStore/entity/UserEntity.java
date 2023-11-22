@@ -23,6 +23,11 @@ public class UserEntity {
     @Column(name = "create_date")
     private Date createDate;
 
+    @PrePersist
+    protected void onCreate() {
+        createDate = new Date();
+    }
+
     @ManyToOne
     @JoinColumn(name = "id_role")
     private RoleEntity role;
@@ -35,6 +40,17 @@ public class UserEntity {
 
     @OneToMany(mappedBy = "user")
     private List<CartEntity> carts;
+
+    @OneToMany(mappedBy = "user")
+    private List<WishListEntity> wishlists;
+
+    public List<WishListEntity> getWishlists() {
+        return wishlists;
+    }
+
+    public void setWishlists(List<WishListEntity> wishlists) {
+        this.wishlists = wishlists;
+    }
 
     public List<BlogEntity> getBlogs() {
         return blogs;

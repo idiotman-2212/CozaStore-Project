@@ -13,10 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.nio.file.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class ProductService implements ProductServiceImp {
@@ -32,7 +29,8 @@ public class ProductService implements ProductServiceImp {
     @Value("${root.folder}")
     private String rootFolder;
     @Override
-    public boolean insertProduct(String name, MultipartFile file, double price, int quanity, int idColor, int idSize, int idCategory, String description) throws IOException {
+    public boolean insertProduct(String name, MultipartFile file, double price, int quanity,
+                                 int idColor, int idSize, int idCategory, String description) throws IOException {
 
         String pathImage= rootFolder + "/" + file.getOriginalFilename();
 
@@ -51,6 +49,7 @@ public class ProductService implements ProductServiceImp {
         productEntity.setQuanity(quanity);
         productEntity.setDescription(description);
 
+
         ColorEntity colorEntity = new ColorEntity();
         colorEntity.setId(idColor);
         productEntity.setColor(colorEntity);
@@ -62,6 +61,8 @@ public class ProductService implements ProductServiceImp {
         CategoryEntity categoryEntity = new CategoryEntity();
         categoryEntity.setId(idCategory);
         productEntity.setCategory(categoryEntity);
+
+        productEntity.setCreateDate(new Date());
 
         productRepository.save(productEntity);
         return true;
@@ -79,6 +80,8 @@ public class ProductService implements ProductServiceImp {
             productResponse.setImage(item.getImage());
             productResponse.setDesc(item.getDescription());
             productResponse.setPrice(item.getPrice());
+            productResponse.setCreateDate(item.getCreateDate());
+
 
             responseList.add(productResponse);
         }
@@ -99,6 +102,7 @@ public class ProductService implements ProductServiceImp {
             productResponse.setImage(productEntity.getImage());
             productResponse.setDesc(productEntity.getDescription());
             productResponse.setPrice(productEntity.getPrice());
+            productResponse.setCreateDate(productEntity.getCreateDate());
 
             List<ProductResponse> productResponses = new ArrayList<>();
             productResponses.add(productResponse);
@@ -123,7 +127,8 @@ public class ProductService implements ProductServiceImp {
     }
 
     @Override
-    public boolean updateProductById(int idProduct, String name, MultipartFile file, String description, double price, int quanity, int idColor, int idSize, int idCategory) throws IOException {
+    public boolean updateProductById(int idProduct, String name, MultipartFile file, String description,
+                                     double price, int quanity, int idColor, int idSize, int idCategory) throws IOException {
         Optional<ProductEntity> productOptional = productRepository.findById(idProduct);
         List<ProductResponse> responseList = new ArrayList<>();
 
@@ -146,6 +151,7 @@ public class ProductService implements ProductServiceImp {
             productEntity.setQuanity(quanity);
             productEntity.setDescription(description);
 
+
             ColorEntity colorEntity = new ColorEntity();
             colorEntity.setId(idColor);
             productEntity.setColor(colorEntity);
@@ -157,6 +163,8 @@ public class ProductService implements ProductServiceImp {
             CategoryEntity categoryEntity = new CategoryEntity();
             categoryEntity.setId(idCategory);
             productEntity.setCategory(categoryEntity);
+
+            productEntity.setCreateDate(new Date());
 
             productRepository.save(productEntity);
 
@@ -180,7 +188,27 @@ public class ProductService implements ProductServiceImp {
             productResponse.setImage(item.getImage());
             productResponse.setDesc(item.getDescription());
             productResponse.setPrice(item.getPrice());
+            productResponse.setCreateDate(item.getCreateDate());
 
+            responseList.add(productResponse);
+        }
+
+        return responseList;
+    }
+
+    @Override
+    public List<ProductResponse> searchProducts(String query) {
+        List<ProductEntity> productList = productRepository.searchProducts(query);
+        List<ProductResponse> responseList = new ArrayList<>();
+
+        for (ProductEntity p: productList) {
+            ProductResponse productResponse = new ProductResponse();
+            productResponse.setId(p.getId());
+            productResponse.setName(p.getName());
+            productResponse.setImage(p.getImage());
+            productResponse.setDesc(p.getDescription());
+            productResponse.setPrice(p.getPrice());
+            productResponse.setCreateDate(p.getCreateDate());
             responseList.add(productResponse);
         }
 
