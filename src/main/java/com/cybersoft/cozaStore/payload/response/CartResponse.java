@@ -1,16 +1,29 @@
 package com.cybersoft.cozaStore.payload.response;
 
 public class CartResponse {
-    private int cart;
+    private int idCart;
+    private double totalCostProduct;
     private int quanity;
     private String nameProduct;
+    private String nameUser;
 
-    public int getCart() {
-        return cart;
+    // Thêm trường mới
+
+    public int getIdCart() {
+        return idCart;
     }
 
-    public void setCart(int cart) {
-        this.cart = cart;
+    public void setIdCart(int idCart) {
+        this.idCart = idCart;
+    }
+
+
+    public double getTotalCostProduct() {
+        return totalCostProduct;
+    }
+
+    public void setTotalCostProduct(double totalCostProduct) {
+        this.totalCostProduct = totalCostProduct;
     }
 
     public int getQuanity() {
@@ -28,4 +41,14 @@ public class CartResponse {
     public void setNameProduct(String nameProduct) {
         this.nameProduct = nameProduct;
     }
+
+    public String getNameUser() {
+        return nameUser;
+    }
+
+    public void setNameUser(String nameUser) {
+        this.nameUser = nameUser;
+    }
+
 }
+

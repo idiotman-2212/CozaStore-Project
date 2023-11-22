@@ -17,6 +17,11 @@ public class SizeEntity {
     @Column(name = "create_date")
     private Date createDate;
 
+    @PrePersist
+    protected void onCreate() {
+        createDate = new Date();
+    }
+
     @OneToMany(mappedBy = "size")
     private List<ProductEntity> products;
 

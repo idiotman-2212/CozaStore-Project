@@ -1,5 +1,7 @@
 package com.cybersoft.cozaStore.payload.response;
 
+import java.util.Date;
+
 public class ProductResponse {
     private int id;
 
@@ -9,6 +11,16 @@ public class ProductResponse {
     private double price;
 
     private String desc;
+
+    private Date createDate;
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
 
     public String getDesc() {
         return desc;

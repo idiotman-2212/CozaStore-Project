@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Product</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="images/icons/favicon.png" rel="icon" type="image/png"/>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="fonts/iconic/css/material-design-iconic-font.min.css" rel="stylesheet" type="text/css">
+    <link href="fonts/linearicons-v1.0.0/icon-font.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/animate/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/util.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <style> body { overflow: auto; } </style>
+</head>
+<body class="animsition">
+<header class="header-v4">
+    <div class="container-menu-desktop">
+        <div class="wrap-menu-desktop how-shadow1">
+            <nav class="limiter-menu-desktop container">
+                <a class="logo" href="#">
+                    <img alt="IMG-LOGO" src="images/icons/logo-01.png">
+                </a>
+                <div class="menu-desktop">
+                    <ul class="main-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="manage-products.html">Manage Products</a></li>
+                        <li><a href="manage-users.html">Manage Users</a></li>
+                        <li><a href="manage-blogs.html">Manager Blogs</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="wrap-icon-header flex-w flex-r-m">
+                    <a class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0"
+                       href="#">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="bg0 m-t-23 p-b-140">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <a class="btn btn-success" href="product-insert.html">New Product</a>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Size</th>
+                        <th>Color</th>
+                        <th>Category</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody id="product-list"></tbody>
+                </table>
+            </div>
+            <div class="col-lg-12 text-center">
+                <div class="pagination" id="pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="vendor/animsition/js/animsition.min.js"></script>
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/select2/select2.min.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="js/slick-custom.js"></script>
+<script src="js/main.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+
+<script>
+    let nextProductId = 1;
+</script>
+
+<script>
+    let currentPage = 1; // Trang hiện tại
+const productsPerPage = 5; // Số sản phẩm trên mỗi trang
+
+function displayProducts(products) {
+    const startIndex = (currentPage - 1) * productsPerPage;
+    const endIndex = startIndex + productsPerPage;
+    const productsToDisplay = products.slice(startIndex, endIndex);
+
+    $("#product-list").empty();
+    productsToDisplay.forEach(function (product) {
+        var productRow = `
+            <tr>
+                <td>${product.idProduct}</td>
+                <td>${product.nameProduct}</td>
+                <td><img src="images/${product.image}" width="100"></td>
+                <td>${product.description}</td>
+                <td>${product.price}</td>
+                <td>${product.nameSize}</td>
+                <td>${product.nameColor}</td>
+                <td>${product.nameCategory}</td>
+                <td>
+                    <a href="product-edit.html?idProduct=${product.idProduct}" class="btn btn-primary">EDIT</a>
+                    <button class="btn btn-danger btn-delete-product" data-product-id="${product.idProduct}">DELETE</button>
+                </td>
+            </tr>`;
+        $("#product-list").append(productRow);
+    });
+}
+
+function loadProducts() {
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:8080/product",
+        success: function (data) {
+            displayProducts(data.data);
+            createPagination(data.data);
+        },
+        error: function () {
+            console.log("Failed to load product data.");
+        }
+    });
+}
+
+function createPagination(products) {
+    const totalPages = Math.ceil(products.length / productsPerPage);
+    $("#pagination").empty();
+    for (let i = 1; i <= totalPages; i++) {
+        const pageItem = `<li class="page-item"><a class="page-link" href="#" data-page="${i}">${i}</a></li>`;
+        $("#pagination").append(pageItem);
+    }
+
+    // Xử lý sự kiện khi người dùng chọn trang
+    $(".page-link").on("click", function () {
+        currentPage = parseInt($(this).data("page"));
+        displayProducts(products);
+    });
+}
+
+$(document).ready(function () {
+    loadProducts();
+});
+
+$(document).on("click", ".btn-delete-product", function() {
+    const productId = $(this).data("product-id");
+    if (confirm("Bạn có chắc muốn xóa sản phẩm này?")) {
+        $.ajax({
+            url: `http://localhost:8080/product/${productId}`,
+            method: "DELETE",
+        }).done(function () {
+            alert("Sản phẩm đã được xóa.");
+            loadProducts(); // Cập nhật danh sách sản phẩm sau khi xóa
+        });
+    }
+});
+
+</script>
+</body>
+</html>

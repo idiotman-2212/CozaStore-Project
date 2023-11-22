@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Lấy token từ localStorage
+            const token = localStorage.getItem("accessToken");
+
+            if (token) {
+
+                const decodedToken = parseJwt(token);
+
+                if (decodedToken) {
+
+                    const userEmail = decodedToken.sub;
+                    document.getElementById("userEmail").textContent = userEmail;
+                }
+            }
+        });
+
+
+        function parseJwt(token) {
+            try {
+                const base64Url = token.split('.')[1];
+                const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                const jsonPayload = decodeURIComponent(atob(base64).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+                return JSON.parse(jsonPayload);
+            } catch (e) {
+                console.error("Error parsing JWT:", e);
+                return null;
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>User Profile</h1>
+<p>Email: <span id="userEmail"></span></p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+</head>
+<body>
+<h1>User Profile</h1>
+<p>Welcome, <span id="username"></span>!</p>
+</body>
+
+<script>
+    // Lấy token từ localStorage
+    const token = localStorage.getItem('token');
+
+    // Giải mã token (đặc biệt, lấy thông tin từ payload của token)
+    const tokenParts = token.split('.');
+    const payload = JSON.parse(atob(tokenParts[1]));
+
+    // Hiển thị username lên trang
+    const usernameElement = document.getElementById('username');
+    usernameElement.textContent = payload.sub; // 'sub' là trường username trong payload
+</script>
+
+</html>

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 public interface ProductServiceImp {
@@ -19,8 +20,10 @@ public interface ProductServiceImp {
 
     boolean updateProductById(int idProduct, String name,
                               MultipartFile file, String description, double price,
-                              int quanity,int idColor, int idSize, int idCategory) throws IOException;
+                              int quanity, int idColor, int idSize, int idCategory) throws IOException;
 
     List<ProductResponse> getProductByName(String productName);
+
+    List<ProductResponse> searchProducts(String query);
 
 }

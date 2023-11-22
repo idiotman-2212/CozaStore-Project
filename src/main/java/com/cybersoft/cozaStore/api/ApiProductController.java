@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -102,7 +103,7 @@ public class ApiProductController {
     public ResponseEntity<?> updateProductById(@PathVariable int idProduct, @RequestParam String name,
                                                @RequestParam MultipartFile file, @RequestParam String description, @RequestParam double price,
                                                @RequestParam int quanity, @RequestParam int idColor, @RequestParam int idSize, @RequestParam int idCategory
-    ) throws IOException {
+                                               ) throws IOException {
        boolean isUpdated = productServiceImp.updateProductById(idProduct, name, file, description, price, quanity,
                 idColor, idSize, idCategory);
 
@@ -121,5 +122,24 @@ public class ApiProductController {
         }
     }
 
+    @GetMapping("/search")
+    public BaseResponse searchProduct(@RequestParam String query) {
+        BaseResponse response = new BaseResponse();
 
+        try {
+            List<ProductResponse> productList = productServiceImp.searchProducts(query);
+
+            if (productList.isEmpty()) {
+                response.setMessage("No products found for the given query.");
+            } else {
+                response.setData(productList);
+                response.setMessage("Products found successfully.");
+            }
+
+        } catch (Exception e) {
+            response.setMessage("An error occurred while searching for products.");
+        }
+
+        return response;
+    }
 }

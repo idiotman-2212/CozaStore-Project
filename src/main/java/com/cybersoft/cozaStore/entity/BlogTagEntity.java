@@ -19,6 +19,11 @@ public class BlogTagEntity {
     @Column(name = "create_date")
     private Date createDate;
 
+    @PrePersist
+    protected void onCreate() {
+        createDate = new Date();
+    }
+
 
     public BlogEntity getBlog() {
         return blog;

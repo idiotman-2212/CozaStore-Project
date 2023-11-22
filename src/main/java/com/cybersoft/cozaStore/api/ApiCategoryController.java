@@ -36,12 +36,20 @@ public class ApiCategoryController {
     @GetMapping("/{idCategory}")
     public ResponseEntity<?> getCategoryById(@PathVariable int idCategory){
         List<CategoryResponse> responseList = categoryServiceImp.getCategoryById(idCategory);
-        BaseResponse baseResponse = new BaseResponse();
-        baseResponse.setMessage("Get category by id");
-        baseResponse.setData(responseList);
-        baseResponse.setStatusCode(200);
+        if (categoryRepository.existsById(idCategory)) {
+            BaseResponse baseResponse = new BaseResponse();
+            baseResponse.setMessage("Get category by id: " + idCategory);
+            baseResponse.setData(responseList);
+            baseResponse.setStatusCode(200);
+            return new ResponseEntity<>(baseResponse, HttpStatus.OK);
+        }else{
+            BaseResponse errorResponse = new BaseResponse();
+            errorResponse.setStatusCode(404);
+            errorResponse.setMessage("Category with id '" + idCategory + "' not found.");
+            return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
 
-        return new ResponseEntity<>(baseResponse, HttpStatus.OK);
+        }
+
     }
 
     @PostMapping("")
@@ -82,5 +90,32 @@ public class ApiCategoryController {
             errorResponse.setMessage("Category with id '" + categoryId + "' not found.");
             return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
         }
+    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteCategoryById(@PathVariable int id){
+        boolean isDelete = categoryServiceImp.deleteCategoryById(id);
+        if(isDelete){
+            BaseResponse baseResponse = new BaseResponse();
+            baseResponse.setStatusCode(200);
+            baseResponse.setMessage("Delete category successfully.");
+            return new ResponseEntity<>(baseResponse, HttpStatus.OK);
+        }else{
+            return new ResponseEntity<>("Category not found or unalbe to delete.", HttpStatus.OK);
+        }
+    }
+
+    @GetMapping("/search")
+    public BaseResponse searchCategories(@RequestParam String query){
+        BaseResponse baseResponse = new BaseResponse();
+        List<CategoryResponse> responseList = categoryServiceImp.searchCategories(query);
+
+        if(responseList.isEmpty()){
+            baseResponse.setMessage("No category for the given query.");
+        }else{
+            baseResponse.setData(responseList);
+            baseResponse.setMessage("Category found successfully.");
+
+        }
+        return baseResponse;
     }
 }

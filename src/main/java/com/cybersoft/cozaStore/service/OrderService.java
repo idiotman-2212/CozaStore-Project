@@ -1,9 +1,6 @@
 package com.cybersoft.cozaStore.service;
 
-import com.cybersoft.cozaStore.entity.CartEntity;
-import com.cybersoft.cozaStore.entity.OrderEntity;
-import com.cybersoft.cozaStore.entity.ProductEntity;
-import com.cybersoft.cozaStore.entity.UserEntity;
+import com.cybersoft.cozaStore.entity.*;
 import com.cybersoft.cozaStore.payload.response.CartResponse;
 import com.cybersoft.cozaStore.payload.response.OrderResponse;
 import com.cybersoft.cozaStore.payload.response.ProductResponse;
@@ -56,16 +53,15 @@ public class OrderService implements OrderServiceImp {
 
         List<OrderResponse> responseList = new ArrayList<>();
 
-        for (OrderEntity item: list) {
-            OrderResponse orderResponse = new OrderResponse();
-            orderResponse.setId(item.getId());
-            orderResponse.setCreateDate(item.getCreateDate());
+        for (OrderEntity o: list){
+                OrderResponse orderResponse = new OrderResponse();
+                orderResponse.setId(o.getId());
+                orderResponse.setStatusName(o.getStatus().getName());
+                orderResponse.setUserName(o.getUser().getUsername());
+                orderResponse.setCreateDate(o.getCreateDate());
+                responseList.add(orderResponse);
 
-            orderResponse.setId_user(item.getUser().getId());
-            orderResponse.setId_status(item.getStatus().getId());
-
-            responseList.add(orderResponse);
-        }
+            }
 
         return responseList;
     }

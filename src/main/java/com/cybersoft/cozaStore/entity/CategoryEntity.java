@@ -17,6 +17,11 @@ public class CategoryEntity {
     @Column(name = "create_date")
     private Date createDate;
 
+    @PrePersist
+    protected void onCreate() {
+        createDate = new Date();
+    }
+
     @OneToMany(mappedBy = "category")
     private List<ProductEntity> products;
 

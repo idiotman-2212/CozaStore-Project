@@ -7,28 +7,28 @@ public class OrderResponse {
 
     private Date createDate;
 
-    private int id_user;
+    private String userName;
 
-    private int id_status;
+    private String statusName;
 
     public Date getCreateDate() {
         return createDate;
     }
 
-    public int getId_user() {
-        return id_user;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setId_user(int id_user) {
-        this.id_user = id_user;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public int getId_status() {
-        return id_status;
+    public String getStatusName() {
+        return statusName;
     }
 
-    public void setId_status(int id_status) {
-        this.id_status = id_status;
+    public void setStatusName(String statusName) {
+        this.statusName = statusName;
     }
 
     public Date getCreateDate(Date createDate) {

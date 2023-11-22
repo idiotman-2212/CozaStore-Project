@@ -17,6 +17,11 @@ public class StatusEntity {
     @Column(name = "create_date")
     private Date createDate;
 
+    @PrePersist
+    protected void onCreate() {
+        createDate = new Date();
+    }
+
     @OneToMany(mappedBy = "status")
     private List<OrderEntity> orders;
 

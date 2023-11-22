@@ -1,11 +1,11 @@
 CREATE DATABASE cozastore;
 USE cozastore;
-
+DROP database cozastore;
 CREATE TABLE user
 (
     id          int auto_increment,
     username    varchar(30),
-    password    varchar(30),
+    password    varchar(255),
     email       varchar(30),
     id_role     int,
     create_date datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -132,6 +132,7 @@ UPDATE
 	CURRENT_TIMESTAMP,
 	PRIMARY KEY (id)
 );
+
 CREATE TABLE file (
 	id int auto_increment,
 	name varchar(255),
@@ -140,6 +141,31 @@ CREATE TABLE file (
 
 	primary key (id)
 );
+
+CREATE TABLE reset_password (
+    id INT AUTO_INCREMENT,
+    id_user INT,
+    token VARCHAR(255),
+    expiry_date DATETIME DEFAULT CURRENT_TIMESTAMP ON
+UPDATE
+CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE wishlist (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_user INT,
+    id_product INT
+);
+
+
+ALTER TABLE wishlist ADD CONSTRAINT fk_wishlist_id_user FOREIGN KEY (id_user) REFERENCES user (id) ON DELETE CASCADE;
+ALTER TABLE wishlist ADD CONSTRAINT fk_wishlist_id_product FOREIGN KEY (id_product) REFERENCES product (id) ON DELETE CASCADE;
+
+
+ALTER TABLE reset_password ADD CONSTRAINT fk_reset_password_id_user FOREIGN KEY (id_user) REFERENCES user (id) ON DELETE CASCADE;
+
+
 ALTER TABLE carousel ADD CONSTRAINT fk_carousel_category_id FOREIGN KEY (id_category)REFERENCES category (id) ON DELETE CASCADE;
 
 ALTER TABLE user ADD CONSTRAINT fk_user_id_role FOREIGN KEY (id_role)REFERENCES role(id) ON DELETE CASCADE;
@@ -169,12 +195,15 @@ ALTER TABLE blog_tag ADD CONSTRAINT fk_blog_tag_id_tag FOREIGN KEY (id_tag)REFER
 
 SELECT * FROM `user` u ;
 select * from product p ;
+SELECT * FROM cart c ;
 SELECT * FROM file f ;
 SELECT * FROM `size` s ;
 SELECT * FROM category c ;
 SELECT * FROM color c ;
 SELECT * FROM `role` r ;
-SELECT * FROM cart c ;
+SELECT * FROM orders o ;
+SELECT * FROM status s ;
+SELECT * FROM product_order po ;
+SELECT * FROM wishlist w ;
 
 
-DELETE  FROM cart c WHERE c.id_user = 1;
