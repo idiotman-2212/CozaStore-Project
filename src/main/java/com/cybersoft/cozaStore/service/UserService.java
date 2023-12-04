@@ -7,6 +7,7 @@ import com.cybersoft.cozaStore.payload.response.UserResponse;
 import com.cybersoft.cozaStore.repository.UserRepository;
 import com.cybersoft.cozaStore.service.imp.UserServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,13 +19,25 @@ public class UserService implements UserServiceImp {
     @Autowired
     private UserRepository userRepository;
 
-//    @Autowired
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    //    @Autowired
 //    private PasswordResetTokenRepository passwordTokenRepository;
     @Override
     public UserEntity findByEmail(String email) {
+
         return userRepository.findByEmail(email);
     }
 
+    public boolean checkPassword(String email, String password) {
+        UserEntity user = userRepository.findByEmail(email);
+        return user != null && passwordEncoder.matches(password, user.getPassword());
+    }
+
+    public boolean checkEmail(String email) {
+        return userRepository.existsByEmail(email);
+    }
 
 
 //    @Override

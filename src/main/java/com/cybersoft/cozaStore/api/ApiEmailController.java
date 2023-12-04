@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@RequestMapping("/mail")
+@RequestMapping("/api/mail")
 public class ApiEmailController {
 
     private final EmailServiceImp emailServiceImp;
@@ -25,8 +25,6 @@ public class ApiEmailController {
         baseResponse.setStatusCode(200);
         baseResponse.setMessage("Send email");
         baseResponse.setData(emailResponses);
-
-
         //return emailServiceImp.sendEmail(file, to, subject, body);
         return new ResponseEntity<>(baseResponse, HttpStatus.OK);
     }

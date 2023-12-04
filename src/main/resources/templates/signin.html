@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sign In</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="/css/login.css" rel="stylesheet" type="text/css">
+    <link href="images/icons/favicon.png" rel="icon" type="image/png"/>
+    <link href="fonts/iconic/css/material-design-iconic-font.min.css" rel="stylesheet" type="text/css">
+    <script nonce="33c683b5-5781-432b-9f2f-3cc206e0b91a">
+        // Script code here...
+    </script>
+</head>
+<body class="animsition">
+<div class="login-wrap">
+    <div class="login-html">
+        <input checked="true" class="sign-in" id="tab-1" name="tab" type="radio"><label class="tab" for="tab-1">Sign
+        In</label>
+        <input  class="sign-up" id="tab-2" name="tab" type="radio"><label class="tab" for="tab-2">Sign
+        Up</label>
+
+        <div class="login-form">
+            <div>
+                <form class="sign-in-htm" method="POST" th:action="@{/signin}">
+                    <div class="group">
+                        <label class="label" for="user">Email</label>
+                        <input class="input" id="user" type="text" name="email">
+                    </div>
+                    <div class="group">
+                        <label class="label" for="pass">Password</label>
+                        <input class="input" data-type="password" id="pass" type="password" name="password">
+                    </div>
+                    <div class="group">
+                        <input checked="false" class="check" id="check" type="checkbox">
+                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                    </div>
+                    <div class="group">
+                        <input class="button" id="btn-sign-in" type="submit" value="Sign In">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <a href="forgotpassword.html">Forgot Password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/login.js"></script>
+</body>
+</html>

@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/wishList")
+@RequestMapping("/api/wishList")
 public class WishListController {
 
     @Autowired

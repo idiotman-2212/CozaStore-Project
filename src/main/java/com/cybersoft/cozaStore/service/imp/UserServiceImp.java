@@ -9,6 +9,8 @@ public interface UserServiceImp {
     UserEntity findByEmail(String email);
 
     //void createPasswordResetTokenForUser(UserEntity user, String token);
+    boolean checkPassword(String email, String password);
 
+    boolean checkEmail(String email);
 
 }

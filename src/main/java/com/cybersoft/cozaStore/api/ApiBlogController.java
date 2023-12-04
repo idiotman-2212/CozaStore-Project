@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/blog")
+@RequestMapping("/api/blog")
 public class ApiBlogController {
 
     @Autowired

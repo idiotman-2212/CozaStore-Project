@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/cart")
+@RequestMapping("/api/cart")
 @CrossOrigin
 public class ApiCartController {
     @Autowired

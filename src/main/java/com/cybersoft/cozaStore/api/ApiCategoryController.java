@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/category")
+@RequestMapping("/api/category")
 public class ApiCategoryController {
     @Autowired
     private CategoryServiceImp categoryServiceImp;
