@@ -2,7 +2,7 @@ package com.cybersoft.cozaStore.api;
 
 import com.cybersoft.cozaStore.payload.response.BaseResponse;
 import com.cybersoft.cozaStore.payload.response.RoleResponse;
-import com.cybersoft.cozaStore.service.imp.RoleServiceIml;
+import com.cybersoft.cozaStore.service.imp.RoleServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,12 +17,12 @@ import java.util.List;
 public class ApiRoleController {
 
     @Autowired
-    private RoleServiceIml roleServiceIml;
+    private RoleServiceImp roleServiceImp;
 
 
     @GetMapping("")
     public ResponseEntity<?> getAllRoles(){
-        List<RoleResponse> roleResponseList = roleServiceIml.getAllRoles();
+        List<RoleResponse> roleResponseList = roleServiceImp.getAllRoles();
         BaseResponse baseResponse = new BaseResponse();
         baseResponse.setMessage("Get all roles");
         baseResponse.setData(roleResponseList);

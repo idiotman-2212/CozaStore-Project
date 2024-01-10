@@ -31,8 +31,6 @@ $(document).ready(function(){
                 alert("Sai email hoặc mật khẩu.")
             }
             console.log("server tra ve ", data)
-
-            window.location.href = 'product.html';
         })
     })
 

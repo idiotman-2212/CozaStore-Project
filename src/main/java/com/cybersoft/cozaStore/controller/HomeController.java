@@ -11,6 +11,6 @@ public class HomeController {
     @GetMapping("/index")
     public String home() {
         System.out.println("Hello method call");
-        return "home-2";
+        return "home-02";
     }
 }
