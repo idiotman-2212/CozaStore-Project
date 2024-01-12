@@ -26,7 +26,6 @@ public class EmailService implements EmailServiceImp {
     public String sendEmail(MultipartFile[] file, String to, String subject, String body) {
         try {
             MimeMessage mimeMessage = javaMailSender.createMimeMessage();
-
             MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
 
             mimeMessageHelper.setFrom(fromEmail);
@@ -47,8 +46,23 @@ public class EmailService implements EmailServiceImp {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
-
     }
 
+    @Override
+    public void sendResetPasswordEmail(String to, String subject, String body) {
+        try {
+            MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+            MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, false);
+
+            mimeMessageHelper.setFrom(fromEmail);
+            mimeMessageHelper.setTo(to);
+            mimeMessageHelper.setSubject(subject);
+            mimeMessageHelper.setText(body, true);
+
+            javaMailSender.send(mimeMessage);
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

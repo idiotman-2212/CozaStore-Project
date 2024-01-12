@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/size")
+@RequestMapping("/api/size")
 public class ApiSizeController {
 
     @Autowired

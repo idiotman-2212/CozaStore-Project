@@ -1,20 +1,18 @@
 package com.cybersoft.cozaStore.service;
 
 import com.cybersoft.cozaStore.entity.RoleEntity;
-import com.cybersoft.cozaStore.entity.SizeEntity;
 import com.cybersoft.cozaStore.payload.response.RoleResponse;
-import com.cybersoft.cozaStore.payload.response.SizeResponse;
 import com.cybersoft.cozaStore.repository.RoleRepository;
-import com.cybersoft.cozaStore.repository.SizeRepository;
-import com.cybersoft.cozaStore.service.imp.RoleServiceIml;
+import com.cybersoft.cozaStore.service.imp.RoleServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
-public class RoleService implements RoleServiceIml {
+public class RoleService implements RoleServiceImp {
 
     @Autowired
     private RoleRepository roleRepository;
@@ -32,4 +30,6 @@ public class RoleService implements RoleServiceIml {
         }
         return listResponse;
     }
+
+
 }

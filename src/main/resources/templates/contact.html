@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <!-- Mirrored from preview.colorlib.com/theme/cozastore/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Mar 2023 02:47:09 GMT -->
 <head>
     <title>Contact</title>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="images/icons/favicon.png" rel="icon" type="image/png"/>
+    <link rel="icon" type="image/png" th:href="@{/images/icons/favicon.png}" />
 
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
 
-    <link href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
 
-    <link href="fonts/iconic/css/material-design-iconic-font.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/fonts/iconic/css/material-design-iconic-font.min.css}">
 
-    <link href="fonts/linearicons-v1.0.0/icon-font.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/fonts/linearicons-v1.0.0/icon-font.min.css}">
 
-    <link href="vendor/animate/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/animate/animate.css}">
 
-    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/css-hamburgers/hamburgers.min.css}">
 
-    <link href="vendor/animsition/css/animsition.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/animsition/css/animsition.min.css}">
 
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/select2/select2.min.css}">
 
-    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/perfect-scrollbar/perfect-scrollbar.css}">
 
-    <link href="css/util.css" rel="stylesheet" type="text/css">
-    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/util.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
 
-    <script nonce="a3286cab-1b5f-4a72-bf74-0733e7645f7e">
-        (function(w,d){!function(a,b,c,d){a[c]=a[c]||{};a[c].executed=[];a.zaraz={deferred:[],listeners:[]};a.zaraz.q=[];a.zaraz._f=function(e){return function(){var f=Array.prototype.slice.call(arguments);a.zaraz.q.push({m:e,a:f})}};for(const g of["track","set","debug"])a.zaraz[g]=a.zaraz._f(g);a.zaraz.init=()=>{var h=b.getElementsByTagName(d)[0],i=b.createElement(d),j=b.getElementsByTagName("title")[0];j&&(a[c].t=b.getElementsByTagName("title")[0].text);a[c].x=Math.random();a[c].w=a.screen.width;a[c].h=a.screen.height;a[c].j=a.innerHeight;a[c].e=a.innerWidth;a[c].l=a.location.href;a[c].r=b.referrer;a[c].k=a.screen.colorDepth;a[c].n=b.characterSet;a[c].o=(new Date).getTimezoneOffset();if(a.dataLayer)for(const n of Object.entries(Object.entries(dataLayer).reduce(((o,p)=>({...o[1],...p[1]})))))zaraz.set(n[0],n[1],{scope:"page"});a[c].q=[];for(;a.zaraz.q.length;){const q=a.zaraz.q.shift();a[c].q.push(q)}i.defer=!0;for(const r of[localStorage,sessionStorage])Object.keys(r||{}).filter((t=>t.startsWith("_zaraz_"))).forEach((s=>{try{a[c]["z_"+s.slice(7)]=JSON.parse(r.getItem(s))}catch{a[c]["z_"+s.slice(7)]=r.getItem(s)}}));i.referrerPolicy="origin";i.src="../../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(a[c])));h.parentNode.insertBefore(i,h)};["complete","interactive"].includes(b.readyState)?zaraz.init():a.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);
-    </script>
-</head>
+    <script nonce="a3286cab-1b5f-4a72-bf74-0733e7645f7e">(function(w,d){!function(a,b,c,d){a[c]=a[c]||{};a[c].executed=[];a.zaraz={deferred:[],listeners:[]};a.zaraz.q=[];a.zaraz._f=function(e){return function(){var f=Array.prototype.slice.call(arguments);a.zaraz.q.push({m:e,a:f})}};for(const g of["track","set","debug"])a.zaraz[g]=a.zaraz._f(g);a.zaraz.init=()=>{var h=b.getElementsByTagName(d)[0],i=b.createElement(d),j=b.getElementsByTagName("title")[0];j&&(a[c].t=b.getElementsByTagName("title")[0].text);a[c].x=Math.random();a[c].w=a.screen.width;a[c].h=a.screen.height;a[c].j=a.innerHeight;a[c].e=a.innerWidth;a[c].l=a.location.href;a[c].r=b.referrer;a[c].k=a.screen.colorDepth;a[c].n=b.characterSet;a[c].o=(new Date).getTimezoneOffset();if(a.dataLayer)for(const n of Object.entries(Object.entries(dataLayer).reduce(((o,p)=>({...o[1],...p[1]})))))zaraz.set(n[0],n[1],{scope:"page"});a[c].q=[];for(;a.zaraz.q.length;){const q=a.zaraz.q.shift();a[c].q.push(q)}i.defer=!0;for(const r of[localStorage,sessionStorage])Object.keys(r||{}).filter((t=>t.startsWith("_zaraz_"))).forEach((s=>{try{a[c]["z_"+s.slice(7)]=JSON.parse(r.getItem(s))}catch{a[c]["z_"+s.slice(7)]=r.getItem(s)}}));i.referrerPolicy="origin";i.src="../../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(a[c])));h.parentNode.insertBefore(i,h)};["complete","interactive"].includes(b.readyState)?zaraz.init():a.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
 <body class="animsition">
 
 <header class="header-v4">
@@ -46,16 +43,16 @@
                     Free shipping for standard order over $100
                 </div>
                 <div class="right-top-bar flex-w h-full">
-                    <a class="flex-c-m trans-04 p-lr-25" href="#">
+                    <a th:href="@{/#}" class="flex-c-m trans-04 p-lr-25">
                         Help & FAQs
                     </a>
-                    <a class="flex-c-m trans-04 p-lr-25" href="#">
+                    <a th:href="@{/#}" class="flex-c-m trans-04 p-lr-25">
                         My Account
                     </a>
-                    <a class="flex-c-m trans-04 p-lr-25" href="#">
+                    <a th:href="@{/#}" class="flex-c-m trans-04 p-lr-25">
                         EN
                     </a>
-                    <a class="flex-c-m trans-04 p-lr-25" href="#">
+                    <a th:href="@{/#}" class="flex-c-m trans-04 p-lr-25">
                         USD
                     </a>
                 </div>
@@ -64,34 +61,34 @@
         <div class="wrap-menu-desktop how-shadow1">
             <nav class="limiter-menu-desktop container">
 
-                <a class="logo" href="#">
-                    <img alt="IMG-LOGO" src="images/icons/logo-01.png">
+                <a th:href="@{/#}" class="logo">
+                    <img th:src ="@{/images/icons/logo-01.png}" alt="IMG-LOGO">
                 </a>
 
                 <div class="menu-desktop">
                     <ul class="main-menu">
                         <li>
-                            <a href="index.html">Home</a>
+                            <a th:href="@{/index-2}">Home</a>
                             <ul class="sub-menu">
-                                <li><a href="index-2.html">Homepage 1</a></li>
-                                <li><a href="home-02.html">Homepage 2</a></li>
-                                <li><a href="home-03.html">Homepage 3</a></li>
+                                <li><a th:href="@{/index-2}">Homepage 1</a></li>
+                                <li><a th:href="@{/home-02}">Homepage 2</a></li>
+                                <li><a th:href="@{/home-03}">Homepage 3</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="product.html">Shop</a>
+                            <a th:href="@{/product}">Shop</a>
                         </li>
                         <li class="label1" data-label1="hot">
-                            <a href="shoping-cart.html">Features</a>
+                            <a th:href="@{/shoping-cart}">Features</a>
                         </li>
                         <li>
-                            <a href="blog.html">Blog</a>
+                            <a th:href="@{/blog}">Blog</a>
                         </li>
                         <li>
-                            <a href="about.html">About</a>
+                            <a th:href="@{/about}">About</a>
                         </li>
                         <li class="active-menu">
-                            <a href="contact.html">Contact</a>
+                            <a th:href="@{/contact}">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -100,12 +97,10 @@
                     <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
                         <i class="zmdi zmdi-search"></i>
                     </div>
-                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
-                         data-notify="2">
+                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
                         <i class="zmdi zmdi-shopping-cart"></i>
                     </div>
-                    <a class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0"
-                       href="#">
+                    <a th:href="@{/#}" class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
                         <i class="zmdi zmdi-favorite-outline"></i>
                     </a>
                 </div>
@@ -116,19 +111,17 @@
     <div class="wrap-header-mobile">
 
         <div class="logo-mobile">
-            <a href="index-2.html"><img alt="IMG-LOGO" src="images/icons/logo-01.png"></a>
+            <a th:href="@{/index-2}"><img th:src ="@{/images/icons/logo-01.png}" alt="IMG-LOGO"></a>
         </div>
 
         <div class="wrap-icon-header flex-w flex-r-m m-r-15">
             <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
                 <i class="zmdi zmdi-search"></i>
             </div>
-            <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart"
-                 data-notify="2">
+            <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="2">
                 <i class="zmdi zmdi-shopping-cart"></i>
             </div>
-            <a class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0"
-               href="#">
+            <a th:href="@{/#}" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
                 <i class="zmdi zmdi-favorite-outline"></i>
             </a>
         </div>
@@ -149,16 +142,16 @@
             </li>
             <li>
                 <div class="right-top-bar flex-w h-full">
-                    <a class="flex-c-m p-lr-10 trans-04" href="#">
+                    <a th:href="@{/#}" class="flex-c-m p-lr-10 trans-04">
                         Help & FAQs
                     </a>
-                    <a class="flex-c-m p-lr-10 trans-04" href="#">
+                    <a th:href="@{/#}" class="flex-c-m p-lr-10 trans-04">
                         My Account
                     </a>
-                    <a class="flex-c-m p-lr-10 trans-04" href="#">
+                    <a th:href="@{/#}" class="flex-c-m p-lr-10 trans-04">
                         EN
                     </a>
-                    <a class="flex-c-m p-lr-10 trans-04" href="#">
+                    <a th:href="@{/#}" class="flex-c-m p-lr-10 trans-04">
                         USD
                     </a>
                 </div>
@@ -166,30 +159,30 @@
         </ul>
         <ul class="main-menu-m">
             <li>
-                <a href="index-2.html">Home</a>
+                <a th:href="@{/index-2}">Home</a>
                 <ul class="sub-menu-m">
-                    <li><a href="index-2.html">Homepage 1</a></li>
-                    <li><a href="home-02.html">Homepage 2</a></li>
-                    <li><a href="home-03.html">Homepage 3</a></li>
+                    <li><a th:href="@{/index-2}">Homepage 1</a></li>
+                    <li><a th:href="@{/home-02}">Homepage 2</a></li>
+                    <li><a th:href="@{/home-03}">Homepage 3</a></li>
                 </ul>
                 <span class="arrow-main-menu-m">
-<i aria-hidden="true" class="fa fa-angle-right"></i>
+<i class="fa fa-angle-right" aria-hidden="true"></i>
 </span>
             </li>
             <li>
-                <a href="product.html">Shop</a>
+                <a th:href="@{/product}">Shop</a>
             </li>
             <li>
-                <a class="label1 rs1" data-label1="hot" href="shoping-cart.html">Features</a>
+                <a th:href="@{/shoping-cart}" class="label1 rs1" data-label1="hot">Features</a>
             </li>
             <li>
-                <a href="blog.html">Blog</a>
+                <a th:href="@{/blog}">Blog</a>
             </li>
             <li>
-                <a href="about.html">About</a>
+                <a th:href="@{/about}">About</a>
             </li>
             <li>
-                <a href="contact.html">Contact</a>
+                <a th:href="@{/contact}">Contact</a>
             </li>
         </ul>
     </div>
@@ -197,13 +190,13 @@
     <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
         <div class="container-search-header">
             <button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-                <img alt="CLOSE" src="images/icons/icon-close2.png">
+                <img th:src ="@{/images/icons/icon-close2.png}" alt="CLOSE">
             </button>
             <form class="wrap-search-header flex-w p-l-15">
                 <button class="flex-c-m trans-04">
                     <i class="zmdi zmdi-search"></i>
                 </button>
-                <input class="plh3" name="search" placeholder="Search..." type="text">
+                <input class="plh3" type="text" name="search" placeholder="Search...">
             </form>
         </div>
     </div>
@@ -224,10 +217,10 @@ Your Cart
             <ul class="header-cart-wrapitem w-full">
                 <li class="header-cart-item flex-w flex-t m-b-12">
                     <div class="header-cart-item-img">
-                        <img alt="IMG" src="images/item-cart-01.jpg">
+                        <img th:src ="@{/images/item-cart-01.jpg}" alt="IMG">
                     </div>
                     <div class="header-cart-item-txt p-t-8">
-                        <a class="header-cart-item-name m-b-18 hov-cl1 trans-04" href="#">
+                        <a th:href="@{/#}" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
                             White Shirt Pleat
                         </a>
                         <span class="header-cart-item-info">
@@ -237,10 +230,10 @@ Your Cart
                 </li>
                 <li class="header-cart-item flex-w flex-t m-b-12">
                     <div class="header-cart-item-img">
-                        <img alt="IMG" src="images/item-cart-02.jpg">
+                        <img th:src ="@{/images/item-cart-02.jpg}" alt="IMG">
                     </div>
                     <div class="header-cart-item-txt p-t-8">
-                        <a class="header-cart-item-name m-b-18 hov-cl1 trans-04" href="#">
+                        <a th:href="@{/#}" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
                             Converse All Star
                         </a>
                         <span class="header-cart-item-info">
@@ -250,10 +243,10 @@ Your Cart
                 </li>
                 <li class="header-cart-item flex-w flex-t m-b-12">
                     <div class="header-cart-item-img">
-                        <img alt="IMG" src="images/item-cart-03.jpg">
+                        <img th:src ="@{/images/item-cart-03.jpg}" alt="IMG">
                     </div>
                     <div class="header-cart-item-txt p-t-8">
-                        <a class="header-cart-item-name m-b-18 hov-cl1 trans-04" href="#">
+                        <a th:href="@{/#}" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
                             Nixon Porter Leather
                         </a>
                         <span class="header-cart-item-info">
@@ -267,12 +260,10 @@ Your Cart
                     Total: $75.00
                 </div>
                 <div class="header-cart-buttons flex-w w-full">
-                    <a class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10"
-                       href="shoping-cart.html">
+                    <a th:href="@{/shoping-cart}" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
                         View Cart
                     </a>
-                    <a class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10"
-                       href="shoping-cart.html">
+                    <a th:href="@{/shoping-cart}" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
                         Check Out
                     </a>
                 </div>
@@ -281,7 +272,7 @@ Your Cart
     </div>
 </div>
 
-<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('/images/bg-01.jpg');">
     <h2 class="ltext-105 cl0 txt-center">
         Contact
     </h2>
@@ -296,13 +287,11 @@ Your Cart
                         Send Us A Message
                     </h4>
                     <div class="bor8 m-b-20 how-pos4-parent">
-                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" name="email" placeholder="Your Email Address"
-                               type="text">
-                        <img alt="ICON" class="how-pos4 pointer-none" src="images/icons/icon-email.png">
+                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="Your Email Address">
+                        <img class="how-pos4 pointer-none" th:src="@{/images/icons/icon-email.png}" alt="ICON">
                     </div>
                     <div class="bor8 m-b-30">
-                        <textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="msg"
-                                  placeholder="How Can We Help?"></textarea>
+                        <textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="msg" placeholder="How Can We Help?"></textarea>
                     </div>
                     <button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
                         Submit
@@ -345,8 +334,7 @@ Lets Talk
 Sale Support
 </span>
                         <p class="stext-115 cl1 size-213 p-t-18">
-                            <a class="__cf_email__" data-cfemail="b4d7dbdac0d5d7c0f4d1ccd5d9c4d8d19ad7dbd9"
-                               href="https://preview.colorlib.com/cdn-cgi/l/email-protection">[email&#160;protected]</a>
+                            <a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b4d7dbdac0d5d7c0f4d1ccd5d9c4d8d19ad7dbd9">[email&#160;protected]</a>
                         </p>
                     </div>
                 </div>
@@ -356,8 +344,7 @@ Sale Support
 </section>
 
 <div class="map">
-    <div class="size-303" data-draggable="1" data-map-x="40.691446" data-map-y="-73.886787" data-pin="images/icons/pin.png"
-         data-scrollwhell="0" data-zoom="11" id="google_map"></div>
+    <div class="size-303" id="google_map" data-map-x="40.691446" data-map-y="-73.886787" data-pin="/images/icons/logo-02.png" data-scrollwhell="0" data-draggable="1" data-zoom="11"></div>
 </div>
 
 <footer class="bg3 p-t-75 p-b-32">
@@ -369,22 +356,22 @@ Sale Support
                 </h4>
                 <ul>
                     <li class="p-b-10">
-                        <a class="stext-107 cl7 hov-cl1 trans-04" href="#">
+                        <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
                             Women
                         </a>
                     </li>
                     <li class="p-b-10">
-                        <a class="stext-107 cl7 hov-cl1 trans-04" href="#">
+                        <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
                             Men
                         </a>
                     </li>
                     <li class="p-b-10">
-                        <a class="stext-107 cl7 hov-cl1 trans-04" href="#">
+                        <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
                             Shoes
                         </a>
                     </li>
                     <li class="p-b-10">
-                        <a class="stext-107 cl7 hov-cl1 trans-04" href="#">
+                        <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
                             Watches
                         </a>
                     </li>
@@ -396,22 +383,22 @@ Sale Support
                 </h4>
                 <ul>
                     <li class="p-b-10">
-                        <a class="stext-107 cl7 hov-cl1 trans-04" href="#">
+                        <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
                             Track Order
                         </a>
                     </li>
                     <li class="p-b-10">
-                        <a class="stext-107 cl7 hov-cl1 trans-04" href="#">
+                        <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
                             Returns
                         </a>
                     </li>
                     <li class="p-b-10">
-                        <a class="stext-107 cl7 hov-cl1 trans-04" href="#">
+                        <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
                             Shipping
                         </a>
                     </li>
                     <li class="p-b-10">
-                        <a class="stext-107 cl7 hov-cl1 trans-04" href="#">
+                        <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
                             FAQs
                         </a>
                     </li>
@@ -422,17 +409,16 @@ Sale Support
                     GET IN TOUCH
                 </h4>
                 <p class="stext-107 cl7 size-201">
-                    Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on
-                    (+1) 96 716 6879
+                    Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
                 </p>
                 <div class="p-t-27">
-                    <a class="fs-18 cl7 hov-cl1 trans-04 m-r-16" href="#">
+                    <a th:href="@{/#}" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
                         <i class="fa fa-facebook"></i>
                     </a>
-                    <a class="fs-18 cl7 hov-cl1 trans-04 m-r-16" href="#">
+                    <a th:href="@{/#}" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
                         <i class="fa fa-instagram"></i>
                     </a>
-                    <a class="fs-18 cl7 hov-cl1 trans-04 m-r-16" href="#">
+                    <a th:href="@{/#}" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
                         <i class="fa fa-pinterest-p"></i>
                     </a>
                 </div>
@@ -443,8 +429,7 @@ Sale Support
                 </h4>
                 <form>
                     <div class="wrap-input1 w-full p-b-4">
-                        <input class="input1 bg-none plh1 stext-107 cl7" name="email" placeholder="email@example.com"
-                               type="text">
+                        <input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
                         <div class="focus-input1 trans-04"></div>
                     </div>
                     <div class="p-t-18">
@@ -457,29 +442,25 @@ Sale Support
         </div>
         <div class="p-t-40">
             <div class="flex-c-m flex-w p-b-18">
-                <a class="m-all-1" href="#">
-                    <img alt="ICON-PAY" src="images/icons/icon-pay-01.png">
+                <a th:href="@{/#}" class="m-all-1">
+                    <img th:src ="@{/images/icons/icon-pay-01.png}" alt="ICON-PAY">
                 </a>
-                <a class="m-all-1" href="#">
-                    <img alt="ICON-PAY" src="images/icons/icon-pay-02.png">
+                <a th:href="@{/#}" class="m-all-1">
+                    <img th:src ="@{/images/icons/icon-pay-02.png}" alt="ICON-PAY">
                 </a>
-                <a class="m-all-1" href="#">
-                    <img alt="ICON-PAY" src="images/icons/icon-pay-03.png">
+                <a th:href="@{/#}" class="m-all-1">
+                    <img th:src ="@{/images/icons/icon-pay-03.png}" alt="ICON-PAY">
                 </a>
-                <a class="m-all-1" href="#">
-                    <img alt="ICON-PAY" src="images/icons/icon-pay-04.png">
+                <a th:href="@{/#}" class="m-all-1">
+                    <img th:src ="@{/images/icons/icon-pay-04.png}" alt="ICON-PAY">
                 </a>
-                <a class="m-all-1" href="#">
-                    <img alt="ICON-PAY" src="images/icons/icon-pay-05.png">
+                <a th:href="@{/#}" class="m-all-1">
+                    <img th:src ="@{/images/icons/icon-pay-05.png}" alt="ICON-PAY">
                 </a>
             </div>
             <p class="stext-107 cl6 txt-center">
 
-                Copyright &copy;<script data-cfasync="false"
-                                        src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-                <script>document.write(new Date().getFullYear());</script>
-                All rights reserved | This template is made with <i aria-hidden="true" class="fa fa-heart-o"></i> by <a
-                    href="https://colorlib.com/" target="_blank">Colorlib</a>
+                Copyright &copy;<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
 
             </p>
         </div>
@@ -492,14 +473,14 @@ Sale Support
 </span>
 </div>
 
-<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script th:src="@{/vendor/jquery/jquery-3.2.1.min.js}"></script>
 
-<script src="vendor/animsition/js/animsition.min.js"></script>
+<script th:src="@{/vendor/animsition/js/animsition.min.js}"></script>
 
-<script src="vendor/bootstrap/js/popper.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script th:src="@{/vendor/bootstrap/js/popper.js}"></script>
+<script th:src="@{/vendor/bootstrap/js/bootstrap.min.js}"></script>
 
-<script src="vendor/select2/select2.min.js"></script>
+<script th:src="@{/vendor/select2/select2.min.js}"></script>
 <script>
 		$(".js-select2").each(function(){
 			$(this).select2({
@@ -507,12 +488,11 @@ Sale Support
 				dropdownParent: $(this).next('.dropDownSelect2')
 			});
 		})
+	</script>
 
-</script>
+<script th:src="@{/vendor/MagnificPopup/jquery.magnific-popup.min.js}"></script>
 
-<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
-
-<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script th:src="@{/vendor/perfect-scrollbar/perfect-scrollbar.min.js}"></script>
 <script>
 		$('.js-pscroll').each(function(){
 			$(this).css('position','relative');
@@ -527,13 +507,12 @@ Sale Support
 				ps.update();
 			})
 		});
-
-</script>
+	</script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-<script src="js/map-custom.js"></script>
+<script th:src="@{/js/map-custom.js}"></script>
 
-<script src="js/main.js"></script>
+<script th:src="@{/js/main.js}"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>
@@ -542,12 +521,8 @@ Sale Support
   gtag('js', new Date());
 
   gtag('config', 'UA-23581568-13');
-
 </script>
-<script crossorigin="anonymous" data-cf-beacon='{"rayId":"7ae44db799b30955","version":"2023.3.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}'
-        defer
-        integrity="sha512-M3hN/6cva/SjwrOtyXeUa5IuCT0sedyfT+jK/OV+s+D0RnzrTfwjwJHhd+wYfMm9HJSrZ1IKksOdddLuN6KOzw=="
-        src="https://static.cloudflareinsights.com/beacon.min.js/vb26e4fa9e5134444860be286fd8771851679335129114"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vb26e4fa9e5134444860be286fd8771851679335129114" integrity="sha512-M3hN/6cva/SjwrOtyXeUa5IuCT0sedyfT+jK/OV+s+D0RnzrTfwjwJHhd+wYfMm9HJSrZ1IKksOdddLuN6KOzw==" data-cf-beacon='{"rayId":"7ae44db799b30955","version":"2023.3.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}' crossorigin="anonymous"></script>
 </body>
 
 <!-- Mirrored from preview.colorlib.com/theme/cozastore/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Mar 2023 02:47:10 GMT -->

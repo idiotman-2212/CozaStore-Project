@@ -19,7 +19,6 @@ public class JwtHelper {
      *  Bước 2 : Sử dụng key mới tạo để sinh ra token
      *
      */
-
     public String generateToken(String data){
 //       Lấy secrect key đã tạo trước đó sử dụng
         SecretKey key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(secrectKey));

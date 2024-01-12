@@ -1,0 +1,40 @@
+2024-01-09 22:03:25,198 INFO  StartupInfoLogger:51 - [] Starting CozaStoreApplication using Java 19.0.2 with PID 7812 (E:\JavaT2T6\Spring\cozaStore\cozaStore\target\classes started by DELL in E:\JavaT2T6\Spring\cozaStore\cozaStore)
+2024-01-09 22:03:25,203 INFO  SpringApplication:637 - [] No active profile set, falling back to 1 default profile: "default"
+2024-01-09 22:03:25,799 INFO  RepositoryConfigurationDelegate:138 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-09 22:03:25,879 INFO  RepositoryConfigurationDelegate:208 - [] Finished Spring Data repository scanning in 79 ms. Found 11 JPA repository interfaces.
+2024-01-09 22:03:26,500 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8080 (http)
+2024-01-09 22:03:26,501 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2024-01-09 22:03:26,501 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-01-09 22:03:26,541 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2024-01-09 22:03:26,542 INFO  ServletWebServerApplicationContext:291 - [] Root WebApplicationContext: initialization completed in 1337 ms
+2024-01-09 22:03:26,633 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-09 22:03:26,648 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2024-01-09 22:03:26,648 INFO  SpringPersistenceUnitInfo:87 - [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-09 22:03:26,651 INFO  HikariDataSource:110 - [] HikariPool-10 - Starting...
+2024-01-09 22:03:26,703 INFO  HikariPool:565 - [] HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3363ee0e
+2024-01-09 22:03:26,704 INFO  HikariDataSource:123 - [] HikariPool-10 - Start completed.
+2024-01-09 22:03:26,705 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-09 22:03:26,843 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2024-01-09 22:03:26,888 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-09 22:03:26,889 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-09 22:03:26,905 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-09 22:03:26,905 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-09 22:03:27,393 INFO  EntityInstantiatorPojoStandard:53 - [] HHH000182: No default (no-argument) constructor for class: com.cybersoft.cozaStore.entity.PasswordResetTokenEntity (class must be instantiated by Interceptor)
+2024-01-09 22:03:27,537 INFO  JtaPlatformInitiator:51 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-09 22:03:27,538 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-09 22:03:28,079 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-09 22:03:28,338 INFO  WelcomePageHandlerMapping:59 - [] Adding welcome page template: index
+2024-01-09 22:03:29,116 INFO  DefaultSecurityFilterChain:54 - [] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@187c1915, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@485ff91a, org.springframework.security.web.context.SecurityContextHolderFilter@77b408a0, org.springframework.security.web.header.HeaderWriterFilter@23428a8d, org.springframework.security.web.authentication.logout.LogoutFilter@408b25a2, com.cybersoft.cozaStore.filter.JwtFilter@286a524b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1438aaa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@511b3d7e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66bac332, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@378b5a6f, org.springframework.security.web.session.SessionManagementFilter@39990ffd, org.springframework.security.web.access.ExceptionTranslationFilter@4d9d629a, org.springframework.security.web.access.intercept.AuthorizationFilter@7860f97f]
+2024-01-09 22:03:29,217 INFO  OptionalLiveReloadServer:59 - [] LiveReload server is running on port 35729
+2024-01-09 22:03:29,232 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-09 22:03:29,235 INFO  StartupInfoLogger:57 - [] Started CozaStoreApplication in 4.091 seconds (process running for 1520.848)
+2024-01-09 22:03:29,237 INFO  ConditionEvaluationDeltaLoggingListener:63 - [] Condition evaluation unchanged
+2024-01-09 22:04:51,932 INFO  DirectJDKLog:173 - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-09 22:04:51,933 INFO  FrameworkServlet:532 - [] Initializing Servlet 'dispatcherServlet'
+2024-01-09 22:04:51,934 INFO  FrameworkServlet:554 - [] Completed initialization in 1 ms
+2024-01-09 22:05:46,535 INFO  LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211 - [] Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
+2024-01-09 22:05:46,555 INFO  DirectJDKLog:173 - [] Stopping service [Tomcat]
+2024-01-09 22:05:46,556 INFO  DirectJDKLog:173 - [] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-01-09 22:05:46,561 INFO  AbstractEntityManagerFactoryBean:650 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-09 22:05:46,562 INFO  HikariDataSource:350 - [] HikariPool-10 - Shutdown initiated...
+2024-01-09 22:05:46,590 INFO  HikariDataSource:352 - [] HikariPool-10 - Shutdown completed.

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment ="head">
+  <title>Manage Category</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" th:href="@{/images/icons/favicon.png}" />
+
+  <link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+
+  <link rel="stylesheet" type="text/css" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+
+  <link rel="stylesheet" type="text/css" th:href="@{/fonts/iconic/css/material-design-iconic-font.min.css}">
+
+  <link rel="stylesheet" type="text/css" th:href="@{/fonts/linearicons-v1.0.0/icon-font.min.css}">
+
+  <link rel="stylesheet" type="text/css" th:href="@{/vendor/animate/animate.css}">
+
+  <link rel="stylesheet" type="text/css" th:href="@{/vendor/css-hamburgers/hamburgers.min.css}">
+
+  <link rel="stylesheet" type="text/css" th:href="@{/vendor/animsition/css/animsition.min.css}">
+
+  <link rel="stylesheet" type="text/css" th:href="@{/vendor/select2/select2.min.css}">
+
+  <link rel="stylesheet" type="text/css" th:href="@{/vendor/daterangepicker/daterangepicker.css}">
+
+  <link rel="stylesheet" type="text/css" th:href="@{/vendor/slick/slick.css}">
+
+  <link rel="stylesheet" type="text/css" th:href="@{/vendor/MagnificPopup/magnific-popup.css}">
+
+  <link rel="stylesheet" type="text/css" th:href="@{/vendor/perfect-scrollbar/perfect-scrollbar.css}">
+
+  <link rel="stylesheet" type="text/css" th:href="@{/css/util.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+
+  <!-- <script nonce="33c683b5-5781-432b-9f2f-3cc206e0b91a">(function(w,d){!function(a,b,c,d){a[c]=a[c]||{};a[c].executed=[];a.zaraz={deferred:[],listeners:[]};a.zaraz.q=[];a.zaraz._f=function(e){return function(){var f=Array.prototype.slice.call(arguments);a.zaraz.q.push({m:e,a:f})}};for(const g of["track","set","debug"])a.zaraz[g]=a.zaraz._f(g);a.zaraz.init=()=>{var h=b.getElementsByTagName(d)[0],i=b.createElement(d),j=b.getElementsByTagName("title")[0];j&&(a[c].t=b.getElementsByTagName("title")[0].text);a[c].x=Math.random();a[c].w=a.screen.width;a[c].h=a.screen.height;a[c].j=a.innerHeight;a[c].e=a.innerWidth;a[c].l=a.location.href;a[c].r=b.referrer;a[c].k=a.screen.colorDepth;a[c].n=b.characterSet;a[c].o=(new Date).getTimezoneOffset();if(a.dataLayer)for(const n of Object.entries(Object.entries(dataLayer).reduce(((o,p)=>({...o[1],...p[1]})))))zaraz.set(n[0],n[1],{scope:"page"});a[c].q=[];for(;a.zaraz.q.length;){const q=a.zaraz.q.shift();a[c].q.push(q)}i.defer=!0;for(const r of[localStorage,sessionStorage])Object.keys(r||{}).filter((t=>t.startsWith("_zaraz_"))).forEach((s=>{try{a[c]["z_"+s.slice(7)]=JSON.parse(r.getItem(s))}catch{a[c]["z_"+s.slice(7)]=r.getItem(s)}}));i.referrerPolicy="origin";i.th:src="@{/../../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(a[c])));h.parentNode.insertBefore(i,h)};["complete","interactive"].includes(b.readyState)?zaraz.init():a.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script>
+   -->
+</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh mục sản phẩm</title>
+  <link rel="stylesheet" th:href="@{/css/category.css}">
+</head>
+<body>
+<div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" th:href="@{/}" href="#">
+      <img th:src="@{/images/icons/logo-01.png}" src="../static/images/logo.png" width="auto" height="20"
+           class="d-inline-block align-top" alt=""/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto"></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" th:href="@{/admin}" href="#">Admin Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" th:href="@{/logout}" href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+<br>
+<main>
+  <div class="container">
+    <h1>Danh mục sản phẩm</h1>
+    <div>
+      <a th:href="@{/admin/categories/add}" class="btn btn-primary">Thêm danh mục</a>
+      <br>
+      <br>
+    </div>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">SN</th>
+        <th scope="col">Category Name</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Update</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="category, iStat : ${categories}">
+        <th scope="row" th:text="${iStat.index + 1}">1</th>
+        <td th:text="${category.name}">Larry</td>
+
+        <td><a href="" th:href="@{/admin/categories/delete/{id}(id=${category.id})}" class="btn btn-danger">Delete</a></td>
+        <td><a href="" th:href="@{/admin/categories/update/{id}(id=${category.id})}" class="btn btn-warning">Update</a></td>
+
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<footer class="bg3 p-t-75 p-b-32" th:fragment ="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-lg-3 p-b-50">
+        <h4 class="stext-301 cl0 p-b-30">
+          Categories
+        </h4>
+        <ul>
+          <li class="p-b-10">
+            <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
+              Women
+            </a>
+          </li>
+          <li class="p-b-10">
+            <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
+              Men
+            </a>
+          </li>
+          <li class="p-b-10">
+            <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
+              Shoes
+            </a>
+          </li>
+          <li class="p-b-10">
+            <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
+              Watches
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-3 p-b-50">
+        <h4 class="stext-301 cl0 p-b-30">
+          Help
+        </h4>
+        <ul>
+          <li class="p-b-10">
+            <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
+              Track Order
+            </a>
+          </li>
+          <li class="p-b-10">
+            <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
+              Returns
+            </a>
+          </li>
+          <li class="p-b-10">
+            <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
+              Shipping
+            </a>
+          </li>
+          <li class="p-b-10">
+            <a th:href="@{/#}" class="stext-107 cl7 hov-cl1 trans-04">
+              FAQs
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-3 p-b-50">
+        <h4 class="stext-301 cl0 p-b-30">
+          GET IN TOUCH
+        </h4>
+        <p class="stext-107 cl7 size-201">
+          Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+        </p>
+        <div class="p-t-27">
+          <a th:href="@{/#}" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a th:href="@{/#}" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a th:href="@{/#}" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+            <i class="fa fa-pinterest-p"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 p-b-50">
+        <h4 class="stext-301 cl0 p-b-30">
+          Newsletter
+        </h4>
+        <form>
+          <div class="wrap-input1 w-full p-b-4">
+            <input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
+            <div class="focus-input1 trans-04"></div>
+          </div>
+          <div class="p-t-18">
+            <button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+              Subscribe
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="p-t-40">
+      <div class="flex-c-m flex-w p-b-18">
+        <a th:href="@{/#}" class="m-all-1">
+          <img th:src="@{/images/icons/icon-pay-01.png}" alt="ICON-PAY">
+        </a>
+        <a th:href="@{/#}" class="m-all-1">
+          <img th:src="@{/images/icons/icon-pay-02.png}" alt="ICON-PAY">
+        </a>
+        <a th:href="@{/#}" class="m-all-1">
+          <img th:src="@{/images/icons/icon-pay-03.png}" alt="ICON-PAY">
+        </a>
+        <a th:href="@{/#}" class="m-all-1">
+          <img th:src="@{/images/icons/icon-pay-04.png}" alt="ICON-PAY">
+        </a>
+        <a th:href="@{/#}" class="m-all-1">
+          <img th:src="@{/images/icons/icon-pay-05.png}" alt="ICON-PAY">
+        </a>
+      </div>
+      <p class="stext-107 cl6 txt-center">
+
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

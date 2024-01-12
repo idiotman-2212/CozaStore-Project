@@ -8,9 +8,10 @@ import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Pattern;
 
 import java.util.Date;
+import java.util.List;
 
 public class SignUpRequest {
-
+    private int id;
     @NotNull
     @NotBlank(message = "User name không được rỗng")
     private String userName;
@@ -25,8 +26,7 @@ public class SignUpRequest {
     @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$")
     private String email;
 
-    private String role;
-
+    private List<Integer> idRole;
     @Column(name = "create_date")
     private Date createDate;
 
@@ -35,12 +35,20 @@ public class SignUpRequest {
         createDate = new Date();
     }
 
-    public String getRole() {
-        return role;
+    public int getId() {
+        return id;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public List<Integer> getIdRole() {
+        return idRole;
+    }
+
+    public void setIdRole(List<Integer> idRole) {
+        this.idRole = idRole;
     }
 
     public Date getCreateDate() {

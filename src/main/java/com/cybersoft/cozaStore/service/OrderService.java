@@ -48,9 +48,7 @@ public class OrderService implements OrderServiceImp {
 
     @Override
     public List<OrderResponse> getAllOrder() {
-
         List<OrderEntity> list = orderRepository.findAll();
-
         List<OrderResponse> responseList = new ArrayList<>();
 
         for (OrderEntity o: list){

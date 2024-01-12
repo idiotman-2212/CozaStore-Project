@@ -44,41 +44,56 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        return http.csrf().disable() // Tắt tấn công theo kiểu cross-site (gọi link theo nhiều trình duyệt khác nhau)
+         http.csrf().disable() // Tắt tấn công theo kiểu cross-site (gọi link theo nhiều trình duyệt khác nhau)
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Không sử dụng session --- STATELESS: Không sử dụng cái gì hết
                 .and()
                 .authorizeHttpRequests()
 
+
+
                 // các thằng dưới là con của thằng trên ----- Matchers là so sánh kiểm tra dữ liệu
-                .requestMatchers("/login/**").permitAll() //permitALl() : nếu có .per thì link này ai gọi cũng được tất cả (ALL)
+                 //permitALl() : nếu có .per thì link này ai gọi cũng được tất cả (ALL)
                 .requestMatchers("/file/**").permitAll()
-                .requestMatchers("/cart/**").permitAll()
+                .requestMatchers("/shoping-cart/**").permitAll()
                 .requestMatchers("/product/**").permitAll()
                 .requestMatchers("/category/**").permitAll()
                 .requestMatchers("/home/**").permitAll()
-                .requestMatchers("/resources/**").permitAll()
-                .requestMatchers("/static/**").permitAll()
-                .requestMatchers("/static/templates/**").permitAll()
+                .requestMatchers("/**").permitAll()
+                .requestMatchers("/index").permitAll()
+                .requestMatchers("/css/**", "/js/**", "/images/**").permitAll()
+                .requestMatchers("/login/**").permitAll()
                 .requestMatchers("/role/**").permitAll()
                 .requestMatchers("/admin/**").permitAll()
                 .requestMatchers("/mail/**").permitAll()
                 .requestMatchers("/order/**").permitAll()
-                .requestMatchers("/hello/**").permitAll()
                 .requestMatchers("/product_order/**").permitAll()
                 .requestMatchers("/wishList/**").permitAll()
                 .requestMatchers("/blog/**").permitAll()
                 .requestMatchers("/contact/**").permitAll()
+                .requestMatchers("/uploadFile/**").permitAll()
 
 
-                .requestMatchers(HttpMethod.POST, "/product").hasRole("ADMIN") // link /product với phương thức POST phải có role ADMIN mới truy cập được
+                /*.requestMatchers(HttpMethod.POST, "/product").hasRole("ADMIN") // link /product với phương thức POST phải có role ADMIN mới truy cập được
                 .requestMatchers(HttpMethod.GET, "/product").permitAll()
                 .requestMatchers(HttpMethod.PUT, "/product").hasRole("ADMIN")
-                .requestMatchers(HttpMethod.GET, "/cart").hasRole("USER")
+                .requestMatchers(HttpMethod.GET, "/cart").hasRole("USER")*/
 
-                .anyRequest().authenticated() // Tất cả các link còn lại cần phải chứng thực
+                //view
+                .requestMatchers("/hello/**").permitAll()
+                .requestMatchers("/signin/**").permitAll()
+                .requestMatchers("/signup/**").permitAll()
+
+                .anyRequest().authenticated()// Tất cả các link còn lại cần phải chứng thực
                 .and()
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
-                .build();
+
+                 .formLogin((form) -> form
+                         .loginPage("/login")
+                         .loginProcessingUrl("/login")
+                         .defaultSuccessUrl("/index")
+                         .permitAll()
+                 );
+                return http.build();
     }
 
 }

@@ -15,4 +15,6 @@ public interface LoginServiceImp {
     List<UserResponse> searchUsers(String query);
 
     boolean deleteUserById(int id);
+
+
 }

@@ -30,7 +30,7 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/login")
+@RequestMapping("/api/login")
 public class ApiLoginController {
 
     @Autowired
@@ -132,9 +132,11 @@ public class ApiLoginController {
         BaseResponse response = new BaseResponse();
         List<UserResponse> userResponses = loginServiceImp.searchUsers(query);
         if(userResponses.isEmpty()){
+            response.setStatusCode(200);
             response.setMessage("No user found for the given query.");
         }else{
             response.setData(userResponses);
+            response.setStatusCode(200);
             response.setMessage("User found successfully.");
         }
         return response;
