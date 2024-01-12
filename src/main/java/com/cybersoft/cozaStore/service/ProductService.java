@@ -70,24 +70,36 @@ public class ProductService implements ProductServiceImp {
 
     @Override
     public List<ProductResponse> getAllProduct() {
-
         List<ProductEntity> list = productRepository.findAll();
         List<ProductResponse> responseList = new ArrayList<>();
-        for (ProductEntity item: list) {
+
+        for (ProductEntity item : list) {
             ProductResponse productResponse = new ProductResponse();
             productResponse.setId(item.getId());
             productResponse.setName(item.getName());
             productResponse.setImage(item.getImage());
             productResponse.setDesc(item.getDescription());
             productResponse.setPrice(item.getPrice());
-            productResponse.setCreateDate(item.getCreateDate());
+            productResponse.setQuantity(item.getQuanity());
 
+            // Lấy thông tin màu, kích thước, và danh mục từ các đối tượng thực tế
+            ColorEntity colorEntity = item.getColor(); // Giả sử ProductEntity có phương thức getColor()
+            productResponse.setColorName(colorEntity != null ? colorEntity.getName() : "");
+
+            SizeEntity sizeEntity = item.getSize(); // Giả sử ProductEntity có phương thức getSize()
+            productResponse.setSizeName(sizeEntity != null ? sizeEntity.getName() : "");
+
+            CategoryEntity categoryEntity = item.getCategory(); // Giả sử ProductEntity có phương thức getCategory()
+            productResponse.setCategoryName(categoryEntity != null ? categoryEntity.getName() : "");
+
+            productResponse.setCreateDate(item.getCreateDate());
 
             responseList.add(productResponse);
         }
 
         return responseList;
     }
+
 
     @Override
     public List<ProductResponse> getProductById(int id) {

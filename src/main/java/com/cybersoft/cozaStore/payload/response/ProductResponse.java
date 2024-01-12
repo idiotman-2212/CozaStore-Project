@@ -1,6 +1,9 @@
 package com.cybersoft.cozaStore.payload.response;
 
+import com.cybersoft.cozaStore.entity.SizeEntity;
+
 import java.util.Date;
+import java.util.List;
 
 public class ProductResponse {
     private int id;
@@ -9,9 +12,15 @@ public class ProductResponse {
 
     private String name;
     private double price;
-
     private String desc;
 
+    private int quantity;
+
+    private String sizeName;
+
+    private String colorName;
+
+    private String categoryName;
     private Date createDate;
 
     public Date getCreateDate() {
@@ -60,5 +69,38 @@ public class ProductResponse {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getSizeName() {
+        return sizeName;
+    }
+
+    public void setSizeName(String sizeName) {
+        this.sizeName = sizeName;
+    }
+
+    public String getColorName() {
+        return colorName;
+    }
+
+    public void setColorName(String colorName) {
+        this.colorName = colorName;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 }

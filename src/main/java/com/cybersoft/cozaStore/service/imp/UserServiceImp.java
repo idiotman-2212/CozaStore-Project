@@ -11,6 +11,7 @@ public interface UserServiceImp {
 
     //void createPasswordResetTokenForUser(UserEntity user, String token);
     boolean checkPassword(String email, String password);
+<<<<<<< HEAD
 
     boolean checkEmail(String email);
 
@@ -24,6 +25,19 @@ public interface UserServiceImp {
 
     boolean deleteUserById(int id);
 
+=======
+>>>>>>> idiotman-2212-patch-2
 
+    boolean checkEmail(String email);
+
+    boolean insertUser(SignUpRequest signUpRequest );
+
+    List<UserResponse> getAllUser();
+
+    List<UserResponse> getUserById(int id);
+
+    List<UserResponse> searchUsers(String query);
+
+    boolean deleteUserById(int id);
 
 }

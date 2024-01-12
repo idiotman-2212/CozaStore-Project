@@ -4,5 +4,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 public interface EmailServiceImp {
     String sendEmail(MultipartFile[] file, String to, String subject, String body);
+
+    void sendResetPasswordEmail( String to, String subject, String body);
 }
 

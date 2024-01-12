@@ -48,4 +48,21 @@ public class EmailService implements EmailServiceImp {
         }
     }
 
+    @Override
+    public void sendResetPasswordEmail(String to, String subject, String body) {
+        try {
+            MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+            MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, false);
+
+            mimeMessageHelper.setFrom(fromEmail);
+            mimeMessageHelper.setTo(to);
+            mimeMessageHelper.setSubject(subject);
+            mimeMessageHelper.setText(body, true);
+
+            javaMailSender.send(mimeMessage);
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

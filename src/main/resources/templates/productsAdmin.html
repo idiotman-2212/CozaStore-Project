@@ -57,8 +57,25 @@
     </div>
   </div>
 </nav>
+<<<<<<< HEAD
 <div class="container-fluid">
 
+=======
+
+<!-- Trong file index.html hoặc trang bạn muốn hiển thị danh sách sản phẩm -->
+<div class="dis-none panel-search w-full p-t-10 p-b-15">
+  <form th:action="@{/product/search}" method="get">
+    <div class="bor8 dis-flex p-l-15">
+      <button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04" type="submit">
+        <i class="zmdi zmdi-search"></i>
+      </button>
+      <input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="keyword" th:value="${keyword}" placeholder="Search">
+    </div>
+  </form>
+</div>
+
+<div class="container-fluid">
+>>>>>>> idiotman-2212-patch-2
   <a th:href="@{/admin/products/add}" style="margin: 20px 0" class="btn btn-primary">Add Product</a>
   <table class="table">
     <thead class="thead-light">
@@ -81,12 +98,21 @@
     <tr th:each="product, iStat : ${products}">
       <th scope="row" th:text="${iStat.index + 1}">1</th>
       <td th:text="${product.name}">Larry</td>
+<<<<<<< HEAD
       <td><img src="" height="100px" width="100px"  th:src="@{${'/productImages/' + product.imageName}}"></td>
       <td th:text="${product.quanity}">Larry</td>
       <td th:text="${product.price}">Larry</td>
       <td th:text="${product.category.name}">Larry</td>
       <td th:text="${product.idSize.name}">Larry</td>
       <td th:text="${product.idColor.name}">Larry</td>
+=======
+      <td><img src="" height="100px" width="100px"  th:src="@{${'/Product Images/' + product.image}}"></td>
+      <td th:text="${product.quantity}">Larry</td>
+      <td th:text="${product.price}">Larry</td>
+      <td th:text="${product.categoryName}">Larry</td>
+      <td th:text="${product.sizeName}">Larry</td>
+      <td th:text="${product.colorName}">Larry</td>
+>>>>>>> idiotman-2212-patch-2
       <td th:text="${product.desc}">Larry</td>
 
 

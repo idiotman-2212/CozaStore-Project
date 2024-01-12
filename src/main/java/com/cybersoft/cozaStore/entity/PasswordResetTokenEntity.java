@@ -6,7 +6,7 @@ import java.util.Date;
 
 @Entity(name = "reset_password")
 public class PasswordResetTokenEntity {
-    private static final int EXPIRATION = 60 * 24;
+    public static final int EXPIRATION_MINUTES  = 60 * 24;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -15,13 +15,20 @@ public class PasswordResetTokenEntity {
     private String token;
 
     @Column(name = "expiry_date")
-    private String expiryDate;
+    private Date expiryDate;
 
     @ManyToOne
     @JoinColumn(name = "id_user")
     private UserEntity user;
 
+    public PasswordResetTokenEntity() {
+        // Constructor mặc định được yêu cầu bởi JPA
+    }
+
     public PasswordResetTokenEntity(String token, UserEntity user) {
+        this.token = token;
+        this.user = user;
+        this.expiryDate = calculateExpiryDate(EXPIRATION_MINUTES);
     }
 
 
@@ -41,11 +48,11 @@ public class PasswordResetTokenEntity {
         this.token = token;
     }
 
-    public String getExpiryDate() {
+    public Date getExpiryDate() {
         return expiryDate;
     }
 
-    public void setExpiryDate(String expiryDate) {
+    public void setExpiryDate(Date expiryDate) {
         this.expiryDate = expiryDate;
     }
 
@@ -55,5 +62,10 @@ public class PasswordResetTokenEntity {
 
     public void setUser(UserEntity user) {
         this.user = user;
+    }
+
+    private Date calculateExpiryDate(int expiryTimeInMinutes) {
+        Date now = new Date();
+        return new Date(now.getTime() + expiryTimeInMinutes * 60 * 1000);
     }
 }

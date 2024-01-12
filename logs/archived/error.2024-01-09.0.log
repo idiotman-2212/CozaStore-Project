@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 2024-01-09 22:51:28,104 ERROR TemplateEngine:1141 - [] [THYMELEAF][http-nio-8080-exec-9] Exception processing template "checkout": Error resolving template [checkout], template might not exist or might not be accessible by any of the configured Template Resolvers
 org.thymeleaf.exceptions.TemplateInputException: Error resolving template [checkout], template might not exist or might not be accessible by any of the configured Template Resolvers
-=======
-2024-01-12 00:01:11,864 ERROR TemplateEngine:1141 - [] [THYMELEAF][http-nio-8080-exec-8] Exception processing template "productsAdmin": Error resolving template [productsAdmin], template might not exist or might not be accessible by any of the configured Template Resolvers
-org.thymeleaf.exceptions.TemplateInputException: Error resolving template [productsAdmin], template might not exist or might not be accessible by any of the configured Template Resolvers
->>>>>>> idiotman-2212-patch-2
 	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
 	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
 	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
@@ -103,13 +98,8 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [produ
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:1589)
-<<<<<<< HEAD
 2024-01-09 22:51:28,111 ERROR DirectJDKLog:175 - [] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [checkout], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
 org.thymeleaf.exceptions.TemplateInputException: Error resolving template [checkout], template might not exist or might not be accessible by any of the configured Template Resolvers
-=======
-2024-01-12 00:01:11,868 ERROR DirectJDKLog:175 - [] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [productsAdmin], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
-org.thymeleaf.exceptions.TemplateInputException: Error resolving template [productsAdmin], template might not exist or might not be accessible by any of the configured Template Resolvers
->>>>>>> idiotman-2212-patch-2
 	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
 	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
 	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)

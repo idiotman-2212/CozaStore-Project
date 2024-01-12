@@ -165,7 +165,11 @@ public class AdminController {
     //Products session
     @GetMapping("/product")
     public String getPro(Model model) {
+<<<<<<< HEAD
         model.addAttribute("product", productService.getAllProduct());
+=======
+        model.addAttribute("products", productService.getAllProduct());
+>>>>>>> idiotman-2212-patch-2
         return "productsAdmin";
     }//view all products
 
@@ -173,7 +177,11 @@ public class AdminController {
     public String getProAdd(Model model) {
         model.addAttribute("productDTO", new ProductEntity());
         model.addAttribute("categories", categoryService.getAllCategory());
+<<<<<<< HEAD
         return "productsAdmin";
+=======
+        return "productsAdd";
+>>>>>>> idiotman-2212-patch-2
     }// form add new product
 
     @PostMapping("/products/add")
@@ -215,7 +223,11 @@ public class AdminController {
         productEntity.setCreateDate(new Date());
 
         productRepository.save(productEntity);
+<<<<<<< HEAD
         return "redirect:/products";
+=======
+        return "redirect:/productsAdd";
+>>>>>>> idiotman-2212-patch-2
     }//form add new product > do add
 
     @GetMapping("/products/delete/{id}")

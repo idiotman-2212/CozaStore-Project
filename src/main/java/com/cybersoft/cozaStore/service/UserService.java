@@ -1,6 +1,5 @@
 package com.cybersoft.cozaStore.service;
 
-import com.cybersoft.cozaStore.entity.PasswordResetTokenEntity;
 import com.cybersoft.cozaStore.entity.UserEntity;
 //import com.cybersoft.cozaStore.repository.PasswordResetTokenRepository;
 import com.cybersoft.cozaStore.payload.request.SignUpRequest;
@@ -11,10 +10,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+=======
+import java.util.*;
+>>>>>>> idiotman-2212-patch-2
 
 @Service
 public class UserService implements UserServiceImp {
@@ -140,7 +143,10 @@ public class UserService implements UserServiceImp {
             return false;
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> idiotman-2212-patch-2
 
 
 //    @Override

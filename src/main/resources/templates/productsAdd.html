@@ -53,7 +53,11 @@
                 </div>
                 <div class="form-group">
                     <label for="category">Select Category</label>
+<<<<<<< HEAD
                     <select class="form-control" th:field="*{categoryId}" id="category" name="category">
+=======
+                    <select class="form-control" th:field="*{id}" id="category" name="category">
+>>>>>>> idiotman-2212-patch-2
                         <option th:each="category :${categories}"
                                 th:value="${category.id}"
                                 th:text="${category.name}"
@@ -66,11 +70,25 @@
                            placeholder="Price">
                 </div>
                 <div class="form-group">
+<<<<<<< HEAD
                     <label for="weight">Weight in grams</label>
                     <input type="number" class="form-control" required th:field="*{weight}" name="weight" id="weight"
                            placeholder="Weight">
                 </div>
                 <div class="form-group">
+=======
+                    <label for="size">Size</label>
+                    <input type="text" class="form-control" required th:field="*{size}" name="size" id="size"
+                           placeholder="Size">
+                </div>
+                <div class="form-group">
+                    <label for="color">Color</label>
+                    <input type="text" class="form-control" required th:field="*{color}" name="color" id="color"
+                           placeholder="Color">
+                </div>
+
+                <div class="form-group">
+>>>>>>> idiotman-2212-patch-2
                     <label for="description">Product Description</label>
                     <textarea class="form-control" rows="5" th:field="*{description}" name="description" id="description"></textarea>
                 </div>
@@ -82,9 +100,15 @@
                     <label class="custom-file-label" for="productImage">Choose file</label>
                 </div>
                 <div class="form-group">
+<<<<<<< HEAD
                     <img src="#" id="imgPreview" height="100px" width="100px" th:src="@{${'/productImages/' + productDTO.imageName}}" style="margin-top: 20px" alt=" ">
                 </div>
                 <input type="hidden" name="imgName" th:value="${productDTO.imageName}">
+=======
+                    <img src="#" id="imgPreview" height="100px" width="100px" th:src="@{${'/Product Images/' + productDTO.image}}" style="margin-top: 20px; width: 300px; height: 300px" alt="">
+                </div>
+                <input type="hidden" name="imgName" th:value="${productDTO.image}">
+>>>>>>> idiotman-2212-patch-2
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
 
@@ -107,7 +131,11 @@
         if(input.files && input.files[0]){
             var reader = new FileReader();
             reader.onload = function(e){
+<<<<<<< HEAD
                 $('#imgPreview').attr('src', e.target.result).width(100).height(100);
+=======
+                $('#imgPreview').attr('src', e.target.result).width(300).height(300);
+>>>>>>> idiotman-2212-patch-2
             }
             reader.readAsDataURL(input.files[0])
         }
