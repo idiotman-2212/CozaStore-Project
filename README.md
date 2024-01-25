@@ -22,7 +22,7 @@ Chức năng thêm sẽ được điểm cộng:
 - Bình luận sản phẩm
 - Đánh giá sản phẩm
 ----------------------------------------------------
-. Giao diện chính
+- Giao diện chính
 ![image](https://github.com/idiotman-2212/CozaStore-Project/assets/82036270/7b3192c1-3b3a-4c90-a6fd-165a976025bd)
 - Trang đăng nhập
 ![image](https://github.com/idiotman-2212/CozaStore-Project/assets/82036270/e9b3dcab-2b01-4b6f-b0e4-f6f3209f9e11)
