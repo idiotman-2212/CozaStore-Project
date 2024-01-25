@@ -1,2 +1,3 @@
 # CozaStore-Project
-Xu ly phan BE, dang hoan thien phan FE
+- Xử lý phần BE, chạy API trong postman
+- Đang hoàn thiện phần FE
