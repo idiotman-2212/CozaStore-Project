@@ -15,9 +15,11 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Integer>
 
     boolean existsByName(String name);
 
-    @Query("SELECT p FROM product p WHERE p.name LIKE %:query% OR p.description LIKE %:query% OR CAST(p.price AS string) LIKE %:query%")
-    List<ProductEntity> searchProducts(@Param("query") String query);
-
+    @Query("SELECT p FROM product p WHERE " +
+            "LOWER(p.name) LIKE LOWER(CONCAT('%', :keyword, '%')) OR " +
+            "LOWER(p.description) LIKE LOWER(CONCAT('%', :keyword, '%')) OR " +
+            "CAST(p.price AS string) LIKE CONCAT('%', :keyword, '%')")
+    List<ProductEntity> searchProducts(@Param("keyword") String keyword);
 
 
 }

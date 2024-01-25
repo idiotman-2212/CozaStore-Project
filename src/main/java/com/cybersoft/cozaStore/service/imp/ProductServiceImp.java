@@ -12,6 +12,8 @@ import java.util.List;
 public interface ProductServiceImp {
     boolean insertProduct( String name, MultipartFile file,  double price, int quanity,  int idColor,
                            int idSize,  int idCategory, String description) throws IOException;
+    void insertProductResponse(String name, MultipartFile file, double price, int quanity, String colorName,
+                                  String sizeName, String categoryName, String desc) throws IOException;
     List<ProductResponse> getAllProduct();
 
     List<ProductResponse> getProductById(int id);
@@ -24,6 +26,6 @@ public interface ProductServiceImp {
 
     List<ProductResponse> getProductByName(String productName);
 
-    List<ProductResponse> searchProducts(String query);
+    List<ProductResponse> searchProducts(String keyword);
 
 }

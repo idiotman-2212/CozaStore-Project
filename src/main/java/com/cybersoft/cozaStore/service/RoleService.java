@@ -31,5 +31,10 @@ public class RoleService implements RoleServiceImp {
         return listResponse;
     }
 
+    @Override
+    public RoleEntity getRoleById(Integer idRole) {
+        return roleRepository.findById(idRole).orElse(null);
+    }
+
 
 }

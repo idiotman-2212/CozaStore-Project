@@ -2,9 +2,7 @@ package com.cybersoft.cozaStore.service;
 
 import com.cybersoft.cozaStore.entity.*;
 import com.cybersoft.cozaStore.payload.response.ProductResponse;
-import com.cybersoft.cozaStore.repository.CartRepository;
-import com.cybersoft.cozaStore.repository.CategoryRepository;
-import com.cybersoft.cozaStore.repository.ProductRepository;
+import com.cybersoft.cozaStore.repository.*;
 import com.cybersoft.cozaStore.service.imp.ProductServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,6 +23,12 @@ public class ProductService implements ProductServiceImp {
 
     @Autowired
     private CategoryRepository categoryRepository;
+
+    @Autowired
+    private ColorRepository colorRepository;
+
+    @Autowired
+    private SizeRepository sizeRepository;
 
     @Value("${root.folder}")
     private String rootFolder;
@@ -66,6 +70,48 @@ public class ProductService implements ProductServiceImp {
 
         productRepository.save(productEntity);
         return true;
+    }
+
+    public void insertProductResponse(String name, MultipartFile file, double price, int quantity,
+                                      String colorName, String sizeName, String categoryName, String desc) throws IOException {
+        // Save ColorEntity
+        ColorEntity colorEntity = new ColorEntity();
+        colorEntity.setName(colorName);
+        colorEntity = colorRepository.save(colorEntity);
+
+        // Save SizeEntity
+        SizeEntity sizeEntity = new SizeEntity();
+        sizeEntity.setName(sizeName);
+        sizeEntity = sizeRepository.save(sizeEntity);
+
+        // Save CategoryEntity
+        CategoryEntity categoryEntity = new CategoryEntity();
+        categoryEntity.setName(categoryName);
+        categoryEntity = categoryRepository.save(categoryEntity);
+
+        // Save ProductEntity
+        String pathImage = rootFolder + "/" + file.getOriginalFilename();
+        Path path = Paths.get(rootFolder);
+        Path pathImageCopy = Paths.get(pathImage);
+
+        if (!Files.exists(path)) {
+            Files.createDirectory(path);
+        }
+
+        Files.copy(file.getInputStream(), pathImageCopy, StandardCopyOption.REPLACE_EXISTING);
+
+        ProductEntity productEntity = new ProductEntity();
+        productEntity.setName(name);
+        productEntity.setImage(file.getOriginalFilename());
+        productEntity.setPrice(price);
+        productEntity.setQuanity(quantity);
+        productEntity.setDescription(desc);
+        productEntity.setColor(colorEntity);
+        productEntity.setSize(sizeEntity);
+        productEntity.setCategory(categoryEntity);
+        productEntity.setCreateDate(new Date());
+
+        productRepository.save(productEntity);
     }
 
     @Override
@@ -209,8 +255,8 @@ public class ProductService implements ProductServiceImp {
     }
 
     @Override
-    public List<ProductResponse> searchProducts(String query) {
-        List<ProductEntity> productList = productRepository.searchProducts(query);
+    public List<ProductResponse> searchProducts(String keyword) {
+        List<ProductEntity> productList = productRepository.searchProducts(keyword);
         List<ProductResponse> responseList = new ArrayList<>();
 
         for (ProductEntity p: productList) {
@@ -223,7 +269,6 @@ public class ProductService implements ProductServiceImp {
             productResponse.setCreateDate(p.getCreateDate());
             responseList.add(productResponse);
         }
-
         return responseList;
     }
 

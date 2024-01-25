@@ -1,5 +1,7 @@
 package com.cybersoft.cozaStore.payload.response;
 
+import com.cybersoft.cozaStore.entity.RoleEntity;
+
 import java.util.Date;
 
 public class UserResponse {
@@ -8,6 +10,16 @@ public class UserResponse {
     private String email;
     private Date createDate;
     private  String password;
+
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public String getPassword() {
         return password;

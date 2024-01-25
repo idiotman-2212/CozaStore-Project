@@ -9,6 +9,28 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="icon" type="image/png" th:href="@{/images/icons/favicon.png}" />
+
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/fonts/iconic/css/material-design-iconic-font.min.css}">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/fonts/linearicons-v1.0.0/icon-font.min.css}">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/animate/animate.css}">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/css-hamburgers/hamburgers.min.css}">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/animsition/css/animsition.min.css}">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/select2/select2.min.css}">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/perfect-scrollbar/perfect-scrollbar.css}">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/util.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
     <title>Product Add</title>
 </head>
 <body>
@@ -39,8 +61,8 @@
     </div>
 </nav>
 <div class="container">
-    <h3>Product Infor</h3>
-    <form th:action="@{/admin/products/add}" method="post" th:object="${productDTO}" enctype="multipart/form-data">
+    <h3>Product Information</h3>
+    <form th:action="@{/admin/product/add}" method="post" th:object="${productDTO}" enctype="multipart/form-data">
         <div class="row">
             <div class="col-sm-5">
 
@@ -53,15 +75,11 @@
                 </div>
                 <div class="form-group">
                     <label for="category">Select Category</label>
-<<<<<<< HEAD
-                    <select class="form-control" th:field="*{categoryId}" id="category" name="category">
-=======
-                    <select class="form-control" th:field="*{id}" id="category" name="category">
->>>>>>> idiotman-2212-patch-2
+                    <select class="form-control" th:field="*{category.id}" id="category" name="category.id">
                         <option th:each="category :${categories}"
                                 th:value="${category.id}"
-                                th:text="${category.name}"
-                        >
+                                th:text="${category.name}">
+                        </option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -70,25 +88,31 @@
                            placeholder="Price">
                 </div>
                 <div class="form-group">
-<<<<<<< HEAD
-                    <label for="weight">Weight in grams</label>
-                    <input type="number" class="form-control" required th:field="*{weight}" name="weight" id="weight"
-                           placeholder="Weight">
-                </div>
-                <div class="form-group">
-=======
-                    <label for="size">Size</label>
-                    <input type="text" class="form-control" required th:field="*{size}" name="size" id="size"
-                           placeholder="Size">
-                </div>
-                <div class="form-group">
-                    <label for="color">Color</label>
-                    <input type="text" class="form-control" required th:field="*{color}" name="color" id="color"
-                           placeholder="Color">
+                    <label for="quanity">Quantity</label>
+                    <input type="number" class="form-control" required th:field="*{quanity}" name="quanity" id="quanity" placeholder="Quantity">
                 </div>
 
                 <div class="form-group">
->>>>>>> idiotman-2212-patch-2
+                    <label for="size">Select Size</label>
+                    <select class="form-control" th:field="*{size}" id="size" name="size">
+                        <option th:each="size :${sizes}"
+                                th:value="${size.name}"
+                                th:text="${size.name}">
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="color">Select Color</label>
+                    <select class="form-control" th:field="*{color}" id="color" name="color">
+                        <option th:each="color :${colors}"
+                                th:value="${color.name}"
+                                th:text="${color.name}">
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
                     <label for="description">Product Description</label>
                     <textarea class="form-control" rows="5" th:field="*{description}" name="description" id="description"></textarea>
                 </div>
@@ -96,25 +120,20 @@
             <div class="col-sm-5">
                 <p>Product Image</p>
                 <div class="custom-file">
-                    <input type="file"  class="custom-file-input" name="productImage" accept="image/jpeg, image/png, image/jpg"  id="productImage"/>
+                    <input type="file" class="custom-file-input" name="file" accept="image/jpeg, image/png, image/jpg" id="productImage"/>
                     <label class="custom-file-label" for="productImage">Choose file</label>
                 </div>
                 <div class="form-group">
-<<<<<<< HEAD
-                    <img src="#" id="imgPreview" height="100px" width="100px" th:src="@{${'/productImages/' + productDTO.imageName}}" style="margin-top: 20px" alt=" ">
-                </div>
-                <input type="hidden" name="imgName" th:value="${productDTO.imageName}">
-=======
                     <img src="#" id="imgPreview" height="100px" width="100px" th:src="@{${'/Product Images/' + productDTO.image}}" style="margin-top: 20px; width: 300px; height: 300px" alt="">
                 </div>
                 <input type="hidden" name="imgName" th:value="${productDTO.image}">
->>>>>>> idiotman-2212-patch-2
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
 
         </div>
     </form>
 </div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -131,11 +150,7 @@
         if(input.files && input.files[0]){
             var reader = new FileReader();
             reader.onload = function(e){
-<<<<<<< HEAD
-                $('#imgPreview').attr('src', e.target.result).width(100).height(100);
-=======
                 $('#imgPreview').attr('src', e.target.result).width(300).height(300);
->>>>>>> idiotman-2212-patch-2
             }
             reader.readAsDataURL(input.files[0])
         }

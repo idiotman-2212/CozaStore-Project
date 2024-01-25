@@ -44,12 +44,12 @@
                     </div>
                     <div class="hr"></div>
                     <div class="foot-lnk">
-                        <a th:href="@{/forgot}">Forgot Password?</a>
+                        <a th:href="@{/forgotpassword}">Forgot Password?</a>
                     </div>
                 </div>
             </form>
 
-            <form th:action="@{/register}" th:object="${user}" method="post">
+            <form th:action="@{/login/signup}" th:object="${signupForm}" method="post">
             <div class="sign-up-htm">
                 <div class="group">
                     <label for="user-signup" class="label">Username</label> <input
@@ -76,7 +76,8 @@
                 </div>
                 <div class="hr"></div>
                 <div class="foot-lnk">
-                    <label for="tab-1">Already Member?</label>
+                    <label for="tab-1">Already Member?<a class="linkControl" th:href="@{/login/signin}"
+                                                        > Login here</a></label>
                 </div>
             </div>
         </form>

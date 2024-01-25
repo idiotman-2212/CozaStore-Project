@@ -1,0 +1,912 @@
+2024-01-21 15:12:20,755 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:12:22,013 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:12:22,014 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:12:22,014 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:12:22,015 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:12:24,888 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:15:53,162 WARN  AbstractHandlerExceptionResolver:207 - [] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'keyword' for method parameter type String is not present]
+2024-01-21 15:24:44,644 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:24:44,821 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:24:44,822 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:24:44,822 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:24:44,822 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:24:45,671 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:24:46,648 WARN  AbstractHandlerExceptionResolver:207 - [] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'keyword' for method parameter type String is not present]
+2024-01-21 15:24:50,366 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:24:50,579 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:24:50,595 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:24:50,595 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:24:50,603 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:24:51,937 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:25:22,301 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:25:22,450 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:25:22,450 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:25:22,450 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:25:22,454 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:25:23,125 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:25:27,468 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:25:27,565 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:25:27,565 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:25:27,565 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:25:27,565 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:25:28,280 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:26:32,984 WARN  AbstractHandlerExceptionResolver:207 - [] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'query' for method parameter type String is not present]
+2024-01-21 15:31:32,725 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:31:32,808 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:31:32,808 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:31:32,809 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:31:32,809 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:31:33,369 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:31:37,038 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:31:37,129 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:31:37,130 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:31:37,130 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:31:37,130 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:31:37,645 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:32:20,556 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:32:20,635 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:32:20,636 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:32:20,636 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:32:20,636 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:32:21,124 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:32:24,837 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:32:24,893 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:32:24,893 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:32:24,893 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:32:24,893 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:32:25,482 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:33:34,657 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:33:34,733 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:33:34,733 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:33:34,733 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:33:34,733 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:33:35,346 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:33:39,637 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:33:39,799 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:33:39,804 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:33:39,805 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:33:39,805 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:33:40,488 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:35:29,627 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:35:29,684 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:35:29,685 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:35:29,685 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:35:29,686 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:35:30,748 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:35:34,416 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:35:34,476 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:35:34,476 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:35:34,477 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:35:34,477 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:35:35,131 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:39:03,270 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:39:03,330 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:39:03,330 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:39:03,330 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:39:03,330 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:39:03,989 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:39:07,904 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:39:07,957 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:39:07,957 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:39:07,957 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:39:07,957 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:39:08,375 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:44:10,483 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:44:10,552 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:44:10,552 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:44:10,552 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:44:10,553 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:44:11,148 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:44:14,864 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:44:14,932 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:44:14,932 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:44:14,933 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:44:14,933 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:44:15,322 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:48:15,947 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:48:16,014 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:48:16,014 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:48:16,015 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:48:16,015 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:48:16,632 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:48:24,106 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:48:24,149 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:48:24,149 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:48:24,149 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:48:24,149 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:48:24,948 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:51:05,312 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:51:05,370 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:51:05,370 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:51:05,371 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:51:05,371 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:51:05,805 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:51:09,452 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:51:09,536 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:51:09,536 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:51:09,537 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:51:09,537 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:51:10,014 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:57:54,936 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:57:55,266 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:57:55,267 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:57:55,267 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:57:55,268 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:57:55,960 WARN  AbstractApplicationContext:616 - [] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'apiCartController': Unsatisfied dependency expressed through field 'cartServiceImp': Error creating bean with name 'cartService' defined in file [E:\JavaT2T6\Spring\cozaStore\cozaStore\target\classes\com\cybersoft\cozaStore\service\CartService.class]: Post-processing of merged bean definition failed
+2024-01-21 15:57:56,015 ERROR SpringApplication:827 - [] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'apiCartController': Unsatisfied dependency expressed through field 'cartServiceImp': Error creating bean with name 'cartService' defined in file [E:\JavaT2T6\Spring\cozaStore\cozaStore\target\classes\com\cybersoft\cozaStore\service\CartService.class]: Post-processing of merged bean definition failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.cybersoft.cozaStore.CozaStoreApplication.main(CozaStoreApplication.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cartService' defined in file [E:\JavaT2T6\Spring\cozaStore\cozaStore\target\classes\com\cybersoft\cozaStore\service\CartService.class]: Post-processing of merged bean definition failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764)
+	... 23 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.cybersoft.cozaStore.service.CartService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1f9f2c0c]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:732)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:664)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.buildPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:436)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:417)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findInjectionMetadata(PersistenceAnnotationBeanPostProcessor.java:371)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(PersistenceAnnotationBeanPostProcessor.java:353)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1083)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	... 32 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/cybersoft/cozaStore/repository/ProductRepository
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3353)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2424)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:727)
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.cybersoft.cozaStore.repository.ProductRepository
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:495)
+	at java.base/java.lang.Class.forName(Class.java:474)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 43 common frames omitted
+2024-01-21 15:58:00,364 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:58:00,411 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:58:00,412 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:58:00,412 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:58:00,412 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:58:00,781 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 15:58:47,932 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:58:47,992 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:58:47,992 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:58:47,995 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:58:47,995 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:58:48,302 WARN  AbstractApplicationContext:616 - [] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'apiCartController': Unsatisfied dependency expressed through field 'cartServiceImp': Error creating bean with name 'cartService' defined in file [E:\JavaT2T6\Spring\cozaStore\cozaStore\target\classes\com\cybersoft\cozaStore\service\CartService.class]: Post-processing of merged bean definition failed
+2024-01-21 15:58:48,347 ERROR SpringApplication:827 - [] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'apiCartController': Unsatisfied dependency expressed through field 'cartServiceImp': Error creating bean with name 'cartService' defined in file [E:\JavaT2T6\Spring\cozaStore\cozaStore\target\classes\com\cybersoft\cozaStore\service\CartService.class]: Post-processing of merged bean definition failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.cybersoft.cozaStore.CozaStoreApplication.main(CozaStoreApplication.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cartService' defined in file [E:\JavaT2T6\Spring\cozaStore\cozaStore\target\classes\com\cybersoft\cozaStore\service\CartService.class]: Post-processing of merged bean definition failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764)
+	... 23 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.cybersoft.cozaStore.service.CartService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4d7e90d9]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:732)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:664)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.buildPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:436)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:417)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findInjectionMetadata(PersistenceAnnotationBeanPostProcessor.java:371)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(PersistenceAnnotationBeanPostProcessor.java:353)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1083)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	... 32 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/cybersoft/cozaStore/repository/ProductRepository
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3353)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2424)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:727)
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.cybersoft.cozaStore.repository.ProductRepository
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:495)
+	at java.base/java.lang.Class.forName(Class.java:474)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 43 common frames omitted
+2024-01-21 15:58:51,437 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 15:58:51,491 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:58:51,491 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 15:58:51,491 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:58:51,491 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 15:58:52,141 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:02:39,690 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:02:39,752 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:02:39,753 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:02:39,753 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:02:39,754 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:02:40,252 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:02:45,013 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:02:45,057 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:02:45,058 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:02:45,058 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:02:45,058 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:02:45,414 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:04:27,338 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:04:27,396 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:04:27,397 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:04:27,397 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:04:27,397 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:04:27,845 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:04:33,819 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:04:33,870 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:04:33,870 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:04:33,870 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:04:33,870 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:04:34,350 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:05:10,411 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:05:10,471 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:05:10,471 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:05:10,473 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:05:10,473 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:05:10,986 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:05:15,799 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:05:15,854 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:05:15,855 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:05:15,855 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:05:15,855 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:05:16,295 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:08:09,135 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:08:09,186 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:08:09,186 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:08:09,187 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:08:09,187 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:08:09,433 WARN  AbstractApplicationContext:616 - [] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'apiCartController': Unsatisfied dependency expressed through field 'cartServiceImp': Error creating bean with name 'cartService' defined in file [E:\JavaT2T6\Spring\cozaStore\cozaStore\target\classes\com\cybersoft\cozaStore\service\CartService.class]: Post-processing of merged bean definition failed
+2024-01-21 16:08:09,466 ERROR SpringApplication:827 - [] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'apiCartController': Unsatisfied dependency expressed through field 'cartServiceImp': Error creating bean with name 'cartService' defined in file [E:\JavaT2T6\Spring\cozaStore\cozaStore\target\classes\com\cybersoft\cozaStore\service\CartService.class]: Post-processing of merged bean definition failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.cybersoft.cozaStore.CozaStoreApplication.main(CozaStoreApplication.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cartService' defined in file [E:\JavaT2T6\Spring\cozaStore\cozaStore\target\classes\com\cybersoft\cozaStore\service\CartService.class]: Post-processing of merged bean definition failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764)
+	... 23 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.cybersoft.cozaStore.service.CartService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6622a15a]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:732)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:664)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.buildPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:436)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:417)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findInjectionMetadata(PersistenceAnnotationBeanPostProcessor.java:371)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(PersistenceAnnotationBeanPostProcessor.java:353)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1083)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	... 32 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/cybersoft/cozaStore/repository/ProductRepository
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3353)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2424)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:727)
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.cybersoft.cozaStore.repository.ProductRepository
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:495)
+	at java.base/java.lang.Class.forName(Class.java:474)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 43 common frames omitted
+2024-01-21 16:08:13,647 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:08:13,706 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:08:13,707 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:08:13,707 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:08:13,707 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:08:14,111 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:09:06,113 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:09:06,165 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:09:06,165 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:09:06,166 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:09:06,166 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:09:06,699 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:09:15,078 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:09:15,140 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:09:15,140 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:09:15,140 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:09:15,141 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:09:15,526 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:21:48,101 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:21:48,151 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:21:48,151 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:21:48,151 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:21:48,152 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:21:48,613 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:21:53,708 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:21:53,758 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:21:53,758 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:21:53,759 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:21:53,759 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:21:55,315 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:22:35,626 WARN  AbstractHandlerExceptionResolver:207 - [] Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'idProduct' for method parameter type int is not present]
+2024-01-21 16:23:06,002 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:23:06,050 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:23:06,050 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:23:06,050 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:23:06,050 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:23:06,440 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:23:10,115 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:23:10,163 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:23:10,164 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:23:10,164 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:23:10,164 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:23:10,503 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:23:32,511 WARN  AbstractHandlerExceptionResolver:207 - [] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
+2024-01-21 16:24:28,793 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:24:28,848 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:24:28,848 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:24:28,849 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:24:28,849 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:24:29,235 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:24:37,419 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 16:24:37,470 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:24:37,470 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 16:24:37,470 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:24:37,470 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 16:24:37,812 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 16:24:38,552 WARN  AbstractHandlerExceptionResolver:207 - [] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
+2024-01-21 16:25:58,648 WARN  AbstractHandlerExceptionResolver:207 - [] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
+2024-01-21 17:49:22,008 WARN  HikariPool$HouseKeeper:804 - [] HikariPool-41 - Thread starvation or clock leap detected (housekeeper delta=55m14s83ms639µs600ns).
+2024-01-21 18:00:09,880 WARN  AbstractHandlerExceptionResolver:207 - [] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
+2024-01-21 18:05:55,217 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:05:55,276 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:05:55,277 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:05:55,278 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:05:55,278 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:05:55,847 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:06:02,948 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:06:03,003 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:06:03,003 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:06:03,003 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:06:03,004 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:06:03,356 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:06:09,644 WARN  AbstractHandlerExceptionResolver:207 - [] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
+2024-01-21 18:10:33,602 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:10:33,653 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:10:33,653 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:10:33,653 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:10:33,653 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:10:33,984 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:10:37,587 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:10:37,661 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:10:37,661 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:10:37,662 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:10:37,662 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:10:38,039 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:11:22,862 WARN  AbstractHandlerExceptionResolver:207 - [] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
+2024-01-21 18:12:05,028 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:12:05,108 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:12:05,109 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:12:05,110 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:12:05,110 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:12:05,782 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:12:10,445 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:12:10,491 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:12:10,491 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:12:10,491 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:12:10,491 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:12:10,866 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:13:13,207 ERROR TemplateEngine:1141 - [] [THYMELEAF][http-nio-8080-exec-3] Exception processing template "productsUpdate": Error resolving template [productsUpdate], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [productsUpdate], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1415)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1159)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1098)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.cybersoft.cozaStore.filter.JwtFilter.doFilterInternal(JwtFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2024-01-21 18:13:13,213 ERROR DirectJDKLog:175 - [] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [productsUpdate], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [productsUpdate], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1415)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1159)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1098)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.cybersoft.cozaStore.filter.JwtFilter.doFilterInternal(JwtFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2024-01-21 18:13:56,049 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:13:56,094 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:13:56,094 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:13:56,094 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:13:56,094 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:13:56,427 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:14:00,065 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:14:00,103 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:14:00,104 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:14:00,104 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:14:00,104 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:14:00,472 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:18:33,508 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:18:33,564 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:18:33,564 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:18:33,565 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:18:33,565 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:18:33,909 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:18:33,943 WARN  AbstractApplicationContext:616 - [] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'apiProductController' defined in file [E:\JavaT2T6\Spring\cozaStore\cozaStore\target\classes\com\cybersoft\cozaStore\api\ApiProductController.class]: Post-processing of merged bean definition failed
+2024-01-21 18:18:33,962 ERROR SpringApplication:827 - [] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'apiProductController' defined in file [E:\JavaT2T6\Spring\cozaStore\cozaStore\target\classes\com\cybersoft\cozaStore\api\ApiProductController.class]: Post-processing of merged bean definition failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.cybersoft.cozaStore.CozaStoreApplication.main(CozaStoreApplication.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.cybersoft.cozaStore.api.ApiProductController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3618f656]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:732)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:664)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.buildPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:436)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:417)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findInjectionMetadata(PersistenceAnnotationBeanPostProcessor.java:371)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(PersistenceAnnotationBeanPostProcessor.java:353)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1083)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/cybersoft/cozaStore/service/imp/ProductServiceImp
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3353)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2424)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:727)
+	... 25 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.cybersoft.cozaStore.service.imp.ProductServiceImp
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:495)
+	at java.base/java.lang.Class.forName(Class.java:474)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 29 common frames omitted
+2024-01-21 18:18:59,667 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:18:59,715 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:18:59,715 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:18:59,716 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:18:59,716 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:19:00,798 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:21:04,972 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:21:05,018 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:21:05,018 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:21:05,018 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:21:05,018 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:21:05,319 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:22:00,628 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:22:00,674 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:22:00,674 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:22:00,675 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:22:00,675 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:22:01,315 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:22:06,259 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:22:06,307 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:22:06,307 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:22:06,307 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:22:06,307 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:22:07,202 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:22:07,256 WARN  AbstractApplicationContext:616 - [] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'apiProductController': Unsatisfied dependency expressed through field 'productServiceImp': No qualifying bean of type 'com.cybersoft.cozaStore.service.imp.ProductServiceImp' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-01-21 18:22:07,285 ERROR LoggingFailureAnalysisReporter:40 - [] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field productServiceImp in com.cybersoft.cozaStore.api.ApiProductController required a bean of type 'com.cybersoft.cozaStore.service.imp.ProductServiceImp' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.cybersoft.cozaStore.service.imp.ProductServiceImp' in your configuration.
+
+2024-01-21 18:22:09,453 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:22:09,520 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:22:09,520 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:22:09,521 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:22:09,521 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:22:10,396 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:24:26,849 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:24:26,894 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:24:26,895 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:24:26,895 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:24:26,895 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:24:27,591 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:24:36,748 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:24:36,802 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:24:36,802 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:24:36,803 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:24:36,803 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:24:37,372 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:25:27,488 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:25:27,532 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:25:27,532 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:25:27,532 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:25:27,532 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:25:27,954 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:25:31,484 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:25:31,521 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:25:31,521 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:25:31,522 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:25:31,522 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:25:31,886 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:38:31,211 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:38:31,269 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:38:31,270 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:38:31,270 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:38:31,270 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:38:31,753 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:38:35,577 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:38:35,633 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:38:35,633 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:38:35,633 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:38:35,634 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:38:36,135 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:38:59,940 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:38:59,969 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:38:59,969 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:38:59,969 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:38:59,969 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:39:00,320 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:39:05,060 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:39:05,099 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:39:05,099 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:39:05,100 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:39:05,100 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:39:05,495 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:43:41,399 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:43:41,453 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:43:41,453 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:43:41,454 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:43:41,454 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:43:41,848 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:43:46,491 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 18:43:46,536 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:43:46,537 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 18:43:46,537 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:43:46,537 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 18:43:47,093 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 18:44:00,312 WARN  AbstractHandlerExceptionResolver:207 - [] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-01-21 19:04:40,931 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 19:04:40,981 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:04:40,982 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:04:40,983 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:04:40,983 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:04:41,457 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 19:04:46,833 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 19:04:46,866 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:04:46,866 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:04:46,866 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:04:46,866 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:04:47,194 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 19:05:09,378 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 19:05:09,418 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:05:09,418 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:05:09,418 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:05:09,418 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:05:09,791 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 19:05:14,444 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 19:05:14,484 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:05:14,484 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:05:14,484 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:05:14,484 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:05:14,910 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 19:05:23,334 WARN  AbstractHandlerExceptionResolver:207 - [] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-01-21 19:05:54,582 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 19:05:54,618 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:05:54,618 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:05:54,618 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:05:54,618 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:05:54,953 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 19:05:58,312 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 19:05:58,334 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:05:58,334 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:05:58,334 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:05:58,334 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:05:58,651 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 19:07:53,558 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 19:07:53,620 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:07:53,620 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:07:53,620 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:07:53,620 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:07:53,975 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 19:07:58,574 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-21 19:07:58,615 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:07:58,615 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-21 19:07:58,615 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:07:58,615 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-21 19:07:59,065 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21 19:19:32,208 WARN  AbstractHandlerExceptionResolver:207 - [] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "{id}"]
+2024-01-21 22:34:28,715 WARN  HikariPool$HouseKeeper:804 - [] HikariPool-73 - Thread starvation or clock leap detected (housekeeper delta=3h29s504ms343µs400ns).

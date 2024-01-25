@@ -62,7 +62,7 @@ $(document).ready(function(){
 
             console.log("server tra ve ", data)
 
-            window.location.href = 'product.html';
+            window.location.href = 'product';
         })
     })
 

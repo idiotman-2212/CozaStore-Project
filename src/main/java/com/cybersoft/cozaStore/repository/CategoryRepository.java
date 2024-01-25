@@ -20,4 +20,5 @@ public interface CategoryRepository extends JpaRepository<CategoryEntity, Intege
 
     List<CategoryEntity> findTop5ByOrderByCreateDateDesc();
 
+    CategoryEntity findByName(String categoryName);
 }

@@ -24,18 +24,15 @@ public class CategoryService implements CategoryServiceImp {
                 // Log hoặc ném một exception nếu name không hợp lệ
                 throw new IllegalArgumentException("Category name cannot be null or empty");
             }
-
             // Kiểm tra xem đã tồn tại category với name này chưa
             if (categoryRepository.existsByName(name)) {
                 // Log hoặc ném một exception nếu đã tồn tại category với name này
                 throw new IllegalStateException("Category with this name already exists");
             }
-
             // Tạo mới CategoryEntity và lưu vào cơ sở dữ liệu
             CategoryEntity categoryEntity = new CategoryEntity();
             categoryEntity.setName(name);
             categoryEntity.setCreateDate(new Date());
-
             categoryRepository.save(categoryEntity);
 
             return true;

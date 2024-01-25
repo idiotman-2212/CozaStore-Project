@@ -66,6 +66,16 @@
 </nav>
 <div class="container">
 
+  <!--bắt sự kiện search user-->
+  <form th:action = "@{/admin/users/search}" method = "get">
+  <div class = "input-group intput-group-sm hidden-xs" style = "width:150px;">
+      <input type="text" name="keyword" class="form-control pull-right" placeholder="Search">
+      <div class="input-group-btn">
+        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+      </div>
+  </div>
+</form>
+
   <a th:href="@{/admin/users/add}" style="margin: 20px 0" class="btn btn-primary">Add Account</a>
   <table class="table">
     <thead class="thead-light">
@@ -73,6 +83,7 @@
       <th scope="col">SN</th>
       <th scope="col">Username</th>
       <th scope="col">Email</th>
+      <th scope="col">Role</th>
       <th scope="col">Delete</th>
       <th scope="col">Update</th>
     </tr>
@@ -83,6 +94,7 @@
       <th scope="row" th:text="${iStat.index + 1}">1</th>
       <td th:text="${user.username}">Larry</td>
       <td th:text="${user.email}">Larry</td>
+      <td th:text="${user.role}">Larry</td>
 
       <td><a href="" th:href="@{/admin/users/delete/{id}(id=${user.id})}" class="btn btn-danger">Delete</a></td>
       <td><a href="" th:href="@{/admin/users/update/{id}(id=${user.id})}" class="btn btn-warning">Update</a></td>

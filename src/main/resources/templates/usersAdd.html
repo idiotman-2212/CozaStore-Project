@@ -96,7 +96,7 @@
         <ul>
           <li th:each="role : ${roles}">
             <div>
-              <input type="checkbox" th:field="*{idRole}" th:value="${role.id}">
+              <input type="radio" th:field="*{idRole}" th:value="${role.id}">
               <label th:text="${role.name}"></label>
             </div>
           </li>

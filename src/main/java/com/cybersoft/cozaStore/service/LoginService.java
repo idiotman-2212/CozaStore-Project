@@ -26,27 +26,26 @@ public class LoginService implements LoginServiceImp {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-
-    @Override
     public boolean insertUser(SignUpRequest signUpRequest) {
+        // Your existing logic...
 
-        boolean isSuccess = false;
+        if (userRepository.existsByEmail(signUpRequest.getEmail())) {
+            System.out.println("Email đã tồn tại");
+            return false;
+        } else {
+            UserEntity user = new UserEntity();
+            user.setEmail(signUpRequest.getEmail());
+            user.setPassword(passwordEncoder.encode(signUpRequest.getPassword()));
+            user.setUsername(signUpRequest.getUserName());
 
-        UserEntity user = new UserEntity();
-        user.setEmail(signUpRequest.getEmail());
-        user.setPassword(passwordEncoder.encode(signUpRequest.getPassword()));
-        user.setUsername(signUpRequest.getUserName());
-
-        try {
-            userRepository.save(user);
-            isSuccess = true;
-        } catch (Exception e) {
-            System.out.println("Them that bai " + e.getLocalizedMessage());
-
-            isSuccess = false;
+            try {
+                userRepository.save(user);
+                return true;
+            } catch (Exception e) {
+                System.out.println("Thêm thất bại " + e.getLocalizedMessage());
+                return false;
+            }
         }
-
-        return isSuccess;
     }
 
     public boolean checkLogin(String username, String password){

@@ -1,29 +1,31 @@
 package com.cybersoft.cozaStore.service;
 
+import com.cybersoft.cozaStore.entity.RoleEntity;
+import com.cybersoft.cozaStore.entity.SizeEntity;
 import com.cybersoft.cozaStore.entity.UserEntity;
 //import com.cybersoft.cozaStore.repository.PasswordResetTokenRepository;
 import com.cybersoft.cozaStore.payload.request.SignUpRequest;
+import com.cybersoft.cozaStore.payload.response.RoleResponse;
 import com.cybersoft.cozaStore.payload.response.UserResponse;
+import com.cybersoft.cozaStore.repository.RoleRepository;
 import com.cybersoft.cozaStore.repository.UserRepository;
 import com.cybersoft.cozaStore.service.imp.UserServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-<<<<<<< HEAD
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
-=======
 import java.util.*;
->>>>>>> idiotman-2212-patch-2
 
 @Service
 public class UserService implements UserServiceImp {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private RoleService roleService;
+    @Autowired
+    private RoleRepository roleRepository;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -86,9 +88,11 @@ public class UserService implements UserServiceImp {
             userResponse.setEmail(u.getEmail());
             userResponse.setCreateDate(u.getCreateDate());
 
+            RoleEntity roleEntity = u.getRole();
+            userResponse.setRole(roleEntity != null ? roleEntity.getName() : "");
+
             responseList.add(userResponse);
         }
-
         return responseList;
     }
 
@@ -143,10 +147,6 @@ public class UserService implements UserServiceImp {
             return false;
         }
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> idiotman-2212-patch-2
 
 
 //    @Override

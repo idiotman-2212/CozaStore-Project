@@ -38,16 +38,17 @@
 
   <link rel="stylesheet" type="text/css" th:href="@{/css/util.css}">
   <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
-
-  <title>Category Add</title>
+  <title>User Edit</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" th:href="@{/}" href="#">
-      <img th:src="@{/images/icons/logo-01.png}"  src="../static/images/icons/logo-01.png" width="auto" height="20" class="d-inline-block align-top" alt=""/>
+      <img th:src="@{/images/icons/logo-01.png}" src="../static/images/logo.png" width="auto" height="20"
+           class="d-inline-block align-top" alt=""/>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -60,31 +61,62 @@
         <li class="nav-item active">
           <a class="nav-link" th:href="@{/logout}" href="#">Logout</a>
         </li>
-
       </ul>
-
     </div>
   </div>
 </nav>
 <div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <form th:action="@{/admin/categories/add}" method="post" th:object="${category}">
-        <input type="hidden" name="id"  th:field="*{id}">
+  <h3>Account Infor</h3>
+  <form th:action="@{/admin/users/update/{id}}" method="post" th:object="${userDTO}" enctype="multipart/form-data">
+    <div class="row">
+      <div class="col-sm-5">
+
+        <input type="hidden" name="id" th:field="*{id}">
         <div class="form-group">
-          <label for="name">Category Name</label>
-          <input type="text" class="form-control" required th:field="*{name}" name="name" id="name"  placeholder="Enter name">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" required th:field="*{email}" name="email" id="email"
+                 placeholder="Enter Email">
         </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" required th:field="*{password}" name="password" id="password"
+                 placeholder="Enter Password">
+        </div>
+        <div class="form-group">
+          <label for="userName">User name</label>
+          <input type="text" class="form-control" required th:field="*{userName}" name="userName" id="userName"
+                 placeholder="Enter User Name">
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <p>Roles</p>
+        <ul>
+          <li th:each="role : ${roles}">
+            <div>
+              <input type="radio" th:field="*{idRole}" th:value="${role.id}">
+              <label th:text="${role.name}"></label>
+            </div>
+          </li>
+        </ul>
         <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        <button type="button" class="btn btn-danger" th:onclick="window.location.href='/admin/users'" href="#">Cancel</button>
+      </div>
     </div>
-  </div>
+  </form>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
 <div>
   <footer class="bg3 p-t-75 p-b-32" th:fragment ="footer">
     <div class="container">
@@ -207,9 +239,5 @@
   </footer>
 
 </div>
-
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

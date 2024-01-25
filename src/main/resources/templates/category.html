@@ -69,10 +69,19 @@
   </div>
 </nav>
 </div>
-<br>
 <main>
   <div class="container">
-    <h1>Danh mục sản phẩm</h1>
+
+    <!--bắt sự kiện search category-->
+    <form th:action = "@{/admin/categories/search}" method = "get">
+      <div class = "input-group intput-group-sm hidden-xs" style = "width:150px;">
+        <input type="text" name="keyword" class="form-control pull-right" placeholder="Search">
+        <div class="input-group-btn">
+          <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+    </form>
+    <br>
     <div>
       <a th:href="@{/admin/categories/add}" class="btn btn-primary">Thêm danh mục</a>
       <br>
@@ -102,6 +111,7 @@
     </table>
   </div>
 </main>
+<br><br><br>
 
 <footer class="bg3 p-t-75 p-b-32" th:fragment ="footer">
   <div class="container">

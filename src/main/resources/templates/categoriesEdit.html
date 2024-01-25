@@ -39,7 +39,7 @@
   <link rel="stylesheet" type="text/css" th:href="@{/css/util.css}">
   <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
 
-  <title>Category Add</title>
+  <title>Category Edit</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" >
@@ -69,7 +69,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <form th:action="@{/admin/categories/add}" method="post" th:object="${category}">
+      <form th:action="@{/admin/categories/update/{id}}" method="post" th:object="${category}">
         <input type="hidden" name="id"  th:field="*{id}">
         <div class="form-group">
           <label for="name">Category Name</label>

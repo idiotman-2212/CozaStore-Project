@@ -1,0 +1,438 @@
+2024-01-24 00:08:32,731 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 00:08:32,774 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 00:08:32,774 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 00:08:32,775 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 00:08:32,775 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 00:08:33,059 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 00:08:41,192 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 00:08:41,358 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 00:08:41,358 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 00:08:41,359 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 00:08:41,359 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 00:08:41,922 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 00:11:01,500 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 00:11:01,541 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 00:11:01,542 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 00:11:01,542 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 00:11:01,542 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 00:11:02,678 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 00:11:10,168 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 00:11:10,269 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 00:11:10,270 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 00:11:10,270 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 00:11:10,270 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 00:11:10,702 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 00:12:40,064 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 00:12:40,100 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 00:12:40,100 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 00:12:40,101 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 00:12:40,101 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 00:12:40,406 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:23:50,849 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:23:51,946 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:23:51,948 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:23:51,949 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:23:51,949 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:23:54,801 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:27:04,748 ERROR DirectJDKLog:175 - [] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: rawPassword cannot be null] with root cause
+java.lang.IllegalArgumentException: rawPassword cannot be null
+	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.encode(BCryptPasswordEncoder.java:107)
+	at com.cybersoft.cozaStore.controller.AdminController.updateUser(AdminController.java:117)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.cybersoft.cozaStore.filter.JwtFilter.doFilterInternal(JwtFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2024-01-24 23:28:15,109 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:28:15,534 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:28:15,534 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:28:15,542 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:28:15,543 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:28:17,852 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:28:23,642 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:28:23,774 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:28:23,775 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:28:23,776 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:28:23,777 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:28:24,410 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:35:26,765 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:35:26,867 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:35:26,868 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:35:26,870 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:35:26,870 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:35:27,528 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:35:30,441 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:35:30,539 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:35:30,540 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:35:30,540 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:35:30,541 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:35:31,167 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:39:08,625 ERROR DirectJDKLog:175 - [] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: rawPassword cannot be null] with root cause
+java.lang.IllegalArgumentException: rawPassword cannot be null
+	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.encode(BCryptPasswordEncoder.java:107)
+	at com.cybersoft.cozaStore.controller.AdminController.updateUser(AdminController.java:116)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.cybersoft.cozaStore.filter.JwtFilter.doFilterInternal(JwtFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2024-01-24 23:39:38,079 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:39:38,160 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:39:38,161 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:39:38,161 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:39:38,162 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:39:38,714 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:39:46,194 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:39:46,438 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:39:46,439 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:39:46,439 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:39:46,440 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:39:47,189 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:40:10,199 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:40:10,284 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:40:10,284 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:40:10,285 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:40:10,285 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:40:10,710 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:40:14,425 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:40:14,508 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:40:14,509 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:40:14,509 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:40:14,509 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:40:15,018 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:41:24,107 ERROR DirectJDKLog:175 - [] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: rawPassword cannot be null] with root cause
+java.lang.IllegalArgumentException: rawPassword cannot be null
+	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.encode(BCryptPasswordEncoder.java:107)
+	at com.cybersoft.cozaStore.controller.AdminController.updateUser(AdminController.java:116)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.cybersoft.cozaStore.filter.JwtFilter.doFilterInternal(JwtFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2024-01-24 23:43:32,781 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:43:32,847 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:43:32,847 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:43:32,848 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:43:32,848 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:43:33,385 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:43:37,110 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:43:37,190 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:43:37,191 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:43:37,191 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:43:37,191 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:43:37,716 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:44:49,737 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:44:49,811 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:44:49,812 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:44:49,812 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:44:49,813 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:44:50,310 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:44:54,006 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:44:54,064 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:44:54,065 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:44:54,065 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:44:54,065 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:44:54,454 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:47:10,164 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:47:10,227 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:47:10,227 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:47:10,228 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:47:10,228 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:47:10,755 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:47:14,619 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:47:14,776 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:47:14,778 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:47:14,779 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:47:14,779 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:47:15,596 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:58:47,846 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:58:47,915 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:58:47,916 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:58:47,917 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:58:47,917 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:58:48,420 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-24 23:58:53,302 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-01-24 23:58:53,379 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:58:53,379 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-01-24 23:58:53,379 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:58:53,380 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-01-24 23:58:53,814 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
