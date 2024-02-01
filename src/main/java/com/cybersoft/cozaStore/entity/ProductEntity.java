@@ -19,7 +19,7 @@ public class ProductEntity {
     private String image;
 
     @Column(name = "price")
-    private double price;
+    private Double price;
 
     @Column(name = "description")
     private String description;
@@ -106,11 +106,11 @@ public class ProductEntity {
         this.image = image;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

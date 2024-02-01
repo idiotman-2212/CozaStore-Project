@@ -1,5 +1,6 @@
 package com.cybersoft.cozaStore.service.imp;
 
+import com.cybersoft.cozaStore.payload.request.ProductRequest1;
 import com.cybersoft.cozaStore.payload.response.ProductResponse;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,8 +13,7 @@ import java.util.List;
 public interface ProductServiceImp {
     boolean insertProduct( String name, MultipartFile file,  double price, int quanity,  int idColor,
                            int idSize,  int idCategory, String description) throws IOException;
-    void insertProductResponse(String name, MultipartFile file, double price, int quanity, String colorName,
-                                  String sizeName, String categoryName, String desc) throws IOException;
+    void insertProductResponse(ProductRequest1 productRequest) throws IOException;
     List<ProductResponse> getAllProduct();
 
     List<ProductResponse> getProductById(int id);

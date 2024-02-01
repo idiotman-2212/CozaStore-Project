@@ -1,5 +1,6 @@
 package com.cybersoft.cozaStore.provider;
 
+import com.cybersoft.cozaStore.entity.RoleEntity;
 import com.cybersoft.cozaStore.entity.UserEntity;
 import com.cybersoft.cozaStore.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +48,7 @@ public class CustomAuthenProvider implements AuthenticationProvider{
             if (password != null && passwordEncoder.matches(password, user.getPassword())) {
                 // Tạo chứng thực --- GrantedAuthority một class chứng thực của SS
                 List<GrantedAuthority> roles = new ArrayList<>();
+                RoleEntity roleEntity = new RoleEntity();
                 GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(user.getRole().getName());
 
                 roles.add(grantedAuthority);

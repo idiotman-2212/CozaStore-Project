@@ -192,18 +192,3 @@ ALTER TABLE blog_tag ADD CONSTRAINT fk_blog_tag_id_tag FOREIGN KEY (id_tag)REFER
 
 
 
-
-SELECT * FROM `user` u ;
-select * from product p ;
-SELECT * FROM cart c ;
-SELECT * FROM file f ;
-SELECT * FROM `size` s ;
-SELECT * FROM category c ;
-SELECT * FROM color c ;
-SELECT * FROM `role` r ;
-SELECT * FROM orders o ;
-SELECT * FROM status s ;
-SELECT * FROM product_order po ;
-SELECT * FROM wishlist w ;
-
-

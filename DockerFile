@@ -1,0 +1,14 @@
+# Sử dụng hình ảnh OpenJDK 11
+FROM openjdk:11-jre-slim
+
+# Thiết lập thư mục làm việc
+WORKDIR /app
+
+# Sao chép JAR file vào thư mục làm việc
+COPY target/cozaStore.jar app.jar
+
+# Expose cổng 8080 (nếu ứng dụng chạy trên cổng khác, hãy thay đổi)
+EXPOSE 8080
+
+# Command để chạy ứng dụng khi container được khởi động
+CMD ["java", "-jar", "app.jar"]

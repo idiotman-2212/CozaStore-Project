@@ -4,7 +4,6 @@ import jakarta.persistence.Column;
 import jakarta.persistence.PrePersist;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Pattern;
 
 import java.util.Date;
@@ -26,7 +25,7 @@ public class SignUpRequest {
     @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$")
     private String email;
 
-    private List<Integer> idRole;
+    private Integer idRole;
     @Column(name = "create_date")
     private Date createDate;
 
@@ -43,11 +42,11 @@ public class SignUpRequest {
         this.id = id;
     }
 
-    public List<Integer> getIdRole() {
+    public Integer getIdRole() {
         return idRole;
     }
 
-    public void setIdRole(List<Integer> idRole) {
+    public void setIdRole(Integer idRole) {
         this.idRole = idRole;
     }
 

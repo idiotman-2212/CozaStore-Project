@@ -1,17 +1,20 @@
 package com.cybersoft.cozaStore.service;
 
 import com.cybersoft.cozaStore.entity.*;
+import com.cybersoft.cozaStore.payload.request.ProductRequest1;
 import com.cybersoft.cozaStore.payload.response.ProductResponse;
 import com.cybersoft.cozaStore.repository.*;
 import com.cybersoft.cozaStore.service.imp.ProductServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductService implements ProductServiceImp {
@@ -72,46 +75,74 @@ public class ProductService implements ProductServiceImp {
         return true;
     }
 
-    public void insertProductResponse(String name, MultipartFile file, double price, int quantity,
-                                      String colorName, String sizeName, String categoryName, String desc) throws IOException {
-        // Save ColorEntity
-        ColorEntity colorEntity = new ColorEntity();
-        colorEntity.setName(colorName);
-        colorEntity = colorRepository.save(colorEntity);
+    public void insertProductResponse(ProductRequest1 productRequest) {
+        try {
+            // Save ColorEntity
+            ColorEntity colorEntity = colorRepository.findByName(productRequest.getColorName());
+            if (colorEntity == null) {
+                colorEntity = new ColorEntity();
+                colorEntity.setName(productRequest.getColorName());
+                try {
+                    colorEntity = colorRepository.save(colorEntity);
+                } catch (Exception e) {
+                    // Log the exception
+                    e.printStackTrace();
+                }
+            }
 
-        // Save SizeEntity
-        SizeEntity sizeEntity = new SizeEntity();
-        sizeEntity.setName(sizeName);
-        sizeEntity = sizeRepository.save(sizeEntity);
+// Save SizeEntity
+            SizeEntity sizeEntity = sizeRepository.findByName(productRequest.getSizeName());
+            if (sizeEntity == null) {
+                sizeEntity = new SizeEntity();
+                sizeEntity.setName(productRequest.getSizeName());
+                try {
+                    sizeEntity = sizeRepository.save(sizeEntity);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
 
-        // Save CategoryEntity
-        CategoryEntity categoryEntity = new CategoryEntity();
-        categoryEntity.setName(categoryName);
-        categoryEntity = categoryRepository.save(categoryEntity);
+// Save CategoryEntity
+            CategoryEntity categoryEntity = categoryRepository.findByName(productRequest.getCategoryName());
+            if (categoryEntity == null) {
+                categoryEntity = new CategoryEntity();
+                categoryEntity.setName(productRequest.getCategoryName());
+                try {
+                    categoryEntity = categoryRepository.save(categoryEntity);
+                }
+               catch (Exception e){
+                    e.printStackTrace();
+               }
+            }
 
-        // Save ProductEntity
-        String pathImage = rootFolder + "/" + file.getOriginalFilename();
-        Path path = Paths.get(rootFolder);
-        Path pathImageCopy = Paths.get(pathImage);
+            // Save ProductEntity
+            String pathImage = rootFolder + "/" + productRequest.getFile().getOriginalFilename();
+            Path path = Paths.get(rootFolder);
+            Path pathImageCopy = Paths.get(pathImage);
 
-        if (!Files.exists(path)) {
-            Files.createDirectory(path);
+            if (!Files.exists(path)) {
+                Files.createDirectory(path);
+            }
+
+            Files.copy(productRequest.getFile().getInputStream(), pathImageCopy, StandardCopyOption.REPLACE_EXISTING);
+
+            ProductEntity productEntity = new ProductEntity();
+            productEntity.setName(productRequest.getName());
+            productEntity.setImage(productRequest.getFile().getOriginalFilename());
+            productEntity.setPrice(productRequest.getPrice());
+            productEntity.setQuanity(productRequest.getQuanity());
+            productEntity.setDescription(productRequest.getDesc());
+            productEntity.setColor(colorEntity);
+            productEntity.setSize(sizeEntity);
+            productEntity.setCategory(categoryEntity);
+            productEntity.setCreateDate(new Date());
+
+            productRepository.save(productEntity);
+
+        } catch (IOException | DataAccessException ex) {
+            // Handle exceptions appropriately (log or return an error response)
+            ex.printStackTrace(); // Print the exception stack trace (you can replace this with logging)
         }
-
-        Files.copy(file.getInputStream(), pathImageCopy, StandardCopyOption.REPLACE_EXISTING);
-
-        ProductEntity productEntity = new ProductEntity();
-        productEntity.setName(name);
-        productEntity.setImage(file.getOriginalFilename());
-        productEntity.setPrice(price);
-        productEntity.setQuanity(quantity);
-        productEntity.setDescription(desc);
-        productEntity.setColor(colorEntity);
-        productEntity.setSize(sizeEntity);
-        productEntity.setCategory(categoryEntity);
-        productEntity.setCreateDate(new Date());
-
-        productRepository.save(productEntity);
     }
 
     @Override
@@ -124,18 +155,25 @@ public class ProductService implements ProductServiceImp {
             productResponse.setId(item.getId());
             productResponse.setName(item.getName());
             productResponse.setImage(item.getImage());
-            productResponse.setDesc(item.getDescription());
-            productResponse.setPrice(item.getPrice());
+            productResponse.setDescription(item.getDescription());
+
+            // Kiểm tra giá trị null trước khi truy cập và gọi doubleValue()
+            if (item.getPrice() != null) {
+                productResponse.setPrice(item.getPrice().doubleValue());
+            } else {
+                // Xử lý khi giá trị là null, ví dụ đặt giá trị mặc định
+                productResponse.setPrice(0.0); // hoặc bỏ qua
+            }
             productResponse.setQuantity(item.getQuanity());
 
             // Lấy thông tin màu, kích thước, và danh mục từ các đối tượng thực tế
-            ColorEntity colorEntity = item.getColor(); // Giả sử ProductEntity có phương thức getColor()
+            ColorEntity colorEntity = item.getColor();
             productResponse.setColorName(colorEntity != null ? colorEntity.getName() : "");
 
-            SizeEntity sizeEntity = item.getSize(); // Giả sử ProductEntity có phương thức getSize()
+            SizeEntity sizeEntity = item.getSize();
             productResponse.setSizeName(sizeEntity != null ? sizeEntity.getName() : "");
 
-            CategoryEntity categoryEntity = item.getCategory(); // Giả sử ProductEntity có phương thức getCategory()
+            CategoryEntity categoryEntity = item.getCategory();
             productResponse.setCategoryName(categoryEntity != null ? categoryEntity.getName() : "");
 
             productResponse.setCreateDate(item.getCreateDate());
@@ -145,6 +183,7 @@ public class ProductService implements ProductServiceImp {
 
         return responseList;
     }
+
 
 
     @Override
@@ -158,7 +197,7 @@ public class ProductService implements ProductServiceImp {
             productResponse.setId(productEntity.getId());
             productResponse.setName(productEntity.getName());
             productResponse.setImage(productEntity.getImage());
-            productResponse.setDesc(productEntity.getDescription());
+            productResponse.setDescription(productEntity.getDescription());
             productResponse.setPrice(productEntity.getPrice());
             productResponse.setCreateDate(productEntity.getCreateDate());
 
@@ -244,7 +283,7 @@ public class ProductService implements ProductServiceImp {
             productResponse.setId(item.getId());
             productResponse.setName(item.getName());
             productResponse.setImage(item.getImage());
-            productResponse.setDesc(item.getDescription());
+            productResponse.setDescription(item.getDescription());
             productResponse.setPrice(item.getPrice());
             productResponse.setCreateDate(item.getCreateDate());
 
@@ -257,19 +296,28 @@ public class ProductService implements ProductServiceImp {
     @Override
     public List<ProductResponse> searchProducts(String keyword) {
         List<ProductEntity> productList = productRepository.searchProducts(keyword);
-        List<ProductResponse> responseList = new ArrayList<>();
 
-        for (ProductEntity p: productList) {
-            ProductResponse productResponse = new ProductResponse();
-            productResponse.setId(p.getId());
-            productResponse.setName(p.getName());
-            productResponse.setImage(p.getImage());
-            productResponse.setDesc(p.getDescription());
-            productResponse.setPrice(p.getPrice());
-            productResponse.setCreateDate(p.getCreateDate());
-            responseList.add(productResponse);
+        if (productList == null) {
+            // Xử lý trường hợp productList là null
+            return Collections.emptyList();
         }
-        return responseList;
+
+        return productList.stream()
+                .map(this::convertToProductResponse)
+                .collect(Collectors.toList());
     }
+
+    private ProductResponse convertToProductResponse(ProductEntity productEntity) {
+        ProductResponse productResponse = new ProductResponse();
+        productResponse.setId(productEntity.getId());
+        productResponse.setName(productEntity.getName());
+        productResponse.setImage(productEntity.getImage());
+        productResponse.setDescription(productEntity.getDescription());
+        productResponse.setPrice(productEntity.getPrice());
+        productResponse.setCreateDate(productEntity.getCreateDate());
+
+        return productResponse;
+    }
+
 
 }

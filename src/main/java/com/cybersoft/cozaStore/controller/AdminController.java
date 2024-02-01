@@ -2,14 +2,17 @@ package com.cybersoft.cozaStore.controller;
 
 import com.cybersoft.cozaStore.entity.*;
 import com.cybersoft.cozaStore.payload.request.ProductRequest;
+import com.cybersoft.cozaStore.payload.request.ProductRequest1;
 import com.cybersoft.cozaStore.payload.request.SignUpRequest;
 import com.cybersoft.cozaStore.payload.response.CategoryResponse;
 import com.cybersoft.cozaStore.payload.response.ProductResponse;
+import com.cybersoft.cozaStore.payload.response.UserResponse;
 import com.cybersoft.cozaStore.repository.*;
 import com.cybersoft.cozaStore.service.imp.CategoryServiceImp;
 import com.cybersoft.cozaStore.service.imp.ProductServiceImp;
 import com.cybersoft.cozaStore.service.imp.RoleServiceImp;
 import com.cybersoft.cozaStore.service.imp.UserServiceImp;
+import io.micrometer.common.util.StringUtils;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -88,17 +91,35 @@ public class AdminController {
     @PostMapping("/users/add")
     public String postUserAdd(@ModelAttribute("userDTO") SignUpRequest userDTO) {
         UserEntity user = new UserEntity();
+        RoleEntity roleEntity = new RoleEntity();
         user.setEmail(userDTO.getEmail());
         user.setPassword(passwordEncoder.encode(userDTO.getPassword()));
         user.setUsername(userDTO.getUserName());
 
+        // Lấy vai trò từ userDTO và thiết lập cho roleEntity
+        if (userDTO.getIdRole() != null) {
+            int roleId = userDTO.getIdRole();
+            roleEntity = roleService.getRoleById(roleId);
+        }
+        // Kiểm tra xem roleEntity có tồn tại hay không
+        if (roleEntity == null) {
+            System.out.println("Vai trò không tồn tại");
+            // Xử lý tùy thuộc vào yêu cầu của bạn (ví dụ: có thể quay trở lại trang trước đó hoặc hiển thị thông báo lỗi)
+            return "redirect:/admin/users";
+        }
+
+        // Thiết lập vai trò cho người dùng
+        user.setRole(roleEntity);
         try {
             userRepository.save(user);
         } catch (Exception e) {
-            System.out.println("Them that bai " + e.getLocalizedMessage());
+            System.out.println("Thêm thất bại " + e.getMessage());
+            // Có thể thêm log để theo dõi lỗi
+            return "redirect:/admin/users?error=true";
         }
-        return "redirect:/users/add?error";
+        return "redirect:/admin/users";
     }
+
 
     @GetMapping("/users/delete/{id}")
     public String deleteUser(@PathVariable int id) {
@@ -121,9 +142,8 @@ public class AdminController {
 
             // Lấy vai trò của người dùng
             if (user.getRole() != null) {
-                userDTO.setIdRole(Collections.singletonList(user.getRole().getId()));
+                userDTO.setIdRole(user.getRole().getId());
             }
-
             model.addAttribute("userDTO", userDTO);
             model.addAttribute("roles", roleService.getAllRoles());
             return "usersEdit";
@@ -132,23 +152,35 @@ public class AdminController {
         }
     }
 
+
     @PostMapping("/users/update/{id}")
     public String updateUser(@PathVariable int id, @ModelAttribute("userDTO") SignUpRequest signUpRequest) {
         Optional<UserEntity> opUser = userRepository.findById(id);
 
         if (opUser.isPresent()) {
             UserEntity user = opUser.get();
+
             // Cập nhật thông tin người dùng từ SignUpRequest
             user.setEmail(signUpRequest.getEmail());
+
+            // Kiểm tra mật khẩu mới có được cung cấp hay không
             if (signUpRequest.getPassword() != null && !signUpRequest.getPassword().isEmpty()) {
                 user.setPassword(passwordEncoder.encode(signUpRequest.getPassword()));
             }
+
             user.setUsername(signUpRequest.getUserName());
 
             // Cập nhật vai trò (roles)
-            if (signUpRequest.getIdRole() != null && !signUpRequest.getIdRole().isEmpty()) {
-                RoleEntity userRole = roleService.getRoleById(signUpRequest.getIdRole().get(0));
-                user.setRole(userRole);
+            if (signUpRequest.getIdRole() != null) {
+                int roleId = signUpRequest.getIdRole();
+                RoleEntity userRole = roleService.getRoleById(roleId);
+                if (userRole != null) {
+                    user.setRole(userRole);
+                } else {
+                    System.out.println("Vai trò không tồn tại");
+                    // Xử lý tùy thuộc vào yêu cầu của bạn (ví dụ: có thể quay trở lại trang trước đó hoặc hiển thị thông báo lỗi)
+                    return "redirect:/admin/users";
+                }
             }
 
             // Lưu người dùng đã cập nhật vào cơ sở dữ liệu
@@ -161,6 +193,24 @@ public class AdminController {
         }
     }
 //update user
+
+    @GetMapping("users/search")
+    public String searchUser(@RequestParam(name = "keyword", required = false) String keyword, Model model) {
+        List<UserEntity> list;
+
+        if (keyword != null && !keyword.isEmpty()) {
+            list = userRepository.searchUsers(keyword);
+
+            if (list.isEmpty()) {
+                model.addAttribute("noResults", true);
+            }
+        } else {
+            list = userRepository.findAll();
+        }
+        model.addAttribute("list", list);
+        model.addAttribute("keyword", keyword);
+        return "users";
+    }//search user
 
     //Categories session
     @GetMapping("/categories")
@@ -236,16 +286,10 @@ public class AdminController {
         return "productsAdmin";
     }//view all products
 
-    @GetMapping("/product/search")
-    public String searchProduct(@Param("keyword") String keyword, Model model) {
-        List<ProductResponse> list;
-
-        if (keyword != null && !keyword.isEmpty()) {
-            list = productServiceImp.searchProducts(keyword);
-        } else {
-            list = productServiceImp.getAllProduct();
-        }
-        model.addAttribute("list", list);
+    @GetMapping("/search")
+    public String searchProduct(@RequestParam(name = "keyword", required = false) String keyword, Model model) {
+        List<ProductResponse> productList = productServiceImp.searchProducts(keyword);
+        model.addAttribute("products", productList);
         model.addAttribute("keyword", keyword);
         return "productsAdmin";
     }//search product
@@ -260,62 +304,24 @@ public class AdminController {
         model.addAttribute("sizes", sizes);
         model.addAttribute("colors", colors);
         return "productsAdd";
-    }// form add new product
+    }
 
     @PostMapping("/product/add")
-    public String postProductAdd(@ModelAttribute("productDTO") ProductRequest productDTO,
-                                 @RequestParam String name,
-                                 @RequestParam("file") MultipartFile file,
-                                 @RequestParam double price,
-                                 @RequestParam int quanity, // Sửa chính tả thành quantity
-                                 @RequestParam String colorName,
-                                 @RequestParam String sizeName,
-                                 @RequestParam String categoryName,
-                                 @RequestParam String description) throws IOException {
+    public String postProductAdd(@ModelAttribute("productDTO") @Valid ProductRequest1 productRequest,
+                                 BindingResult result,
+                                 Model model) throws IOException {
 
-        // Kiểm tra giá trị null
-        if (name == null || file == null || colorName == null || sizeName == null || categoryName == null || description == null) {
-            // Xử lý lỗi hoặc thông báo lỗi
-            return "redirect:/admin/product";
-        }
-        // Kiểm tra giá trị hợp lệ
-        if (price <= 0 || quanity <= 0) {
-            // Xử lý lỗi hoặc thông báo lỗi
-            return "redirect:/admin/product";
+        if (result.hasErrors()) {
+            model.addAttribute("categories", categoryService.getAllCategory());
+            List<SizeEntity> sizes = sizeRepository.findAll();
+            List<ColorEntity> colors = colorRepository.findAll();
+            model.addAttribute("sizes", sizes);
+            model.addAttribute("colors", colors);
+            return "productsAdd";
         }
 
-        String pathImage = rootFolder + "/" + file.getOriginalFilename();
+        productServiceImp.insertProductResponse(productRequest);
 
-        Path path = Paths.get(rootFolder);
-        Path pathImageCopy = Paths.get(pathImage);
-        if (!Files.exists(path)) {
-            Files.createDirectory(path);
-        }
-
-        Files.copy(file.getInputStream(), pathImageCopy, StandardCopyOption.REPLACE_EXISTING);
-
-        ProductEntity productEntity = new ProductEntity();
-        productEntity.setName(name);
-        productEntity.setImage(file.getOriginalFilename());
-        productEntity.setPrice(price);
-        productEntity.setQuanity(quanity);
-        productEntity.setDescription(description);
-
-        ColorEntity colorEntity = new ColorEntity();
-        colorEntity.setName(colorName);
-        productEntity.setColor(colorEntity);
-
-        SizeEntity sizeEntity = new SizeEntity();
-        sizeEntity.setName(sizeName);
-        productEntity.setSize(sizeEntity);
-
-        CategoryEntity categoryEntity = new CategoryEntity();
-        categoryEntity.setName(categoryName);
-        productEntity.setCategory(categoryEntity);
-
-        productEntity.setCreateDate(new Date());
-
-        productRepository.save(productEntity);
         return "redirect:/admin/product";
     }//form add new product > do add
 
@@ -345,7 +351,7 @@ public class AdminController {
     }
 
     @PostMapping("/product/update/{id}")
-    public String processUpdateProduct(@ModelAttribute("productDTO") ProductEntity productDTO,
+    public String processUpdateProduct(@ModelAttribute("productDTO") ProductRequest1 productDTO,
                                        @PathVariable int id,
                                        @RequestParam MultipartFile file,
                                        @RequestParam String colorName,
@@ -375,7 +381,7 @@ public class AdminController {
             productEntity.setName(productDTO.getName());
             productEntity.setPrice(productDTO.getPrice());
             productEntity.setQuanity(productDTO.getQuanity());
-            productEntity.setDescription(productDTO.getDescription());
+            productEntity.setDescription(productDTO.getDesc());
 
             // Lấy đối tượng từ cơ sở dữ liệu thay vì tạo mới
             ColorEntity colorEntity = colorRepository.findByName(colorName);

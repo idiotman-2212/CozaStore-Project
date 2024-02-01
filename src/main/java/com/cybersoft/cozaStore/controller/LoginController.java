@@ -100,31 +100,40 @@ import com.cybersoft.cozaStore.entity.UserEntity;
 import com.cybersoft.cozaStore.payload.request.SignUpRequest;
 import com.cybersoft.cozaStore.repository.UserRepository;
 import com.cybersoft.cozaStore.service.imp.LoginServiceImp;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.Arrays;
+import java.util.List;
 
 @Controller
+@RequestMapping("/login")
 public class LoginController {
     @Autowired
     private UserRepository userRepository;
     @Autowired
-    // @Lazy
     private PasswordEncoder passwordEncoder;
 
     @Autowired
     private LoginServiceImp loginServiceImp;
 
-    @GetMapping("/login/signin")
+
+    @GetMapping("/signin")
     public String showLogin() {
-        return "login";
+        return "signin";
     }
 
-    @PostMapping("/login/signin")
+    @PostMapping("/signin")
     public String login(@ModelAttribute(name = "loginForm") SignUpRequest signUpRequest, Model m) {
 
         UserEntity user = userRepository.findByEmail(signUpRequest.getUserName());
@@ -135,22 +144,25 @@ public class LoginController {
             return "index"; // Change "index" to the appropriate view for successful login
         } else {
             m.addAttribute("error", "Incorrect Username & Password");
-            return "login";
+            return "signin";
         }
     }
 
-    @GetMapping("/login/signup")
+    @GetMapping("/signup")
     public String showRegistrationForm(Model model) {
         model.addAttribute("signupRequest", new SignUpRequest());
-        return "login";
+        return "signup";
     }
 
-    @PostMapping("/login/signup")
+    @PostMapping("/signup")
     public String processRegistrationForm(@ModelAttribute("signupRequest") @Valid SignUpRequest signUpRequest,
                                           BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) {
-            return "login";
+            return "signup";
         }
+
+        // Set default role ID (Assuming "USER" role has ID 1, modify accordingly)
+        signUpRequest.setIdRole(3);
 
         boolean registrationSuccess = loginServiceImp.insertUser(signUpRequest);
 
@@ -158,8 +170,30 @@ public class LoginController {
             return "redirect:/login/signin";
         } else {
             model.addAttribute("error", "Registration failed. Please try again.");
-            return "login";
+            return "signin";
         }
     }
 }
+ /*   @GetMapping("/signin")
+    public String getSignInForm(){
+        return "login";
+    }
+
+    @GetMapping("/signup")
+    public String showSignupForm(Model model) {
+        model.addAttribute("signupForm", new UserEntity());
+        return "login";
+    }
+
+    @PostMapping("/signup")
+    public String processRegister(UserEntity user) {
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String encodedPassword = passwordEncoder.encode(user.getPassword());
+        user.setPassword(encodedPassword);
+
+        userRepository.save(user);
+
+        return "login";
+    }//after register success
+}*/
 

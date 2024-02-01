@@ -2,6 +2,7 @@ package com.cybersoft.cozaStore.security;
 
 import com.cybersoft.cozaStore.filter.JwtFilter;
 import com.cybersoft.cozaStore.provider.CustomAuthenProvider;
+import com.cybersoft.cozaStore.provider.CustomAuthenticationSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,12 +10,14 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration // Class sẽ được quét khi spring boot chạy ở tầng config
 @EnableWebSecurity // Custom Spring Secutiry
@@ -78,22 +81,45 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.PUT, "/product").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.GET, "/cart").hasRole("USER")*/
 
-                //view
-                .requestMatchers("/hello/**").permitAll()
-                .requestMatchers("/signin/**").permitAll()
-                .requestMatchers("/signup/**").permitAll()
 
-                .anyRequest().authenticated()// Tất cả các link còn lại cần phải chứng thực
+                 .requestMatchers("/adminPage/**").hasRole("ADMIN")
+                 .requestMatchers("/index/**").hasAnyRole("USER", "MEMBER")
+
+
+                 .anyRequest().authenticated()// Tất cả các link còn lại cần phải chứng thực
                 .and()
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
 
                  .formLogin((form) -> form
-                         .loginPage("/login")
-                         .loginProcessingUrl("/login")
-                         .defaultSuccessUrl("/index")
+                         .loginPage("/login/signin")
+                         .usernameParameter("user")
+                         .passwordParameter("pass")
+                         .successHandler((request, response, authentication) -> {
+                             // Kiểm tra role của người dùng và chuyển hướng tương ứng
+                             if (authentication.getAuthorities().stream().anyMatch(r -> r.getAuthority().equals("ADMIN"))) {
+                                 response.sendRedirect("/admin");
+                             } else if (authentication.getAuthorities().stream().anyMatch(r -> r.getAuthority().equals("USER") || r.getAuthority().equals("MEMBER"))) {
+                                 response.sendRedirect("/");
+                             } else {
+                                 // Nếu không có role nào khớp, chuyển hướng mặc định
+                                 response.sendRedirect("/");
+                             }
+                         })
+                         .failureUrl("/login/signin?error=true")
                          .permitAll()
-                 );
+                 )
+                 .logout()
+                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                 .logoutSuccessUrl("/login/signin")
+                 .invalidateHttpSession(true)
+                 .deleteCookies("JSESSIONID")
+
+                 //declare exeption
+                 .and()
+                 .exceptionHandling().accessDeniedPage("/403");
+
                 return http.build();
     }
+
 
 }
