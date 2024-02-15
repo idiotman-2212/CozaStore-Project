@@ -158,6 +158,7 @@ public class LoginController {
     public String processRegistrationForm(@ModelAttribute("signupRequest") @Valid SignUpRequest signUpRequest,
                                           BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) {
+            model.addAttribute("error", "Please correct the following errors:");
             return "signup";
         }
 
@@ -174,26 +175,5 @@ public class LoginController {
         }
     }
 }
- /*   @GetMapping("/signin")
-    public String getSignInForm(){
-        return "login";
-    }
 
-    @GetMapping("/signup")
-    public String showSignupForm(Model model) {
-        model.addAttribute("signupForm", new UserEntity());
-        return "login";
-    }
-
-    @PostMapping("/signup")
-    public String processRegister(UserEntity user) {
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        String encodedPassword = passwordEncoder.encode(user.getPassword());
-        user.setPassword(encodedPassword);
-
-        userRepository.save(user);
-
-        return "login";
-    }//after register success
-}*/
 

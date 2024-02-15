@@ -2610,6 +2610,30 @@ input.num-product::-webkit-inner-spin-button {
   color: #fff;
 }
 
+/*----------------------------------------------*/
+
+.pagination {
+  display: flex;  /* Hiển thị theo hàng ngang */
+  justify-content: flex-end;  /* Đưa phần phân trang về bên phải */
+  align-items: center;  /* Canh giữa theo chiều dọc */
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+}
+.pagination a.active {
+  background-color: #4b00ff;
+  color: white;
+  border: 1px solid #4b00ff;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
 /*---------------------------------------------*/
 .how-shadow1 {
   box-shadow: 0 0px 3px 0px rgba(0,0,0,0.2);

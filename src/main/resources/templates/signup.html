@@ -45,22 +45,35 @@
   <div class="col-sm-6">
     <h3 style="margin-top: 10px">Sign Up Now</h3>
     <p>Please fill out this to register</p>
-    <form th:action="@{/login/signup}" th:object="${user}" method="post">
+    <form th:action="@{/login/signup}" th:object="${signupRequest}" method="post">
+
       <div class="form-group">
+        <div th:if="${#fields.hasErrors('userName')}" th:errors="${signupRequest.userName}"></div>
         <label for="userName">User Name</label>
-        <input type="text" name="userName" id="userName" required placeholder="Your Username" class="form-control form-control-lg">
+        <input type="text" name="userName" id="userName" required placeholder="Username" class="form-control form-control-lg">
       </div>
+
       <div class="form-group">
+        <div th:if="${#fields.hasErrors('email')}" th:errors="${signupRequest.email}"></div>
         <label for="email">Email address</label>
         <input type="email" class="form-control form-control-lg" required minlength="6" placeholder="Email" name="email" id="email"
                aria-describedby="emailHelp">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with
           anyone else.</small>
       </div>
+
       <div class="form-group">
+        <div th:if="${#fields.hasErrors('password')}" th:errors="${signupRequest.password}"></div>
         <label for="password">Password</label>
-        <input type="password" class="form-control form-control-lg" required placeholder="Password" name="password"
+        <input type="password" class="form-control form-control-lg" required placeholder="Password" data-type="password" name="password"
                id="password">
+      </div>
+
+      <div class="form-group">
+        <label for="re-password">Confirm Password</label>
+        <input type="password" class="form-control form-control-lg" required placeholder="Confirm Password" data-type="password" name="rePassword"
+               id="re-password">
+        <div th:if="${#fields.hasErrors('rePassword')}" th:errors="${signupRequest.rePassword}" class="text-danger"></div>
       </div>
 
       <input type="submit" value="Register" class="btn btn-primary btn-block">

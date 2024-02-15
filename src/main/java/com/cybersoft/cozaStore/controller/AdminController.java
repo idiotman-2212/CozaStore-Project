@@ -16,6 +16,8 @@ import io.micrometer.common.util.StringUtils;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.query.Param;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -25,6 +27,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -281,12 +284,20 @@ public class AdminController {
 
     //Products session
     @GetMapping("/product")
-    public String getPro(Model model) {
-        model.addAttribute("products", productServiceImp.getAllProduct());
+    public String getProduct(Model model, @RequestParam(name = "pageNo", defaultValue ="1") Integer pageNo ) {
+        Page<ProductResponse> products = productServiceImp.getAllProductsPage(pageNo);
+        if(pageNo != null){
+            model.addAttribute("totalPage", products.getTotalPages());
+            model.addAttribute("currentPage", pageNo);
+            model.addAttribute("products", products);
+
+        }else {
+            model.addAttribute("error", "Không thể lấy danh sách sản phẩm.");
+        }
         return "productsAdmin";
     }//view all products
 
-    @GetMapping("/search")
+    @GetMapping("/product/search")
     public String searchProduct(@RequestParam(name = "keyword", required = false) String keyword, Model model) {
         List<ProductResponse> productList = productServiceImp.searchProducts(keyword);
         model.addAttribute("products", productList);
@@ -296,7 +307,7 @@ public class AdminController {
 
     @GetMapping("/product/add")
     public String getProductAdd(Model model) {
-        model.addAttribute("productDTO", new ProductEntity());
+        model.addAttribute("productRequest", new ProductEntity());
         model.addAttribute("categories", categoryService.getAllCategory());
         List<SizeEntity> sizes = sizeRepository.findAll();
         List<ColorEntity> colors = colorRepository.findAll();
@@ -307,7 +318,7 @@ public class AdminController {
     }
 
     @PostMapping("/product/add")
-    public String postProductAdd(@ModelAttribute("productDTO") @Valid ProductRequest1 productRequest,
+    public String postProductAdd(@ModelAttribute("productRequest") @Valid ProductRequest1 productRequest,
                                  BindingResult result,
                                  Model model) throws IOException {
 
@@ -332,12 +343,18 @@ public class AdminController {
     }//delete 1 product
 
     @GetMapping("/product/update/{id}")
-    public String updateProductById(@PathVariable int id, Model model) {
+    public String updateProductById(@PathVariable("id") String idStr, Model model) {
+        int id;
+        try {
+            id = Integer.parseInt(idStr);
+        } catch (NumberFormatException e) {
+            return "redirect:/error"; // Hoặc trả về lỗi phù hợp
+        }
+        // Tìm kiếm sản phẩm theo ID
         Optional<ProductEntity> productOptional = productRepository.findById(id);
-
         if (productOptional.isPresent()) {
             ProductEntity productEntity = productOptional.get();
-            model.addAttribute("productDTO", productEntity);
+            model.addAttribute("productRequest", productEntity);
             model.addAttribute("categories", categoryService.getAllCategory());
             List<SizeEntity> sizes = sizeRepository.findAll();
             List<ColorEntity> colors = colorRepository.findAll();
@@ -346,25 +363,42 @@ public class AdminController {
 
             return "productsEdit"; // Tên view để hiển thị form cập nhật
         } else {
-            return "404"; // Trả về trang lỗi nếu không tìm thấy sản phẩm
+            // Xử lý trường hợp không tìm thấy sản phẩm
+            // Ví dụ: redirect về trang 404
+            return "redirect:/404";
         }
     }
 
     @PostMapping("/product/update/{id}")
-    public String processUpdateProduct(@ModelAttribute("productDTO") ProductRequest1 productDTO,
-                                       @PathVariable int id,
+    public String processUpdateProduct(@ModelAttribute("productRequest") ProductRequest1 productDTO,
+                                       @PathVariable String idStr,
                                        @RequestParam MultipartFile file,
                                        @RequestParam String colorName,
                                        @RequestParam String sizeName,
                                        @RequestParam String categoryName,
                                        @RequestParam String desc,
                                        Model model) throws IOException {
+        int id;
+        try {
+            id = Integer.parseInt(idStr);
+        } catch (NumberFormatException e) {
+            return "redirect:/error";
+        }
+
         Optional<ProductEntity> productOptional = productRepository.findById(id);
 
         if (productOptional.isPresent()) {
             ProductEntity productEntity = productOptional.get();
 
-            // Kiểm tra nếu người dùng chọn ảnh mới
+            String rootFolder = "src/main/resources/static/images";
+
+            // Cập nhật thông tin sản phẩm
+            productEntity.setName(productDTO.getName());
+            productEntity.setPrice(productDTO.getPrice());
+            productEntity.setQuanity(productDTO.getQuanity());
+            productEntity.setDescription(productDTO.getDesc());
+
+            // Lưu ảnh nếu người dùng chọn ảnh mới
             if (!file.isEmpty()) {
                 String oldImage = productEntity.getImage();
                 if (oldImage != null) {
@@ -373,15 +407,11 @@ public class AdminController {
 
                 String newImage = file.getOriginalFilename();
                 Path newPathImageCopy = Paths.get(rootFolder, newImage);
-                Files.copy(file.getInputStream(), newPathImageCopy, StandardCopyOption.REPLACE_EXISTING);
+                try (InputStream inputStream = file.getInputStream()) {
+                    Files.copy(inputStream, newPathImageCopy, StandardCopyOption.REPLACE_EXISTING);
+                }
                 productEntity.setImage(newImage);
             }
-
-            // Cập nhật thông tin sản phẩm
-            productEntity.setName(productDTO.getName());
-            productEntity.setPrice(productDTO.getPrice());
-            productEntity.setQuanity(productDTO.getQuanity());
-            productEntity.setDescription(productDTO.getDesc());
 
             // Lấy đối tượng từ cơ sở dữ liệu thay vì tạo mới
             ColorEntity colorEntity = colorRepository.findByName(colorName);
@@ -392,7 +422,6 @@ public class AdminController {
             productEntity.setSize(sizeEntity);
             productEntity.setCategory(categoryEntity);
 
-            // Lưu cập nhật vào cơ sở dữ liệu
             productRepository.save(productEntity);
 
             return "redirect:/admin/product";
@@ -400,4 +429,5 @@ public class AdminController {
             return "404";
         }
     }
+
 }

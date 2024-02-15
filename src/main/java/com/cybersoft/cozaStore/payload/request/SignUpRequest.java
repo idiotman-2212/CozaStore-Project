@@ -25,6 +25,9 @@ public class SignUpRequest {
     @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$")
     private String email;
 
+    @NotBlank
+    private String rePassword;
+
     private Integer idRole;
     @Column(name = "create_date")
     private Date createDate;
@@ -80,5 +83,13 @@ public class SignUpRequest {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getRePassword() {
+        return rePassword;
+    }
+
+    public void setRePassword(String rePassword) {
+        this.rePassword = rePassword;
     }
 }

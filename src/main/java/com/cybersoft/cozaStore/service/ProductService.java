@@ -8,6 +8,10 @@ import com.cybersoft.cozaStore.service.imp.ProductServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataAccessException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -184,7 +188,21 @@ public class ProductService implements ProductServiceImp {
         return responseList;
     }
 
+    @Override
+    public Page<ProductResponse> getAllProductsPage(Integer pageNo) {
+        int pageSize = 5; // Số sản phẩm trên mỗi trang
+        List<ProductResponse> allProducts = getAllProduct();
 
+        // Phân trang dữ liệu
+        Pageable pageable = PageRequest.of(pageNo - 1, pageSize);
+        int start = (int) pageable.getOffset();
+        int end = Math.min((start + pageable.getPageSize()), allProducts.size());
+
+        List<ProductResponse> sublist = allProducts.subList(start, end);
+
+        // Trả về trang dữ liệu
+        return new PageImpl<>(sublist, pageable, allProducts.size());
+    }
 
     @Override
     public List<ProductResponse> getProductById(int id) {

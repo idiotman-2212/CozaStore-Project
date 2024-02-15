@@ -1,0 +1,6 @@
+2024-02-14 22:40:57,649 WARN  DialectFactoryImpl:100 - [] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-14 22:40:59,408 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-02-14 22:40:59,414 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.BlogTagEntity
+2024-02-14 22:40:59,415 WARN  RootClass:356 - [] HHH000038: Composite-id class does not override equals(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-02-14 22:40:59,424 WARN  RootClass:359 - [] HHH000039: Composite-id class does not override hashCode(): com.cybersoft.cozaStore.entity.keys.ProductOrderKeys
+2024-02-14 22:41:05,724 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
