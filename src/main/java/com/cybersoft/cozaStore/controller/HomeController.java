@@ -12,19 +12,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.stream.StreamSupport;
 
 @Controller
+@RequestMapping("")
 public class HomeController {
 
     @Autowired
     private CategoryRepository categoryRepository;
 
-    @GetMapping("/")
+    @GetMapping("")
     public String home(Model model) {
-        Iterable<CategoryEntity> categories = categoryRepository.findAll();
+     /*   Iterable<CategoryEntity> categories = categoryRepository.findAll();
         model.addAttribute("categories", categories);
 
         // Chuyển đổi tên danh mục thành class và thêm vào model
         model.addAttribute("categoryClasses", getCategoryClasses(categories));
-
+*/
         return "index";
     }
 
